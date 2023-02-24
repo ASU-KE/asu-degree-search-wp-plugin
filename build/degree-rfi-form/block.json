@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "unityblocks/degree-rfi-form",
+  "version": "1.0.0",
+  "title": "Unity Degree RFI Form",
+  "category": "uds",
+  "keywords": [
+    "unityblocks",
+    "rfi",
+    "form",
+    "degree"
+  ],
+  "icon": "list-view",
+  "description": "Provide a degree RFI block",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "unityblocks",
+  "viewScript": [
+    "file:./frontend.js",
+    "unityblocks-degree-rfi-form-view-script"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.scss",
+  "style": [
+    "file:./style.scss",
+    "asu-rfi-style"
+  ],
+  "attributes": {
+    "campus": {
+      "enum": [
+        "ONLNE",
+        "GROUND",
+        "NOPREF"
+      ],
+      "default": "GROUND"
+    },
+    "actualCampus": {
+      "type": "string",
+      "enum": [
+        "TEMPE",
+        "DTPHX",
+        "POLY",
+        "WEST",
+        "ONLNE"
+      ],
+      "default": "TEMPE"
+    },
+    "studentType": {
+      "type": "string",
+      "enum": [
+        "undergrad",
+        "graduate"
+      ],
+      "default": "undergrad"
+    },
+    "areaOfInterest": {
+      "type": "string",
+      "default": ""
+    },
+    "programOfInterest": {
+      "type": "string",
+      "default": ""
+    },
+    "programOfInterestOptional": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCertMinor": {
+      "type": "boolean",
+      "default": false
+    },
+    "successMsg": {
+      "type": "string",
+      "default": "Keep an eye on your inbox and in the meantime, check out some more of the <a href=\"https://www.asu.edu/about\">amazing facts, figures, or other links</a> that ASU has to offer."
+    },
+    "test": {
+      "type": "boolean",
+      "default": false
+    },
+    "dataSourceDegreeSearch": {
+      "type": "string",
+      "default": "https://degrees.apps.asu.edu/t5/service"
+    },
+    "dataSourceAsuOnline": {
+      "type": "string",
+      "default": "https://cms.asuonline.asu.edu/lead-submissions-v3.5/programs"
+    },
+    "dataSourceCountriesStates": {
+      "type": "string",
+      "default": "https://api.myasuplat-dpl.asu.edu/api/codeset/countries"
+    },
+    "submissionUrl": {
+      "type": "string",
+      "default": "https://httpbin.org/post"
+    },
+    "sourceID": {
+      "type": "string",
+      "default": "123456789"
+    }
+  }
+}

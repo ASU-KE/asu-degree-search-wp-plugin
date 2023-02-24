@@ -1,0 +1,54 @@
+export const statesCan = [
+	{
+		stateCode: 'AB',
+		description: 'Alberta',
+	},
+	{
+		stateCode: 'BC',
+		description: 'British Columbia',
+	},
+	{
+		stateCode: 'MB',
+		description: 'Manitoba',
+	},
+	{
+		stateCode: 'NB',
+		description: 'New Brunswick',
+	},
+	{
+		stateCode: 'NL',
+		description: 'Newfoundland and Labrador',
+	},
+	{
+		stateCode: 'NT',
+		description: 'Northwest Territories',
+	},
+	{
+		stateCode: 'NS',
+		description: 'Nova Scotia',
+	},
+	{
+		stateCode: 'NU',
+		description: 'Nunavut (NU)',
+	},
+	{
+		stateCode: 'ON',
+		description: 'Ontario',
+	},
+	{
+		stateCode: 'PE',
+		description: 'Prince Edward Island',
+	},
+	{
+		stateCode: 'QC',
+		description: 'Quebec',
+	},
+	{
+		stateCode: 'SK',
+		description: 'Saskatchewan',
+	},
+	{
+		stateCode: 'YT',
+		description: 'Yukon',
+	},
+];

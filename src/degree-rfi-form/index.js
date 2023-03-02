@@ -17,7 +17,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-//import "./style.css";
+import "./style.scss";
 
 /**
  * Every block starts by registering a new block type definition.

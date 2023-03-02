@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "unityblocks/degree-rfi-form",
+  "name": "asu-degree-search/degree-rfi-form",
   "version": "1.0.0",
-  "title": "Unity Degree RFI Form",
+  "title": "ASU Degree RFI Form",
   "category": "uds",
   "keywords": [
-    "unityblocks",
+    "ASU",
     "rfi",
     "form",
     "degree"
@@ -20,17 +20,13 @@
       "full"
     ]
   },
-  "textdomain": "unityblocks",
+  "textdomain": "asu-degree-search",
   "viewScript": [
     "file:./frontend.js",
-    "unityblocks-degree-rfi-form-view-script"
+    "asu-degree-rfi-form-view-script"
   ],
   "editorScript": "file:./index.js",
-  "editorStyle": "file:./editor.scss",
-  "style": [
-    "file:./style.scss",
-    "asu-rfi-style"
-  ],
+  "style": "file:./style-index.css",
   "attributes": {
     "campus": {
       "enum": [

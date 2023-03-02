@@ -5,7 +5,7 @@ import { AsuRfi } from '../../resources/asu-degree-rfi/src/components/AsuRfi';
 
 // It is possible to load multiple forms onto a page.
 // Load each DOM element on page using the Gutenberg-generated class for the Testimonial block
-const rfiForms = document.querySelectorAll( '.wp-block-unityblocks-degree-rfi-form' );
+const rfiForms = document.querySelectorAll( '.wp-block-asu-degree-search-degree-rfi-form' );
 
 rfiForms.forEach( ( form ) => {
 	const campus = form.dataset.campus;
@@ -15,7 +15,7 @@ rfiForms.forEach( ( form ) => {
 	const studentType = form.dataset.studenttype;
   //const areaOfInterest = form.dataset.areaofinterest;
 	// const programOfInterest = form.dataset.programofinterest;
-  const areaOfInterest = form.dataset.areaofinterest;
+	const areaOfInterest = form.dataset.areaofinterest;
 	const programOfInterest = form.dataset.programofinterest;
 	// const areaOfInterest = (form.dataset.areaofinterest ? form.dataset.areaofinterest : undefined);
 	// const programOfInterest = (form.dataset.programofinterest ? form.dataset.programofinterest : undefined);
@@ -29,7 +29,7 @@ rfiForms.forEach( ( form ) => {
 	const dataSourceAsuOnline = form.dataset.datasourceasuonline;
 	const dataSourceCountriesStates = form.dataset.datasourcecountriesstates;
 	const submissionUrl = form.dataset.submissionurl;
-  const sourceID = form.dataset.sourceid;
+	const sourceID = form.dataset.sourceid;
 
 	render(
 		<AsuRfi
@@ -46,7 +46,7 @@ rfiForms.forEach( ( form ) => {
 			// dataSourceAsuOnline={ dataSourceAsuOnline }
 			// dataSourceCountriesStates={ dataSourceCountriesStates }
 			submissionUrl={ submissionUrl }
-      sourceID={ sourceID }
+			sourceID={ sourceID }
 		/>,
 		form
 	);

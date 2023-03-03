@@ -6418,7 +6418,7 @@ const RfiStepperButtons = _ref2 => {
     className: "col-6 text-right"
   }, stepNum < lastStep - 1 ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(reactstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
     type: "submit",
-    className: `rfi-button-step${stepNum + 1}`,
+    className: `rfi-button-step${stepNum + 1} btn-maroon`,
     onClick: () => (0,_core_services_googleAnalytics__WEBPACK_IMPORTED_MODULE_5__.trackGAEvent)({
       ...defaultButtonEvent,
       section,

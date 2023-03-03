@@ -291,7 +291,7 @@ const RfiStepperButtons = ({
         {stepNum < lastStep - 1 ? (
           <Button
             type="submit"
-            className={`rfi-button-step${stepNum + 1}`}
+            className={`rfi-button-step${stepNum + 1} btn-maroon`}
             onClick={() =>
               trackGAEvent({
                 ...defaultButtonEvent,

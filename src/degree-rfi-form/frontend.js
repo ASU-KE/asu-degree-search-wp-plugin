@@ -13,12 +13,8 @@ rfiForms.forEach( ( form ) => {
 	const college = form.dataset.college;
 	const department = form.dataset.department;
 	const studentType = form.dataset.studenttype;
-  //const areaOfInterest = form.dataset.areaofinterest;
-	// const programOfInterest = form.dataset.programofinterest;
 	const areaOfInterest = form.dataset.areaofinterest;
 	const programOfInterest = form.dataset.programofinterest;
-	// const areaOfInterest = (form.dataset.areaofinterest ? form.dataset.areaofinterest : undefined);
-	// const programOfInterest = (form.dataset.programofinterest ? form.dataset.programofinterest : undefined);
 	const programOfInterestOptional = "true" === form.dataset.programofinterestoptional;
 	const isCertMinor = "true" === form.dataset.iscertminor;
 	const country = form.dataset.country;

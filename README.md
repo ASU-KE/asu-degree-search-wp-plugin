@@ -1,12 +1,23 @@
-=== Asu Degree Search Wp Plugin ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.1
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+# Asu Degree Search Wp Plugin
 
-Example block scaffolded with Create Block tool.
+* Contributors:      ASU-KE
+* Tags:              block
+* Tested up to:      6.1
+* Stable tag:        0.1.0
+* License:           GPL-2.0-or-later
+* License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+
+A collection of blocks to handle ASU .
+
+## Installation
+
+Upload the plugin files to the `/wp-content/plugins/asu-degree-search-wp-plugin` directory, or install the plugin through the WordPress plugins screen directly.
+
+## Available blocks
+
+* [ASU Degree RFI Form](#ASU-Degree-RFI-Form)
+
+### ASU Degree RFI Form
 
 == Description ==
 

@@ -6402,6 +6402,7 @@ const RfiStepperButtons = _ref2 => {
     className: "col-6"
   }, stepNum > 0 ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(reactstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
     type: "button",
+    className: `btn-maroon`,
     onClick: () => {
       handleBack();
       (0,_core_services_googleAnalytics__WEBPACK_IMPORTED_MODULE_5__.trackGAEvent)({

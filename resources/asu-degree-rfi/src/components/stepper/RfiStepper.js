@@ -269,6 +269,7 @@ const RfiStepperButtons = ({
         {stepNum > 0 ? (
           <Button
             type="button"
+						className={`btn-maroon`}
             onClick={() => {
               handleBack();
               trackGAEvent({

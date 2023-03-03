@@ -46,10 +46,9 @@ Additionally, Google Tag Manager (GTM) and a dataLayer must be provided by the w
 
 You must have a Source ID configured in your host site in order to successfully send RFI submissions to the RFI submissions service.
 
-RECOMMENDED: See /example/rfi.html for a complete, HTML + vanilla Javascript example of incorporating the RFI component into an HTML page and launching it. Includes example and description of the props to use to configure the RFI form. It should work if you open the file in your browser, allowing you to get to know the RFI component.
+See `/resources/asu-degree-rfi/examples/rfi.html` for a complete, HTML + vanilla Javascript example of incorporating the RFI component into an HTML page and launching it. Includes example and description of the props to use to configure the RFI form.
 
 See the the [Unity Storybook for the RFI component](https://unity.web.asu.edu/@asu-design-system/app-rfi/index.html?path=/story/uds-asurfi--rfi-default) for example configurations to match various use-cases.
-
 
 
 #### Changelog
@@ -57,8 +56,11 @@ See the the [Unity Storybook for the RFI component](https://unity.web.asu.edu/@a
 = 0.1.0 =
 * initial commits - AsuRfi components, degree-rfi-form Gutenberg block created.
 
+## Known issues (updated 3/1/23)
+* Using the `@asu/app-rfi` packages from a remote reponsitory is causing build issues, currently they are imported locally from `/resources`
 
-## Important docs:
+
+## Important docs from ASU ET:
 
 **ServiceNow Request Form to Setup RFI**
 https://asudev.jira.com/servicedesk/customer/portal/5/group/28/create/89
@@ -151,9 +153,6 @@ This Unity block implements the `app-rfi` unity-stack component.
 * submissionUrl - Endpoint to submit RFI requests
 
 Most of these props either configure the submission process or pre-configure the webform options.
-
-## Known issues (updated 3/1/23)
-* Using the `@asu/app-rfi` packages from a remote reponsitory is causing build issues, currently they are imported locally from `/resources`
 
 # ASU RFI Component
 
@@ -416,3 +415,61 @@ Most of these props either configure the submission process or pre-configure the
 | [dataSourceCountriesStates] | <code>string</code> |
 | submissionUrl | <code>string</code> |
 
+
+     * This example shows how to use the RFI form component
+     * from a static HTML page with plain vanilla JS
+     *
+     * React and React DOM are peer dependencies and must be included
+     * seperately as seen above. Please use locally installed copies for QA
+     * and Production sites. Unpkg examples above are for testing only.
+     *
+     * @asu/bootstrap4-theme@dev is also a peer depdenency and
+     * must be included separately. See link tag above for file to include.
+     *
+     * Additional details: Site hosting the Rfi component should have Google
+     * Tag Manager installed for proper sourcing of hidden field data and
+     * should initialize a dataLayer. Examples of both can be seen above.
+     *
+     * Find the right GTM code for your ASU site at https://unity.web.asu.edu.
+     *
+     * DEGREE SEARCH REST API QUERIES, FOR REFERENCE
+     * Best viewed in Postman. To view in your browser, install a JSON
+     * formatter extension.
+     * - Undergrad
+     *   https://degrees.apps.asu.edu/t5/service?method=findAllDegrees&init=false&fields=Descr100,Degree,CollegeAcadOrg,CollegeDescr100,DepartmentCode,DepartmentName,AcadPlanType,AcadPlan,AcadProg,AcadProg,planCatDescr,CampusStringArray&cert=false&program=undergrad
+     * - Graduate
+     *   https://degrees.apps.asu.edu/t5/service?method=findAllDegrees&init=false&fields=Descr100,Degree,CollegeAcadOrg,CollegeDescr100,DepartmentCode,DepartmentName,AcadPlanType,AcadPlan,AcadProg,AcadProg,planCatDescr,CampusStringArray&cert=false&program=graduate
+     * - Certs/Minors
+     *   https://degrees.apps.asu.edu/t5/service?method=findAllDegrees&init=false&fields=Descr100,Degree,CollegeAcadOrg,CollegeDescr100,DepartmentCode,DepartmentName,AcadPlanType,AcadPlan,AcadProg,AcadProg,planCatDescr,CampusStringArray&cert=true&program=graduate
+     *
+     * RFI COMPONENT PROPS, FOR REFERENCE
+     * - campus: One of a campus type: ONLNE, GROUND, NOPREF, or undefined
+     * - actualCampus: A specific campus like TEMPE, DTPHX, POLY, WEST, ONLNE...
+     * - college: Use one acadOrgCode from reference
+     *     https://api.myasuplat-dpl.asu.edu/api/codeset/colleges
+     * - department: Use one department code. See DepartmentCode values in
+     *     Degree Search API query.
+     * - studentType: One of undergrad or graduate.
+     * - areaOfInterest: One of planCatDescr values from Degree Search API
+     *     query.
+     * - programOfInterest: One of AcadPlan from Degree Search API query.
+     *     (Note: Descr100 is used as label for this value in RFI UIs)
+     * - programOfInterestOptional: true or false
+     * - isCertMinor: true or false
+     * - country: One 2 char country code ala
+     *     https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 or see data used by
+     *     RFI in https://api.myasuplat-dpl.asu.edu/api/codeset/countries
+     * - stateProvince: US or Canada only. Use a description field value from
+     *     https://api.myasuplat-dpl.asu.edu/api/codeset/countries?include=states
+     * - successMsg: A string. May contain HTML.
+     * - test: true or false. Will send the form payload with Test === 1.
+     * - dataSourceDegreeSearch: Degree Search REST API. Uses default if not
+     *     supplied.
+     * - dataSourceAsuOnline: ASUOnline Programs API. Uses default if not
+     *     supplied.
+     * - dataSourceCountriesStates: Data Potluck Countries codeset service.
+     *     Uses default if not supplied.
+     * - submissionUrl: URL or path for receiving and handling submission
+     *     and adding Source value identifier to payload before sending to RFI
+     *     Submission Handler service.
+     */

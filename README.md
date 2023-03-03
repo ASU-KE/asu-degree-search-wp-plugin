@@ -1,82 +1,46 @@
-# Asu Degree Search Wp Plugin
+<p align="center">
+  <img src="https://cdn.infonet.research.asu.edu/assets/asu_asu_knowledge_enterprise_horiz_150ppi.png" alt="ASU Knowledge Enterprise" width="400" />
+</p>
+
+<h1 align="center">ASU Degree Search Wordpress Plugin</h1>
+
+<p align="center">
+  <b>A collection of blocks to handle ASU degree data within Wordpress.</b>
+</p>
+
+<br />
 
 * Contributors:      ASU-KE
-* Tags:              block
 * Tested up to:      6.1
-* Stable tag:        0.1.0
-* License:           GPL-2.0-or-later
-* License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+* Current vesion:    0.1.0
 
-A collection of blocks to handle ASU .
+
+<br />
 
 ## Installation
 
-Upload the plugin files to the `/wp-content/plugins/asu-degree-search-wp-plugin` directory, or install the plugin through the WordPress plugins screen directly.
+Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
+
+##### Development
+This block uses `wp-scripts` for the build process:
+* `npm run build` - rebuilds the app with the latest saved files, exported to `/build`
+* `npm run start` - live editing mode, rebuilds app when updated file is saved
 
 ## Available blocks
 
-* [ASU Degree RFI Form](#ASU-Degree-RFI-Form)
+* [ASU Degree RFI Form](#ASU-Degree-RFI-Form) - Gutenberg block to add the offical ASU Degree RFI Form to a page.
 
 ### ASU Degree RFI Form
-
-== Description ==
-
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/asu-degree-search-wp-plugin` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
-
-== Changelog ==
-
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
-
-
-# Degree RFI
 
 From the original asu-unity-stack component README:
 
 > The ASU RFI Component is a React-powered Request for Information form. It is intended to be implemented by a CMS module/plugin/extension that must provide a local endpoint to receive the component's submission payload and add the host's source ID (which serves as an API key and identifier) to the payload, and then send it off to the RFI submissions service which processes and routes the submissions to Undergrad, Grad, and ASUOnline middleware destinations so that the RFI request ultimately lands in the appropriate Salesforce destination.
 
-## Installation requirements:
+#### Installation
 
-`@asu/bootstrap4-theme` is required. This should already be available via the UDS WordPress theme.
+`@asu/bootstrap4-theme` is required. This should already be available via an ASU branded WordPress theme on your site.
 
-Make sure to have included FontAwesome to allow icons to be shown: `yarn add @asu/components-core@dev`. UDS WordPress theme should already provide this.
+Make sure to have included FontAwesome to allow icons to be shown: `@asu/components-core@dev`. An ASU branded WordPress theme should already provide this module.
 
 Additionally, Google Tag Manager (GTM) and a dataLayer must be provided by the website launching the RFI component so Google Analytics data can be properly included as hidden field data in submissions. See the Header Guide on https://unity.web.asu.edu for details about GTM options to fit your ASU site.
 
@@ -85,6 +49,14 @@ You must have a Source ID configured in your host site in order to successfully 
 RECOMMENDED: See /example/rfi.html for a complete, HTML + vanilla Javascript example of incorporating the RFI component into an HTML page and launching it. Includes example and description of the props to use to configure the RFI form. It should work if you open the file in your browser, allowing you to get to know the RFI component.
 
 See the the [Unity Storybook for the RFI component](https://unity.web.asu.edu/@asu-design-system/app-rfi/index.html?path=/story/uds-asurfi--rfi-default) for example configurations to match various use-cases.
+
+
+
+#### Changelog
+
+= 0.1.0 =
+* initial commits - AsuRfi components, degree-rfi-form Gutenberg block created.
+
 
 ## Important docs:
 

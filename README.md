@@ -29,6 +29,12 @@ This block uses `wp-scripts` for the build process:
 ## Available blocks
 
 * [ASU Degree RFI Form](#ASU-Degree-RFI-Form) - Gutenberg block to add the offical ASU Degree RFI Form to a page.
+    - [Installation and initial configuration](#installation-and-initial-configuration)
+		- [Changelog](#changelog)
+		- [Known issues](#known-issues-updated-3923))
+		- [ASU Degree Search REST API](#asu-degree-search-rest-api)
+		    - [Example API queries](#degree-search-rest-api-queries-for-reference)
+				- [Available methods](#available-methods)
 
 ### ASU Degree RFI Form
 
@@ -36,7 +42,7 @@ From the original asu-unity-stack component README:
 
 > The ASU RFI Component is a React-powered Request for Information form. It is intended to be implemented by a CMS module/plugin/extension that must provide a local endpoint to receive the component's submission payload and add the host's source ID (which serves as an API key and identifier) to the payload, and then send it off to the RFI submissions service which processes and routes the submissions to Undergrad, Grad, and ASUOnline middleware destinations so that the RFI request ultimately lands in the appropriate Salesforce destination.
 
-#### Installation
+#### Installation and initial configuration
 
 `@asu/bootstrap4-theme` is required. This should already be available via an ASU branded WordPress theme on your site.
 
@@ -56,9 +62,8 @@ See the the [Unity Storybook for the RFI component](https://unity.web.asu.edu/@a
 = 0.1.0 =
 * initial commits - AsuRfi components, degree-rfi-form Gutenberg block created.
 
-## Known issues (updated 3/1/23)
+## Known issues (updated 3/9/23)
 * Using the `@asu/app-rfi` packages from a remote reponsitory is causing build issues, currently they are imported locally from `/resources`
-* In editor mode, block is only able to be selected through List View, clicking on the block does not make it active to edit.
 
 ### To-do list before 1.0 release
 * Test submissions on live endpoint

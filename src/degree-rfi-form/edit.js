@@ -10,6 +10,7 @@ import { AsuRfi } from "../../resources/asu-degree-rfi/src/components/AsuRfi";
 // import Controls from './controls';
 import Inspector from './inspector';
 import { BlockPreview } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
 
 
 /**
@@ -68,7 +69,7 @@ const Edit = ( props ) => {
 		<>
 			<Inspector { ...props } />
 
-			<div className={ className }>
+			<div {...useBlockProps()}>
       <BlockPreview block={ AsuRfi } viewportWidth={ 800 } />
 				<AsuRfi { ...args } />
 			</div>

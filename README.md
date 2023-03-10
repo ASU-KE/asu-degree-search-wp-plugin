@@ -31,7 +31,7 @@ This block uses `wp-scripts` for the build process:
 * [ASU Degree RFI Form](#ASU-Degree-RFI-Form) - Gutenberg block to add the offical ASU Degree RFI Form to a page.
     - [Installation and initial configuration](#installation-and-initial-configuration)
 		- [Changelog](#changelog)
-		- [Known issues](#known-issues-updated-3923))
+		- [Known issues](#known-issues-updated-3923)
 		- [ASU Degree Search REST API](#asu-degree-search-rest-api)
 		    - [Example API queries](#degree-search-rest-api-queries-for-reference)
 				- [Available methods](#available-methods)
@@ -247,7 +247,7 @@ Most of these props either configure the submission process or pre-configure the
 | **department** | <code>string</code> | <code>undefined</code>  | Use one department code. See <code>DepartmentCode</code> values in Degree Search API query. |
 | **studentType** | <code>string</code> |<code>"undergrad"</code>  | <code>undergrad, graduate</code> |
 | **areaOfInterest** | <code>string</code> | <code>""</code> | <code>planCatDescr</code> values from Degree Search API query. |
-| **programOfInterest** | <code>string</code> | <code>string</code> | <code>AcadPlan</code> from Degree Search API query. <code>Descr100</code> is used as label for this value in RFI UIs|
+| **programOfInterest** | <code>string</code> | <code>""</code> | <code>AcadPlan</code> from Degree Search API query. <code>Descr100</code> is used as label for this value in RFI UIs|
 | **programOfInterestOptional** | <code>boolean</code> | <code>false</code> | Sets <code>programOfInterest</code> as an optional field. |
 | **isCertMinor** | <code>boolean</code> | <code>false</code> | <code>true</code> value sets form into certificate/minor mode, which simply displays the success message screen. These programs have a different admissions pipeline.
 | **country** | <code>string</code> | <code>undefined</code> | see data used by RFI in https://api.myasuplat-dpl.asu.edu/api/codeset/countries |

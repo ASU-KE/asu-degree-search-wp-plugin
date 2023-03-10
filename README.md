@@ -246,8 +246,8 @@ Most of these props either configure the submission process or pre-configure the
 | **college** | <code>string</code> | <code>undefined</code>  | Use one <code>acadOrgCode</code> from reference https://api.myasuplat-dpl.asu.edu/api/codeset/colleges |
 | **department** | <code>string</code> | <code>undefined</code>  | Use one department code. See <code>DepartmentCode</code> values in Degree Search API query. |
 | **studentType** | <code>string</code> |<code>"undergrad"</code>  | <code>undergrad, graduate</code> |
-| **areaOfInterest** | <code>string</code> | <code>""</code> | <code>planCatDescr</code> values from Degree Search API query. |
-| **programOfInterest** | <code>string</code> | <code>""</code> | <code>AcadPlan</code> from Degree Search API query. <code>Descr100</code> is used as label for this value in RFI UIs|
+| **areaOfInterest** | <code>string</code> | <code>""</code> | <code>planCatDescr</code> values from Degree Search API query. For block validation, WordPress is expecting an empty string, while the react app takes the empty string and casts it to <code>undefined</code>. |
+| **programOfInterest** | <code>string</code> | <code>""</code> | <code>AcadPlan</code> from Degree Search API query. <code>Descr100</code> is used as label for this value in RFI UIs. For block validation, WordPress is expecting an empty string, while the react app takes the empty string and casts it to <code>undefined</code>. |
 | **programOfInterestOptional** | <code>boolean</code> | <code>false</code> | Sets <code>programOfInterest</code> as an optional field. |
 | **isCertMinor** | <code>boolean</code> | <code>false</code> | <code>true</code> value sets form into certificate/minor mode, which simply displays the success message screen. These programs have a different admissions pipeline.
 | **country** | <code>string</code> | <code>undefined</code> | see data used by RFI in https://api.myasuplat-dpl.asu.edu/api/codeset/countries |

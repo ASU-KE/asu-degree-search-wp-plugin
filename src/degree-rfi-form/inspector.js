@@ -3,13 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
-import {
-	PanelBody,
-	PanelRow,
-	// SelectControl,
-	TextControl,
-	ToggleControl,
-} from '@wordpress/components';
+import { PanelBody, PanelRow, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
 
 /**
  * Inspector controls
@@ -49,23 +43,28 @@ const Inspector = ( props ) => {
 					initialOpen={ false }
 				>
 					<PanelRow>
-						<TextControl
-							label={ 'Campus type' }
-							help={ 'Type of campus: GROUND, ONLNE, NOPREF' }
+						<SelectControl
+							label={'Campus type'}
+							help={ 'Type of campus: Ground, Online, or no preference' }
 							value={ campus }
-							onChange={ ( value ) =>
-								setAttributes( { campus: value } )
-							}
+							options={[
+								{ label: 'Ground', value: 'GROUND' },
+								{ label: 'Online', value: 'ONLNE' },
+								{ label: 'No preference', value: 'NOPREF' }
+							]}
+							onChange={ ( value ) => setAttributes( { campus: value } ) }
+							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
 					<PanelRow>
-						<TextControl
-							label={ 'Student type' }
-              help={ 'Student type: undergrad, graduate'}
+						<SelectControl
+							label={'Student type'}
+							help={ 'Student type: Undergraduate or Graduate' }
 							value={ studentType }
-							onChange={ ( value ) =>
-								setAttributes( { studentType: value } )
-							}
+							options={[
+								{ label: 'Undergraduate', value: 'undergrad' },{ label: 'Graduate', value: 'graduate' }]}
+							onChange={ ( value ) => setAttributes( { studentType: value } ) }
+							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
 				</PanelBody>

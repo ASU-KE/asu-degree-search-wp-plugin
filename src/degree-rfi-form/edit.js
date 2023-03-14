@@ -9,7 +9,6 @@ import { AsuRfi } from "../../resources/asu-degree-rfi/src/components/AsuRfi";
  */
 // import Controls from './controls';
 import Inspector from './inspector';
-import { BlockPreview } from '@wordpress/block-editor';
 import { useBlockProps } from "@wordpress/block-editor";
 
 
@@ -20,6 +19,7 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 
 const Edit = ( props ) => {
+	console.log(`starting props: ${JSON.stringify(props)}`);
 	const {
 		attributes: {
 			campus,
@@ -39,11 +39,11 @@ const Edit = ( props ) => {
 			dataSourceAsuOnline,
 			dataSourceCountriesStates,
 			submissionUrl,
-      sourceID
+			sourceID
 		},
 		className,
 	} = props;
-
+	console.log(`attribute props: ${JSON.stringify(props)}`);
 	const args = {
 		campus,
 		actualCampus,
@@ -64,14 +64,15 @@ const Edit = ( props ) => {
 		submissionUrl,
     sourceID
 	};
-
+	console.log(`args: ${JSON.stringify(args)}`);
 	return (
 		<>
 			<Inspector { ...props } />
 
 			<div {...useBlockProps()}>
-      <BlockPreview block={ AsuRfi } viewportWidth={ 800 } />
-				<AsuRfi { ...args } />
+				<AsuRfi { ...args }
+				areaOfInterest={args.areaOfInterest || undefined}
+				programOfInterest={args.programOfInterest || undefined} />
 			</div>
 		</>
 	);

@@ -38,14 +38,7 @@
     },
     "actualCampus": {
       "type": "string",
-      "enum": [
-        "TEMPE",
-        "DTPHX",
-        "POLY",
-        "WEST",
-        "ONLNE"
-      ],
-      "default": "TEMPE"
+      "default": ""
     },
     "studentType": {
       "type": "string",

@@ -14,7 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			campus,
-			// actualCampus,
+			actualCampus,
 			// college,
 			// department,
 			studentType,
@@ -42,6 +42,23 @@ const Inspector = ( props ) => {
 					title={ __( 'Program selection', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<SelectControl
+							label={'Campus location'}
+							help={ 'Narrow down programs to a specific location, or no preference' }
+							value={ actualCampus }
+							options={[
+								{ label: 'No preference', value: "" },
+								{ label: 'Tempe', value: 'TEMPE' },
+								{ label: 'Downtown Phoenix', value: 'DTPHX' },
+								{ label: 'Polytechnic', value: 'POLY' },
+								{ label: 'West', value: 'WEST' },
+								{ label: 'Online', value: 'ONLNE' }
+							]}
+							onChange={ ( value ) => setAttributes( { actualCampus: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
 					<PanelRow>
 						<SelectControl
 							label={'Campus type'}

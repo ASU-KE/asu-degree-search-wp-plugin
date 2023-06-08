@@ -72,7 +72,8 @@ const Edit = ( props ) => {
 			<div {...useBlockProps()}>
 				<AsuRfi { ...args }
 				areaOfInterest={args.areaOfInterest || undefined}
-				programOfInterest={args.programOfInterest || undefined} />
+				programOfInterest={args.programOfInterest || undefined}
+				actualCampus={args.actualCampus || undefined} />
 			</div>
 		</>
 	);

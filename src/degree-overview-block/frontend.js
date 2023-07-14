@@ -11,10 +11,12 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	// const hero = listingBlock.dataset.hero
 	// const introContent = listingBlock.dataset.introcontent
 	// const programList = listingBlock.dataset.programlist
-	// const hasFilters = listingBlock.dataset.hasfilters
-	// const hasSearchBar = listingBlock.dataset.hassearchbar
+	const hasFilters = listingBlock.dataset.hasfilters === "true"
+	const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
 	const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
 	console.log(degreesPerPage)
+	console.log(hasFilters)
+	console.log(hasSearchBar)
 	const dataSource = {
         endpoint: "https://degrees.apps.asu.edu/t5/service",
         method: "findAllDegrees",
@@ -49,8 +51,8 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		  },
 		},
 		//introContent,
-		hasFilters: true, // OPTIONAL
-		hasSearchBar: true, // OPTIONAL
+		hasFilters: hasFilters, // OPTIONAL
+		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {
 		  dataSource: dataSource,
 		  // OPTIONAL
@@ -71,8 +73,8 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 			hero={ testProps.hero }
 			introContent={ testProps.introContent }
 			programList={ testProps.programList }
-			hasFilters={ testProps.hasFilters }
-			hasSearchBar={ testProps.hasSearchBar }
+			hasFilters={ hasFilters }
+			hasSearchBar={ hasSearchBar }
 			degreesPerPage={degreesPerPage}
 		/>,
 		listingBlock

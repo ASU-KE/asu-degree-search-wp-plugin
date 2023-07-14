@@ -66,11 +66,11 @@
     },
     "hasFilters": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "hasSearchBar": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "programList": {
       "type": "object",

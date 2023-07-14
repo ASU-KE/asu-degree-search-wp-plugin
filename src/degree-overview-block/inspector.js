@@ -90,8 +90,8 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
-							label={ 'hasFilters' }
-							help={'hasFilters'}
+							label={ 'User filtering' }
+							help={'Show or hide degree filtering controls (Campuses or online, ASU location, ASU LocalAccelerated, Concurrent)'}
 							checked={ hasFilters }
               onChange={ (value) => {
                 value ? false : true
@@ -102,8 +102,8 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
-							label={ 'hasSearchBar' }
-							help={'hasSearchBar'}
+							label={ 'Search bar' }
+							help={'Show or hide search degree programs via text input'}
 							checked={ hasSearchBar }
               onChange={ (value) => {
                 value ? false : true

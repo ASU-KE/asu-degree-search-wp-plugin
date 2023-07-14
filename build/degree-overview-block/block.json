@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "asu-degree-search/degree-overview-block",
+  "version": "1.0.0",
+  "title": "ASU Degree Overview",
+  "category": "uds",
+  "keywords": [
+    "ASU",
+    "overview",
+    "block",
+    "degree"
+  ],
+  "icon": "list-view",
+  "description": "Provide a degree overview block, that will display cards of degrees for a school or college.",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "asu-degree-search",
+  "viewScript": [
+    "file:./frontend.js",
+    "asu-degree-overview-view-script"
+  ],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "actionUrls": {
+      "type": "object",
+      "default": {
+        "majorInfoUrl": "/examples/detail-page.html?acadPlan={BAACCBS}"
+      }
+    },
+    "degreesPerPage": {
+      "type": "string",
+      "default": "8"
+    },
+    "hero": {
+      "type": "string",
+      "default": "/resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
+    },
+    "introContent": {
+      "type": "object",
+      "default": {
+        "type": "text",
+        "title": {
+          "text": "This is introductory marketing copy. Lorem ipsum dolor sit amet"
+        },
+        "contents": [
+          {
+            "text": "Lorem, ipsum dolorsit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?"
+          }
+        ]
+      }
+    },
+    "studentType": {
+      "type": "string",
+      "enum": [
+        "undergrad",
+        "graduate"
+      ],
+      "default": "undergrad"
+    },
+    "hasFilters": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasSearchBar": {
+      "type": "boolean",
+      "default": false
+    },
+    "programList": {
+      "type": "object",
+      "default": {
+        "dataSource": {
+          "endpoint": "https://degrees.apps.asu.edu/t5/service",
+          "method": "findAllDegrees",
+          "init": "false",
+          "program": "undergrad",
+          "cert": "false"
+        },
+        "settings": {
+          "hideCollegeSchool": true,
+          "defaultView": "list-view",
+          "cardDefaultImage": {
+            "url": "examples/assets/img/ds_header_undergrad.jpg"
+          }
+        }
+      }
+    }
+  }
+}

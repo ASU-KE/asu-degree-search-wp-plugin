@@ -14,6 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceCollegeAcadOrg,
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
@@ -73,12 +74,16 @@ const Inspector = ( props ) => {
 							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
-				</PanelBody>
-
-				<PanelBody
-					title={ __( 'Program filtering', 'unityblocks' ) }
-					initialOpen={ false }
-				>
+					<PanelRow>
+						<TextControl
+							label={ 'College Academic Org' }
+              				help={'OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all'}
+							value={ dataSourceCollegeAcadOrg }
+							onChange={ ( value ) =>
+								setAttributes( { dataSourceCollegeAcadOrg: value } )
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Degrees Per Page' }
@@ -86,16 +91,6 @@ const Inspector = ( props ) => {
 							value={ degreesPerPage }
 							onChange={ ( value ) =>
 								setAttributes( { degreesPerPage: value } )
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<TextControl
-							label={ 'programList' }
-              help={'programList'}
-							value={ programList }
-							onChange={ ( value ) =>
-								setAttributes( { programList: value } )
 							}
 						/>
 					</PanelRow>
@@ -123,6 +118,25 @@ const Inspector = ( props ) => {
 
 						/>
 					</PanelRow>
+				</PanelBody>
+
+				<PanelBody
+					title={ __( 'Program filtering', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+
+					<PanelRow>
+						<TextControl
+							label={ 'programList' }
+              help={'programList'}
+							value={ programList }
+							onChange={ ( value ) =>
+								setAttributes( { programList: value } )
+							}
+						/>
+					</PanelRow>
+
+
 				</PanelBody>
 			</InspectorControls>
 		</>

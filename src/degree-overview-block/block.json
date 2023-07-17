@@ -27,6 +27,10 @@
 			"type":"string",
 			"default": "8"
 		},
+		"dataSourceCollegeAcadOrg": {
+			"type":"string",
+      "default": ""
+		},
 		"dataSourceProgram": {
 			"type":"string",
 			"enum": [ "undergrad", "graduate" ],

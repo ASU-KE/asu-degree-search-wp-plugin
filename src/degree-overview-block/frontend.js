@@ -11,6 +11,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	// const hero = listingBlock.dataset.hero
 	// const introContent = listingBlock.dataset.introcontent
 	// const programList = listingBlock.dataset.programlist
+	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -25,7 +26,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         init: "false", // "true" | "false"Î
         program: dataSourceProgram, // graduate | undergrad
         cert: "false", // "true" | "false"
-        // collegeAcadOrg: "CGF", // OPTIONAL example values: CLW, CTB, CTE
+        collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
         // departmentCode: "CSFIS", // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL
         // blacklistAcadPlans: ["BAACCBS", "LAACTBS"], // OPTIONAL example filters out Accountancy and Actuarial Science
       };

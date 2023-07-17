@@ -7,7 +7,7 @@
   "category": "uds",
   "keywords": ["ASU", "overview", "block", "degree"],
   "icon": "list-view",
-  "description": "Provide a degree overview block, that will display cards of degrees for a school or college.",
+  "description": "Provide a degree overview block, that will display cards or list of degrees for a school or college.",
   "supports": {
     "html": false,
     "align": ["wide", "full"]
@@ -26,6 +26,10 @@
 		"degreesPerPage": {
 			"type":"string",
 			"default": "8"
+		},
+		"dataSourceBlacklistAcadPlans": {
+			"type":"string",
+      "default": ""
 		},
 		"dataSourceCollegeAcadOrg": {
 			"type":"string",

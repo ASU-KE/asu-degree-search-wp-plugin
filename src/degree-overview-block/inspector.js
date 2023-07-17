@@ -14,6 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceBlacklistAcadPlans,
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
@@ -102,6 +103,16 @@ const Inspector = ( props ) => {
 							value={ degreesPerPage }
 							onChange={ ( value ) =>
 								setAttributes( { degreesPerPage: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Hide specific academic plan' }
+              				help={'OPTIONAL, example filters out Accountancy and Actuarial Science. Use comma seperated list for multiple - BAACCBS,LAACTBS'}
+							value={ dataSourceBlacklistAcadPlans }
+							onChange={ ( value ) =>
+								setAttributes( { dataSourceBlacklistAcadPlans: value } )
 							}
 						/>
 					</PanelRow>

@@ -22,6 +22,7 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceBlacklistAcadPlans,
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
@@ -38,6 +39,7 @@ const Edit = ( props ) => {
 	//console.log(`attribute props: ${JSON.stringify(props)}`);
 	const args = {
 		actionUrls,
+		dataSourceBlacklistAcadPlans,
 		dataSourceCollegeAcadOrg,
 		dataSourceDepartmentCode,
 		dataSourceProgram,

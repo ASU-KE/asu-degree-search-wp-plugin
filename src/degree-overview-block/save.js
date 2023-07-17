@@ -9,6 +9,7 @@ const save = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceBlacklistAcadPlans,
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
@@ -28,6 +29,7 @@ const save = ( props ) => {
 		id="asu-degree-overview-container"
 		{...useBlockProps.save()}
 			data-actionurls={ 'a string' }
+			data-dataSourceBlacklistAcadPlans={ dataSourceBlacklistAcadPlans }
 			data-dataSourceCollegeAcadOrg={ dataSourceCollegeAcadOrg }
 			data-dataSourceDepartmentCode={ dataSourceDepartmentCode }
 			data-dataSourceProgram={ dataSourceProgram }

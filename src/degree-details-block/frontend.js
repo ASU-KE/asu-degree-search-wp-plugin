@@ -78,7 +78,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  endpoint: "https://degrees.apps.asu.edu/t5/service",
 		  method: "findDegreeByAcadPlan",
 		  init: "false",
-		  acadPlan: "BABUSGLBA", // any valid acadPlan code
+		  acadPlan: dataSourceAcadPlan, // any valid acadPlan code example BABUSGLBA
 		  // acadPlan: "LSBISBIS", // this has marketText
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},

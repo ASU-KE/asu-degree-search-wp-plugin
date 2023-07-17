@@ -11,6 +11,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	// const hero = listingBlock.dataset.hero
 	// const introContent = listingBlock.dataset.introcontent
 	// const programList = listingBlock.dataset.programlist
+	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
 	const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
 	const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
@@ -58,7 +59,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		  // OPTIONAL
 		  settings: {
 			hideCollegeSchool: false,
-			defaultView: "list-view", // "grid-view""grid-view" or "list-view"
+			defaultView: defaultView, // "grid-view""grid-view" or "list-view"
 			cardDefaultImage: {
 			  url: `examples/assets/img/ds_header_undergrad.jpg`,
 			}

@@ -38,6 +38,14 @@
       "type": "string",
       "default": "8"
     },
+    "defaultView": {
+      "type": "string",
+      "enum": [
+        "grid-view",
+        "list-view"
+      ],
+      "default": "list-view"
+    },
     "hero": {
       "type": "string",
       "default": "/resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"

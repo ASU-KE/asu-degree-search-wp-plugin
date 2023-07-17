@@ -9,6 +9,7 @@ const save = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			defaultView,
 			degreesPerPage,
 			hero,
 			introContent,
@@ -24,6 +25,7 @@ const save = ( props ) => {
 		id="asu-degree-overview-container"
 		{...useBlockProps.save()}
 			data-actionurls={ 'a string' }
+			data-defaultView={ defaultView }
 			data-degreesPerPage={ degreesPerPage }
 			data-hero={ hero }
 			data-introContent={ introContent }

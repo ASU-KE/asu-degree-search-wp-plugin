@@ -14,6 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			defaultView,
 			degreesPerPage,
 			hero,
 			introContent,
@@ -33,18 +34,14 @@ const Inspector = ( props ) => {
 				>
 					<PanelRow>
 						<SelectControl
-							label={'actionUrls'}
-							help={ 'actionUrls' }
-							value={ actionUrls }
+							label={'View style'}
+							help={ 'The degree overview list can be styled as a list or cards.' }
+							value={ defaultView }
 							options={[
-								{ label: 'No preference', value: "" },
-								{ label: 'Tempe', value: 'TEMPE' },
-								{ label: 'Downtown Phoenix', value: 'DTPHX' },
-								{ label: 'Polytechnic', value: 'POLY' },
-								{ label: 'West', value: 'WEST' },
-								{ label: 'Online', value: 'ONLNE' }
+								{ label: 'Grid style', value: "grid-view" },
+								{ label: 'List style', value: "list-view" }
 							]}
-							onChange={ ( value ) => setAttributes( { actionUrls: value } ) }
+							onChange={ ( value ) => setAttributes( { defaultView: value } ) }
 							__nextHasNoMarginBottom
 						/>
 					</PanelRow>

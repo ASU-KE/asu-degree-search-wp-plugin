@@ -14,6 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
 			hero,
@@ -32,6 +33,19 @@ const Inspector = ( props ) => {
 					title={ __( 'Program selection', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<SelectControl
+							label={'Program level'}
+							help={ 'Display undergrad or graduate programs.' }
+							value={ dataSourceProgram }
+							options={[
+								{ label: 'undergrad', value: "undergrad" },
+								{ label: 'graduate', value: "graduate" }
+							]}
+							onChange={ ( value ) => setAttributes( { dataSourceProgram: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
 					<PanelRow>
 						<SelectControl
 							label={'View style'}

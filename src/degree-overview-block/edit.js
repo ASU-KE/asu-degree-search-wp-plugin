@@ -22,6 +22,7 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			actionUrls,
+			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
 			hero,
@@ -35,6 +36,7 @@ const Edit = ( props ) => {
 	//console.log(`attribute props: ${JSON.stringify(props)}`);
 	const args = {
 		actionUrls,
+		dataSourceProgram,
 		defaultView,
 		degreesPerPage,
 		hero,

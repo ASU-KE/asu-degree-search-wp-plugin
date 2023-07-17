@@ -27,6 +27,11 @@
 			"type":"string",
 			"default": "8"
 		},
+		"dataSourceProgram": {
+			"type":"string",
+			"enum": [ "undergrad", "graduate" ],
+      "default": "undergrad"
+		},
 		"defaultView": {
 			"type":"string",
 			"enum": [ "grid-view", "list-view" ],

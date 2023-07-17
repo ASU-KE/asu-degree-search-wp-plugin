@@ -11,6 +11,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	// const hero = listingBlock.dataset.hero
 	// const introContent = listingBlock.dataset.introcontent
 	// const programList = listingBlock.dataset.programlist
+	const dataSourceProgram = listingBlock.dataset.datasourceprogram
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
 	const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
@@ -22,7 +23,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         endpoint: "https://degrees.apps.asu.edu/t5/service",
         method: "findAllDegrees",
         init: "false", // "true" | "false"Î
-        program: "undergrad", // graduate | undergrad
+        program: dataSourceProgram, // graduate | undergrad
         cert: "false", // "true" | "false"
         // collegeAcadOrg: "CGF", // OPTIONAL example values: CLW, CTB, CTE
         // departmentCode: "CSFIS", // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL
@@ -37,7 +38,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
       };
 
-	let testProps = {
+	let customProps = {
 		appPathFolder: "http://localhost:3000/dist",
 		actionUrls: actionUrls,
 		hero: {
@@ -59,7 +60,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		  // OPTIONAL
 		  settings: {
 			hideCollegeSchool: false,
-			defaultView: defaultView, // "grid-view""grid-view" or "list-view"
+			defaultView: defaultView, //"grid-view" or "list-view"
 			cardDefaultImage: {
 			  url: `examples/assets/img/ds_header_undergrad.jpg`,
 			}
@@ -71,9 +72,9 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	render(
 		<ListingPage
 			actionUrls={ actionUrls }
-			hero={ testProps.hero }
-			introContent={ testProps.introContent }
-			programList={ testProps.programList }
+			//hero={ customProps.hero }
+			introContent={ customProps.introContent }
+			programList={ customProps.programList }
 			hasFilters={ hasFilters }
 			hasSearchBar={ hasSearchBar }
 			degreesPerPage={degreesPerPage}

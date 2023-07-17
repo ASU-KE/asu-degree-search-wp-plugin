@@ -42,6 +42,10 @@
       "type": "string",
       "default": ""
     },
+    "dataSourceDepartmentCode": {
+      "type": "string",
+      "default": ""
+    },
     "dataSourceProgram": {
       "type": "string",
       "enum": [

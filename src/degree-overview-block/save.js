@@ -10,6 +10,7 @@ const save = ( props ) => {
 		attributes: {
 			actionUrls,
 			dataSourceCollegeAcadOrg,
+			dataSourceDepartmentCode,
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
@@ -28,6 +29,7 @@ const save = ( props ) => {
 		{...useBlockProps.save()}
 			data-actionurls={ 'a string' }
 			data-dataSourceCollegeAcadOrg={ dataSourceCollegeAcadOrg }
+			data-dataSourceDepartmentCode={ dataSourceDepartmentCode }
 			data-dataSourceProgram={ dataSourceProgram }
 			data-defaultView={ defaultView }
 			data-degreesPerPage={ degreesPerPage }

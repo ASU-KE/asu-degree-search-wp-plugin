@@ -15,6 +15,7 @@ const Inspector = ( props ) => {
 		attributes: {
 			actionUrls,
 			dataSourceCollegeAcadOrg,
+			dataSourceDepartmentCode,
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
@@ -77,10 +78,20 @@ const Inspector = ( props ) => {
 					<PanelRow>
 						<TextControl
 							label={ 'College Academic Org' }
-              				help={'OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all'}
+              				help={'OPTIONAL example values: CLW, CTB, CTE, CGF - empty string to see all'}
 							value={ dataSourceCollegeAcadOrg }
 							onChange={ ( value ) =>
 								setAttributes( { dataSourceCollegeAcadOrg: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Department Code' }
+              				help={'OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS - empty string to see all'}
+							value={ dataSourceDepartmentCode }
+							onChange={ ( value ) =>
+								setAttributes( { dataSourceDepartmentCode: value } )
 							}
 						/>
 					</PanelRow>

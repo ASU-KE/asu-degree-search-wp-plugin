@@ -23,6 +23,7 @@ const Edit = ( props ) => {
 		attributes: {
 			actionUrls,
 			dataSourceCollegeAcadOrg,
+			dataSourceDepartmentCode,
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
@@ -38,6 +39,7 @@ const Edit = ( props ) => {
 	const args = {
 		actionUrls,
 		dataSourceCollegeAcadOrg,
+		dataSourceDepartmentCode,
 		dataSourceProgram,
 		defaultView,
 		degreesPerPage,

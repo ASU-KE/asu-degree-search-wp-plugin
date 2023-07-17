@@ -12,14 +12,14 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	// const introContent = listingBlock.dataset.introcontent
 	// const programList = listingBlock.dataset.programlist
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
+	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
+
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
 	const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
 	const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
-	console.log(degreesPerPage)
-	console.log(hasFilters)
-	console.log(hasSearchBar)
+
 	const dataSource = {
         endpoint: "https://degrees.apps.asu.edu/t5/service",
         method: "findAllDegrees",
@@ -27,7 +27,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         program: dataSourceProgram, // graduate | undergrad
         cert: "false", // "true" | "false"
         collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
-        // departmentCode: "CSFIS", // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL
+        departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
         // blacklistAcadPlans: ["BAACCBS", "LAACTBS"], // OPTIONAL example filters out Accountancy and Actuarial Science
       };
 

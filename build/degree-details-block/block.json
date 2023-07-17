@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "asu-degree-search/degree-details-block",
+  "version": "1.0.0",
+  "title": "ASU Degree Details",
+  "category": "uds",
+  "keywords": [
+    "ASU",
+    "details",
+    "block",
+    "degree"
+  ],
+  "icon": "list-view",
+  "description": "Provide a degree detail block, that will display all information about a specific degree.",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "asu-degree-search",
+  "viewScript": [
+    "file:./frontend.js",
+    "asu-degree-detail-view-script"
+  ],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "dataSourceAcadPlan": {
+      "type": "string",
+      "default": "BABUSGLBA"
+    }
+  }
+}

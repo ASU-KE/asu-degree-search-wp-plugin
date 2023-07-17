@@ -23,5 +23,6 @@
 function create_block_asu_degree_search_wp_plugin_block_init() {
 	register_block_type( __DIR__ . '/build/degree-rfi-form' );
 	register_block_type( __DIR__ . '/build/degree-overview-block' );
+	register_block_type( __DIR__ . '/build/degree-details-block' );
 }
 add_action( 'init', 'create_block_asu_degree_search_wp_plugin_block_init' );

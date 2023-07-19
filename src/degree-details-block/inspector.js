@@ -18,6 +18,8 @@ const Inspector = ( props ) => {
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,
+			anchorMenuAffordingCollege,
+			anchorMenuFlexibleDegreeOptions,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -86,6 +88,30 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuNextSteps: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Affording college' }
+							help={'Show or hide Affording college link'}
+							checked={ anchorMenuAffordingCollege }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuAffordingCollege: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Flexible degree options' }
+							help={'Show or hide Flexible degree options link'}
+							checked={ anchorMenuFlexibleDegreeOptions }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuFlexibleDegreeOptions: value} );
 								}
 							}
 						/>

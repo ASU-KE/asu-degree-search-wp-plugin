@@ -48,6 +48,14 @@
       "type": "boolean",
       "default": false
     },
+    "anchorMenuAffordingCollege": {
+      "type": "boolean",
+      "default": false
+    },
+    "anchorMenuFlexibleDegreeOptions": {
+      "type": "boolean",
+      "default": false
+    },
     "dataSourceAcadPlan": {
       "type": "string",
       "default": "BABUSGLBA"

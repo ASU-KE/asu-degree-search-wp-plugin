@@ -44,6 +44,10 @@
       "type": "boolean",
       "default": false
     },
+    "anchorMenuNextSteps": {
+      "type": "boolean",
+      "default": false
+    },
     "dataSourceAcadPlan": {
       "type": "string",
       "default": "BABUSGLBA"

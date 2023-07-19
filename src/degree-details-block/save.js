@@ -12,6 +12,7 @@ const save = ( props ) => {
 			anchorMenuAtAGlance,
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuNextSteps,
 			dataSourceAcadPlan
 		},
 		className,
@@ -25,6 +26,7 @@ const save = ( props ) => {
 			data-anchorMenuAtAGlance={ anchorMenuAtAGlance }
 			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
 			data-anchorMenuChangeMajorRequirements={ anchorMenuChangeMajorRequirements }
+			data-anchorMenuNextSteps={ anchorMenuNextSteps }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }
 		></div>
 	);

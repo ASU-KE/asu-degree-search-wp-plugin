@@ -17,6 +17,7 @@ const Inspector = ( props ) => {
 			anchorMenuAtAGlance,
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuNextSteps,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -73,6 +74,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuChangeMajorRequirements: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Next steps' }
+							help={'Show or hide next steps link'}
+							checked={ anchorMenuNextSteps }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuNextSteps: value} );
 								}
 							}
 						/>

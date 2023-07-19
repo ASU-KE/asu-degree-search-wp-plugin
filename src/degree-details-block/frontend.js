@@ -20,6 +20,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuAtAGlance = detailBlock.dataset.anchormenuataglance === "true"
 	const anchorMenuApplicationRequirements = detailBlock.dataset.anchormenuapplicationrequirements === "true"
 	const anchorMenuChangeMajorRequirements = detailBlock.dataset.anchormenuchangemajorrequirements === "true"
+	const anchorMenuNextSteps = detailBlock.dataset.anchormenunextsteps === "true"
 
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -104,7 +105,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  atAGlance: anchorMenuAtAGlance,
 		  applicationRequirements: anchorMenuApplicationRequirements,
 		  changeMajorRequirements: anchorMenuChangeMajorRequirements,
-		  nextSteps: false,
+		  nextSteps: anchorMenuNextSteps,
 		  affordingCollege: false,
 		  flexibleDegreeOptions: false,
 		  careerOutlook: false,

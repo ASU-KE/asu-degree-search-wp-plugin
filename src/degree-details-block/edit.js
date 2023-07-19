@@ -25,6 +25,7 @@ const Edit = ( props ) => {
 			anchorMenuAtAGlance,
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuNextSteps,
 			dataSourceAcadPlan
 		},
 		className,
@@ -34,6 +35,8 @@ const Edit = ( props ) => {
 		anchorMenuEnabled,
 		anchorMenuAtAGlance,
 		anchorMenuApplicationRequirements,
+		anchorMenuChangeMajorRequirements,
+		anchorMenuNextSteps,
 		dataSourceAcadPlan
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);

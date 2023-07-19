@@ -24,6 +24,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuAffordingCollege = detailBlock.dataset.anchormenuaffordingcollege === "true"
 	const anchorMenuFlexibleDegreeOptions = detailBlock.dataset.anchormenuflexibledegreeoptions === "true"
 	const anchorMenuCareerOutlook = detailBlock.dataset.anchormenucareeroutlook === "true"
+	const anchorMenuExampleCareers = detailBlock.dataset.anchormenuexamplecareers === "true"
+	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
+	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -112,11 +115,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  affordingCollege: anchorMenuAffordingCollege,
 		  flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 		  careerOutlook: anchorMenuCareerOutlook,
-		  exampleCareers: false,
-		  customizeYourCollegeExperience: false,
-		  globalOpportunity: false,
-		  attendOnline: false,
-		  programContactInfo: false,
+		  exampleCareers: anchorMenuExampleCareers,
+		  globalOpportunity: anchorMenuGlobalOpportunity,
+		  programContactInfo: anchorMenuProgramContactInfo,
 		//   externalAnchors: [
 		//     {
 		//       targetIdName: "my-request-form-info-id",

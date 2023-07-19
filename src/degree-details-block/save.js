@@ -16,6 +16,9 @@ const save = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
+			anchorMenuExampleCareers,
+			anchorMenuGlobalOpportunity,
+			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan
 		},
 		className,
@@ -33,6 +36,9 @@ const save = ( props ) => {
 			data-anchorMenuAffordingCollege={ anchorMenuAffordingCollege }
 			data-anchorMenuFlexibleDegreeOptions={ anchorMenuFlexibleDegreeOptions }
 			data-anchorMenuCareerOutlook={ anchorMenuCareerOutlook }
+			data-anchorMenuExampleCareers={ anchorMenuExampleCareers }
+			data-anchorMenuGlobalOpportunity={ anchorMenuGlobalOpportunity }
+			data-anchorMenuProgramContactInfo={ anchorMenuProgramContactInfo }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }
 		></div>
 	);

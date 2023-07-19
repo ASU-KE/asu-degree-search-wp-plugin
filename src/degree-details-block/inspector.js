@@ -21,6 +21,9 @@ const Inspector = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
+			anchorMenuExampleCareers,
+			anchorMenuGlobalOpportunity,
+			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -125,6 +128,42 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuCareerOutlook: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - example careers' }
+							help={'Show or hide example careers link'}
+							checked={ anchorMenuExampleCareers }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuExampleCareers: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - global opportunity' }
+							help={'Show or hide global opportunity link'}
+							checked={ anchorMenuGlobalOpportunity }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuGlobalOpportunity: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - program contact info' }
+							help={'Show or hide program contact info link'}
+							checked={ anchorMenuProgramContactInfo }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuProgramContactInfo: value} );
 								}
 							}
 						/>

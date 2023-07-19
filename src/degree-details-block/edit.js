@@ -29,6 +29,9 @@ const Edit = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
+			anchorMenuExampleCareers,
+			anchorMenuGlobalOpportunity,
+			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan
 		},
 		className,
@@ -43,6 +46,9 @@ const Edit = ( props ) => {
 		anchorMenuAffordingCollege,
 		anchorMenuFlexibleDegreeOptions,
 		anchorMenuCareerOutlook,
+		anchorMenuExampleCareers,
+		anchorMenuGlobalOpportunity,
+		anchorMenuProgramContactInfo,
 		dataSourceAcadPlan
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);

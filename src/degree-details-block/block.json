@@ -49,6 +49,18 @@
 			"type": "boolean",
 			"default": false
 		},
+		"anchorMenuExampleCareers":{
+			"type": "boolean",
+			"default": false
+		},
+		"anchorMenuGlobalOpportunity":{
+			"type": "boolean",
+			"default": false
+		},
+		"anchorMenuProgramContactInfo":{
+			"type": "boolean",
+			"default": false
+		},
     "dataSourceAcadPlan":{
 		"type": "string",
 		"default": "BABUSGLBA"

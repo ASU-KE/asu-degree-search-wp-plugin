@@ -15,6 +15,8 @@ const Inspector = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
+			anchorMenuApplicationRequirements,
+			anchorMenuChangeMajorRequirements,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -47,6 +49,30 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuAtAGlance: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Application Requirements' }
+							help={'Show or hide application requirements link'}
+							checked={ anchorMenuApplicationRequirements }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuApplicationRequirements: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Change Major Requirements' }
+							help={'Show or hide change major requirements link'}
+							checked={ anchorMenuChangeMajorRequirements }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuChangeMajorRequirements: value} );
 								}
 							}
 						/>

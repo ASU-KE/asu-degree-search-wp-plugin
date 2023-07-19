@@ -18,6 +18,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	// const dataSourceProgram = listingBlock.dataset.datasourceprogram
 	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
 	const anchorMenuAtAGlance = detailBlock.dataset.anchormenuataglance === "true"
+	const anchorMenuApplicationRequirements = detailBlock.dataset.anchormenuapplicationrequirements === "true"
+	const anchorMenuChangeMajorRequirements = detailBlock.dataset.anchormenuchangemajorrequirements === "true"
 
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -100,8 +102,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		// },
 		anchorMenu: {
 		  atAGlance: anchorMenuAtAGlance,
-		  applicationRequirements: false,
-		  changeMajorRequirements: false,
+		  applicationRequirements: anchorMenuApplicationRequirements,
+		  changeMajorRequirements: anchorMenuChangeMajorRequirements,
 		  nextSteps: false,
 		  affordingCollege: false,
 		  flexibleDegreeOptions: false,

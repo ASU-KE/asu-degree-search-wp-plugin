@@ -36,6 +36,14 @@
       "type": "boolean",
       "default": false
     },
+    "anchorMenuApplicationRequirements": {
+      "type": "boolean",
+      "default": false
+    },
+    "anchorMenuChangeMajorRequirements": {
+      "type": "boolean",
+      "default": false
+    },
     "dataSourceAcadPlan": {
       "type": "string",
       "default": "BABUSGLBA"

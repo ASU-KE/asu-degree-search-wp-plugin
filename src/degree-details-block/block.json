@@ -21,6 +21,10 @@
 			"type": "boolean",
 			"default": false
 		},
+		"anchorMenuAtAGlance":{
+			"type": "boolean",
+			"default": false
+		},
     "dataSourceAcadPlan":{
 		"type": "string",
 		"default": "BABUSGLBA"

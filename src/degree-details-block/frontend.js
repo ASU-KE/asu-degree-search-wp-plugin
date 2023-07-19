@@ -17,6 +17,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	// const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	// const dataSourceProgram = listingBlock.dataset.datasourceprogram
 	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
+	const anchorMenuAtAGlance = detailBlock.dataset.anchormenuataglance === "true"
 
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -98,7 +99,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   ],
 		// },
 		anchorMenu: {
-		  atAGlance: false,
+		  atAGlance: anchorMenuAtAGlance,
 		  applicationRequirements: false,
 		  changeMajorRequirements: false,
 		  nextSteps: false,

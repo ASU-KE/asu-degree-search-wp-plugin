@@ -22,6 +22,7 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
 			dataSourceAcadPlan
 		},
 		className,
@@ -29,6 +30,7 @@ const Edit = ( props ) => {
 	//console.log(`attribute props: ${JSON.stringify(props)}`);
 	const args = {
 		anchorMenuEnabled,
+		anchorMenuAtAGlance,
 		dataSourceAcadPlan
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);

@@ -9,6 +9,7 @@ const save = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
 			dataSourceAcadPlan
 		},
 		className,
@@ -19,6 +20,7 @@ const save = ( props ) => {
 		id="asu-degree-details-container"
 		{...useBlockProps.save()}
 			data-anchorMenuEnabled={ anchorMenuEnabled }
+			data-anchorMenuAtAGlance={ anchorMenuAtAGlance }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }
 		></div>
 	);

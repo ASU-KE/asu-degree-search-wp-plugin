@@ -14,6 +14,7 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -38,6 +39,19 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - At a Glance' }
+							help={'Show or hide At a Glance link'}
+							checked={ anchorMenuAtAGlance }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuAtAGlance: value} );
+								}
+							}
+						/>
+					</PanelRow>
+
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Data source', 'unityblocks' ) }

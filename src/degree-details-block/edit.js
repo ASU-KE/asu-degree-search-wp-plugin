@@ -32,7 +32,10 @@ const Edit = ( props ) => {
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
-			dataSourceAcadPlan
+			dataSourceAcadPlan,
+			heroImageUrl,
+			heroAltText,
+			heroImageSize
 		},
 		className,
 	} = props;
@@ -49,7 +52,10 @@ const Edit = ( props ) => {
 		anchorMenuExampleCareers,
 		anchorMenuGlobalOpportunity,
 		anchorMenuProgramContactInfo,
-		dataSourceAcadPlan
+		dataSourceAcadPlan,
+		heroImageUrl,
+		heroAltText,
+		heroImageSize
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

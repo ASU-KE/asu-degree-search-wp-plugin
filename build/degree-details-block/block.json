@@ -75,6 +75,23 @@
     "dataSourceAcadPlan": {
       "type": "string",
       "default": "BABUSGLBA"
+    },
+    "heroImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "heroAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "heroImageSize": {
+      "type": "string",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "medium"
     }
   }
 }

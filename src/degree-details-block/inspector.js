@@ -24,7 +24,10 @@ const Inspector = ( props ) => {
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
-			dataSourceAcadPlan
+			dataSourceAcadPlan,
+			heroImageUrl,
+			heroAltText,
+			heroImageSize
 		},
 		setAttributes,
 	} = props;
@@ -182,6 +185,45 @@ const Inspector = ( props ) => {
 							onChange={ ( value ) =>
 								setAttributes( { dataSourceAcadPlan: value } )
 							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Hero settings', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image URL' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ heroImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { heroImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image alt text' }
+              				help={'required for a11y '}
+							value={ heroAltText }
+							onChange={ ( value ) =>
+								setAttributes( { heroAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Hero image size'}
+							help={ 'Set hero height' }
+							value={ heroImageSize }
+							options={[
+								{ label: 'Small', value: 'small' },
+								{ label: 'Medium', value: 'medium' },
+								{ label: 'Large', value: 'large' }
+							]}
+							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
+							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
 				</PanelBody>

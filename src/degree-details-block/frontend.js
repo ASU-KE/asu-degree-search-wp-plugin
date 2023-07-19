@@ -2,20 +2,10 @@ const { render } = wp.element;
 
 import { DetailPage } from "../../resources/app-degree-pages/src/components/DetailPage"
 
-
-// It is possible to load multiple forms onto a page.
-// Load each DOM element on page using the Gutenberg-generated class for the Testimonial block
 const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
-	// //const actionUrls = listingBlock.dataset.actionurls
-	// // const hero = listingBlock.dataset.hero
-	// // const introContent = listingBlock.dataset.introcontent
-	// // const programList = listingBlock.dataset.programlist
 	const dataSourceAcadPlan = detailBlock.dataset.datasourceacadplan
-	console.log(dataSourceAcadPlan)
-	// const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
-	// const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
-	// const dataSourceProgram = listingBlock.dataset.datasourceprogram
+
 	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
 	const anchorMenuAtAGlance = detailBlock.dataset.anchormenuataglance === "true"
 	const anchorMenuApplicationRequirements = detailBlock.dataset.anchormenuapplicationrequirements === "true"
@@ -28,60 +18,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
 	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
+	const heroImageUrl = detailBlock.dataset.heroimageurl
+	const heroAltText = detailBlock.dataset.heroalttext
+	const heroImageSize = detailBlock.dataset.heroimagesize
+
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
 	// const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
 	// const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
 
-	// const dataSource = {
-    //     endpoint: "https://degrees.apps.asu.edu/t5/service",
-    //     method: "findAllDegrees",
-    //     init: "false", // "true" | "false"Î
-    //     program: dataSourceProgram, // graduate | undergrad
-    //     cert: "false", // "true" | "false"
-    //     collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
-    //     departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
-    //     blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
-    //   };
-
-	// const actionUrls = {
-    //     // applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
-    //     majorInfoUrl: `/examples/detail-page.html?acadPlan={ACAD_PLAN_CODE}`,
-    //     // majorInfoUrl:
-    //     //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
-    //     // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
-    //   };
-
-	// let customProps = {
-	// 	appPathFolder: "http://localhost:3000/dist",
-	// 	actionUrls: actionUrls,
-	// 	hero: {
-	// 	  image: {
-	// 	    url: "/programs/resources/images/ds_header_undergrad.jpg",
-	// 	    altText: "Undergraduate Degrees",
-	// 	    size: "medium",
-	// 	  },
-	// 	  title: {
-	// 	    text: "Undergraduate Degrees",
-	// 	    highlightColor: "gold",
-	// 	  },
-	// 	},
-	// 	//introContent,
-	// 	hasFilters: hasFilters, // OPTIONAL
-	// 	hasSearchBar: hasSearchBar, // OPTIONAL
-	// 	programList: {
-	// 	  dataSource: dataSource,
-	// 	  // OPTIONAL
-	// 	  settings: {
-	// 		hideCollegeSchool: false,
-	// 		defaultView: defaultView, //"grid-view" or "list-view"
-	// 		cardDefaultImage: {
-	// 		  url: `examples/assets/img/ds_header_undergrad.jpg`,
-	// 		}
-	// 	  }
-	// 	},
-	// 	degreesPerPage: degreesPerPage,
-	//   }
 
 	const customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -93,20 +38,6 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  // acadPlan: "LSBISBIS", // this has marketText
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
-		// anchorMenu: {
-		//   // atAGlance: true,
-		//   applicationRequirements: true,
-		//   nextSteps: true,
-		//   affordingCollege: true,
-		//   careerOutlook: true,
-		//   globalOpportunity: true,
-		//   externalAnchors: [
-		// 	{
-		// 	  targetIdName: "my-request-form-info-id",
-		// 	  text: "Request Information",
-		// 	},
-		//   ],
-		// },
 		anchorMenu: {
 		  atAGlance: anchorMenuAtAGlance,
 		  applicationRequirements: anchorMenuApplicationRequirements,
@@ -126,16 +57,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   ],
 		},
 		hero: {
-		  // OPTIONAL
-		  // image: {
-		  //   url: DOMAIN_URL + "/programs/resources/images/ds_header_undergrad.jpg",
-		  //   altText: "Undergraduate Degrees",
-		  //   size: "medium",
-		  // },
-		  title: {
-			text: "Undergraduate Degrees",
-			highlightColor: "gold",
+		  image: {
+		    url: heroImageUrl,
+		    altText: heroAltText,
+		    size: heroImageSize, //"medium",
 		  },
+		//   title: {
+		// 	text: "Undergraduate Degrees",
+		// 	highlightColor: "gold",
+		//   },
 		},
 		introContent: {
 		  // hideMarketText: true,
@@ -385,6 +315,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		<DetailPage
 		dataSource={ customProps.dataSource }
 		anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
+		hero={ customProps.hero }
 		/>,
 		detailBlock
 	);

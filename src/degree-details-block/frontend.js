@@ -22,6 +22,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const heroAltText = detailBlock.dataset.heroalttext
 	const heroImageSize = detailBlock.dataset.heroimagesize
 
+	const introContentImageUrl = detailBlock.dataset.introcontentimageurl
+	const introContentImageAltText = detailBlock.dataset.introcontentimagealttext
+
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
 	// const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
@@ -71,26 +74,25 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  // hideMarketText: true,
 		  // hideProgramDesc: true,
 		  // hideRequiredCourses: true,
-		  breadcrumbs: [
-			{
-			  text: "Academic programs",
-			  url: "#",
+		//   breadcrumbs: [
+		// 	{
+		// 	  text: "Academic programs",
+		// 	  url: "#",
+		// 	},
+		// 	{
+		// 	  text: "Undergraduate degrees",
+		// 	  url: "listing-page.html",
+		// 	},
+		// 	{
+		// 	  text: "Degree title",
+		// 	  url: "detail-page.html",
+		// 	  isActive: true,
+		// 	},
+		//   ],
+			image: {
+				url: introContentImageUrl,
+				altText: introContentImageAltText,
 			},
-			{
-			  text: "Undergraduate degrees",
-			  url: "listing-page.html",
-			},
-			{
-			  text: "Degree title",
-			  url: "detail-page.html",
-			  isActive: true,
-			},
-		  ],
-		  image: {
-			url: "https://source.unsplash.com/random/1200x750",
-			altText:
-			  "Random image. REPLACE with appropriate alt text for accessibility.",
-		  },
 		  // optional
 		  // video: {
 		  //   url: "/assets/video/stock-video-person-drawing.mp4",
@@ -106,34 +108,34 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  //   },
 		  // ],
 		},
-		atAGlance: {
-		  // hide: true,
-		  offeredBy: {
-			text: "Herberger Instite for Design and the Arts",
-			url: "#",
-		  },
-		  locations: [
-			{
-			  text: "Tempe campus",
-			  url: "#",
-			},
-			{
-			  text: "West campus",
-			  url: "#",
-			},
-			{
-			  text: "Online",
-			  url: "#",
-			},
-			{
-			  text: "ASU Local@Los Angeles",
-			  url: "#",
-			},
-		  ],
-		  firstRequirementMathCourse: "MAT 142 - College Mathematics",
-		  mathIntensity: "General",
-		  timeCommitment: "120 credit hours(about 4 years)",
-		},
+		// atAGlance: {
+		//   // hide: true,
+		//   offeredBy: {
+		// 	text: "Herberger Instite for Design and the Arts",
+		// 	url: "#",
+		//   },
+		//   locations: [
+		// 	{
+		// 	  text: "Tempe campus",
+		// 	  url: "#",
+		// 	},
+		// 	{
+		// 	  text: "West campus",
+		// 	  url: "#",
+		// 	},
+		// 	{
+		// 	  text: "Online",
+		// 	  url: "#",
+		// 	},
+		// 	{
+		// 	  text: "ASU Local@Los Angeles",
+		// 	  url: "#",
+		// 	},
+		//   ],
+		//   firstRequirementMathCourse: "MAT 142 - College Mathematics",
+		//   mathIntensity: "General",
+		//   timeCommitment: "120 credit hours(about 4 years)",
+		// },
 		// applicationRequirements: {
 		//   hide: true,
 		// },
@@ -316,6 +318,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		dataSource={ customProps.dataSource }
 		anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
 		hero={ customProps.hero }
+		introContent={ customProps.introContent }
 		/>,
 		detailBlock
 	);

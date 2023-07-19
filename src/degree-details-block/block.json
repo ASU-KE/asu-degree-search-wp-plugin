@@ -77,6 +77,14 @@
 		"type": "string",
 		"enum": [ "small", "medium", "large" ],
 		"default": "medium"
+	},
+	"introContentImageUrl":{
+		"type": "string",
+		"default": ""
+	},
+	"introContentImageAltText":{
+		"type": "string",
+		"default": ""
 	}
   }
 }

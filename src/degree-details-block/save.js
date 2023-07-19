@@ -22,7 +22,9 @@ const save = ( props ) => {
 			dataSourceAcadPlan,
 			heroImageUrl,
 			heroAltText,
-			heroImageSize
+			heroImageSize,
+			introContentImageUrl,
+			introContentImageAltText
 		},
 		className,
 	} = props;
@@ -46,6 +48,8 @@ const save = ( props ) => {
 			data-heroImageUrl={ heroImageUrl }
 			data-heroAltText={ heroAltText }
 			data-heroImageSize={ heroImageSize }
+			data-introContentImageUrl={ introContentImageUrl }
+			data-introContentImageAltText={ introContentImageAltText }
 		></div>
 	);
 };

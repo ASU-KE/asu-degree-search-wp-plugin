@@ -35,7 +35,9 @@ const Edit = ( props ) => {
 			dataSourceAcadPlan,
 			heroImageUrl,
 			heroAltText,
-			heroImageSize
+			heroImageSize,
+			introContentImageUrl,
+			introContentImageAltText
 		},
 		className,
 	} = props;
@@ -55,7 +57,9 @@ const Edit = ( props ) => {
 		dataSourceAcadPlan,
 		heroImageUrl,
 		heroAltText,
-		heroImageSize
+		heroImageSize,
+		introContentImageUrl,
+		introContentImageAltText
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

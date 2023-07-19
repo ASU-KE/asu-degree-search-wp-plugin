@@ -27,7 +27,9 @@ const Inspector = ( props ) => {
 			dataSourceAcadPlan,
 			heroImageUrl,
 			heroAltText,
-			heroImageSize
+			heroImageSize,
+			introContentImageUrl,
+			introContentImageAltText
 		},
 		setAttributes,
 	} = props;
@@ -224,6 +226,31 @@ const Inspector = ( props ) => {
 							]}
 							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
 							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Intro content', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Intro content image URL' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ introContentImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { introContentImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Intro content image alt text' }
+              				help={'required for a11y'}
+							value={ introContentImageAltText }
+							onChange={ ( value ) =>
+								setAttributes( { introContentImageAltText: value } )
+							}
 						/>
 					</PanelRow>
 				</PanelBody>

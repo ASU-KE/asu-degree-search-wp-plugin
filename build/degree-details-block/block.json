@@ -56,6 +56,10 @@
       "type": "boolean",
       "default": false
     },
+    "anchorMenuCareerOutlook": {
+      "type": "boolean",
+      "default": false
+    },
     "dataSourceAcadPlan": {
       "type": "string",
       "default": "BABUSGLBA"

@@ -20,6 +20,7 @@ const Inspector = ( props ) => {
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
+			anchorMenuCareerOutlook,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -112,6 +113,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuFlexibleDegreeOptions: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - career outlook' }
+							help={'Show or hide career outlook link'}
+							checked={ anchorMenuCareerOutlook }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuCareerOutlook: value} );
 								}
 							}
 						/>

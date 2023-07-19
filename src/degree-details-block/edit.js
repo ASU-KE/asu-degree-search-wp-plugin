@@ -21,12 +21,14 @@ const Edit = ( props ) => {
 	//console.log(`starting props: ${JSON.stringify(props)}`);
 	const {
 		attributes: {
+			anchorMenuEnabled,
 			dataSourceAcadPlan
 		},
 		className,
 	} = props;
 	//console.log(`attribute props: ${JSON.stringify(props)}`);
 	const args = {
+		anchorMenuEnabled,
 		dataSourceAcadPlan
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);

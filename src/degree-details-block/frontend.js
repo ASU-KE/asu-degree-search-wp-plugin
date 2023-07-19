@@ -16,6 +16,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	// const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	// const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	// const dataSourceProgram = listingBlock.dataset.datasourceprogram
+	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
 
 	// const defaultView = listingBlock.dataset.defaultview
 	// const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -82,40 +83,40 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  // acadPlan: "LSBISBIS", // this has marketText
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
-		anchorMenu: {
-		  // atAGlance: true,
-		  applicationRequirements: true,
-		  nextSteps: true,
-		  affordingCollege: true,
-		  careerOutlook: true,
-		  globalOpportunity: true,
-		  externalAnchors: [
-			{
-			  targetIdName: "my-request-form-info-id",
-			  text: "Request Information",
-			},
-		  ],
-		},
 		// anchorMenu: {
-		//   atAGlance: true,
+		//   // atAGlance: true,
 		//   applicationRequirements: true,
-		//   changeMajorRequirements: true,
 		//   nextSteps: true,
 		//   affordingCollege: true,
-		//   flexibleDegreeOptions: true,
 		//   careerOutlook: true,
-		//   exampleCareers: true,
-		//   customizeYourCollegeExperience: true,
 		//   globalOpportunity: true,
-		//   attendOnline: true,
-		//   programContactInfo: true,
+		//   externalAnchors: [
+		// 	{
+		// 	  targetIdName: "my-request-form-info-id",
+		// 	  text: "Request Information",
+		// 	},
+		//   ],
+		// },
+		anchorMenu: {
+		  atAGlance: false,
+		  applicationRequirements: false,
+		  changeMajorRequirements: false,
+		  nextSteps: false,
+		  affordingCollege: false,
+		  flexibleDegreeOptions: false,
+		  careerOutlook: false,
+		  exampleCareers: false,
+		  customizeYourCollegeExperience: false,
+		  globalOpportunity: false,
+		  attendOnline: false,
+		  programContactInfo: false,
 		//   externalAnchors: [
 		//     {
 		//       targetIdName: "my-request-form-info-id",
 		//       text: "Request Information",
 		//     },
 		//   ],
-		// },
+		},
 		hero: {
 		  // OPTIONAL
 		  // image: {
@@ -375,6 +376,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	render(
 		<DetailPage
 		dataSource={ customProps.dataSource }
+		anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
 		/>,
 		detailBlock
 	);

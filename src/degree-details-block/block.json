@@ -17,6 +17,10 @@
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "attributes": {
+		"anchorMenuEnabled":{
+			"type": "boolean",
+			"default": false
+		},
     "dataSourceAcadPlan":{
 		"type": "string",
 		"default": "BABUSGLBA"

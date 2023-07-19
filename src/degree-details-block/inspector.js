@@ -13,6 +13,7 @@ import { PanelBody, PanelRow, SelectControl, TextControl, ToggleControl } from '
 const Inspector = ( props ) => {
 	const {
 		attributes: {
+			anchorMenuEnabled,
 			dataSourceAcadPlan
 		},
 		setAttributes,
@@ -22,44 +23,36 @@ const Inspector = ( props ) => {
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Program selection', 'unityblocks' ) }
+					title={ __( 'Show/hide sections - Anchor menu', 'unityblocks' ) }
 					initialOpen={ false }
 				>
-					{/* <PanelRow>
-						<SelectControl
-							label={'View style'}
-							help={ 'The degree overview list can be styled as a list or cards.' }
-							value={ defaultView }
-							options={[
-								{ label: 'Grid style', value: "grid-view" },
-								{ label: 'List style', value: "list-view" }
-							]}
-							onChange={ ( value ) => setAttributes( { defaultView: value } ) }
-							__nextHasNoMarginBottom
+					<PanelRow>
+						<ToggleControl
+							label={ 'Enable anchor menu' }
+							help={'Show or hide anchor menu'}
+							checked={ anchorMenuEnabled }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuEnabled: value} );
+								}
+							}
 						/>
-					</PanelRow> */}
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Data source', 'unityblocks' ) }
+					initialOpen={ false }
+				>
 					<PanelRow>
 						<TextControl
-							label={ 'Degree plan code' }
-              				help={'Code to display degree data. Any valid acadPlan code, example: BABUSGLBA'}
+							label={ 'dataSourceAcadPlan' }
+              				help={'any valid acadPlan code example BABUSGLBA'}
 							value={ dataSourceAcadPlan }
 							onChange={ ( value ) =>
 								setAttributes( { dataSourceAcadPlan: value } )
 							}
 						/>
 					</PanelRow>
-					{/* <PanelRow>
-						<ToggleControl
-							label={ 'User filtering' }
-							help={'Show or hide degree filtering controls (Campuses or online, ASU location, ASU LocalAccelerated, Concurrent)'}
-							checked={ hasFilters }
-              onChange={ (value) => {
-                value ? false : true
-                setAttributes( {hasFilters: value} );
-            } }
-
-						/>
-					</PanelRow> */}
 				</PanelBody>
 			</InspectorControls>
 		</>

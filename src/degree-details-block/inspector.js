@@ -29,7 +29,10 @@ const Inspector = ( props ) => {
 			heroAltText,
 			heroImageSize,
 			introContentImageUrl,
-			introContentImageAltText
+			introContentImageAltText,
+			introContentHideMarketText,
+			introContentHideProgramDesc,
+			introContentHideRequiredCourses
 		},
 		setAttributes,
 	} = props;
@@ -250,6 +253,42 @@ const Inspector = ( props ) => {
 							value={ introContentImageAltText }
 							onChange={ ( value ) =>
 								setAttributes( { introContentImageAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Intro content - Hide marketing text' }
+							help={'Marketing Text for Program in PeopleSoft'}
+							checked={ introContentHideMarketText }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {introContentHideMarketText: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'introContentHideProgramDesc' }
+							help={'introContentHideProgramDesc'}
+							checked={ introContentHideProgramDesc }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {introContentHideProgramDesc: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Intro content - hide required courses' }
+							help={'Required courses/major map section'}
+							checked={ introContentHideRequiredCourses }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {introContentHideRequiredCourses: value} );
+								}
 							}
 						/>
 					</PanelRow>

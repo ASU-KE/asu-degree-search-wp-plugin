@@ -37,7 +37,10 @@ const Edit = ( props ) => {
 			heroAltText,
 			heroImageSize,
 			introContentImageUrl,
-			introContentImageAltText
+			introContentImageAltText,
+			introContentHideMarketText,
+			introContentHideProgramDesc,
+			introContentHideRequiredCourses
 		},
 		className,
 	} = props;
@@ -59,7 +62,10 @@ const Edit = ( props ) => {
 		heroAltText,
 		heroImageSize,
 		introContentImageUrl,
-		introContentImageAltText
+		introContentImageAltText,
+		introContentHideMarketText,
+		introContentHideProgramDesc,
+		introContentHideRequiredCourses
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

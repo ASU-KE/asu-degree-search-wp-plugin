@@ -85,6 +85,18 @@
 	"introContentImageAltText":{
 		"type": "string",
 		"default": ""
+	},
+	"introContentHideMarketText":{
+		"type": "boolean",
+		"default": false
+	},
+	"introContentHideProgramDesc":{
+		"type": "boolean",
+		"default": false
+	},
+	"introContentHideRequiredCourses":{
+		"type": "boolean",
+		"default": false
 	}
   }
 }

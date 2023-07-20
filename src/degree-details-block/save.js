@@ -24,7 +24,10 @@ const save = ( props ) => {
 			heroAltText,
 			heroImageSize,
 			introContentImageUrl,
-			introContentImageAltText
+			introContentImageAltText,
+			introContentHideMarketText,
+			introContentHideProgramDesc,
+			introContentHideRequiredCourses
 		},
 		className,
 	} = props;
@@ -50,6 +53,9 @@ const save = ( props ) => {
 			data-heroImageSize={ heroImageSize }
 			data-introContentImageUrl={ introContentImageUrl }
 			data-introContentImageAltText={ introContentImageAltText }
+			data-introContentHideMarketText={ introContentHideMarketText }
+			data-introContentHideProgramDesc={ introContentHideProgramDesc }
+			data-introContentHideRequiredCourses={ introContentHideRequiredCourses }
 		></div>
 	);
 };

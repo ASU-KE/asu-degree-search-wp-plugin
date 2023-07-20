@@ -22,6 +22,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const heroAltText = detailBlock.dataset.heroalttext
 	const heroImageSize = detailBlock.dataset.heroimagesize
 
+	const introContentHideMarketText = detailBlock.dataset.introcontenthidemarkettext === "true"
+	const introContentHideProgramDesc = detailBlock.dataset.introcontenthideprogramdesc === "true"
+	const introContentHideRequiredCourses = detailBlock.dataset.introcontenthiderequiredcourses === "true"
 	const introContentImageUrl = detailBlock.dataset.introcontentimageurl
 	const introContentImageAltText = detailBlock.dataset.introcontentimagealttext
 
@@ -71,9 +74,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   },
 		},
 		introContent: {
-		  // hideMarketText: true,
-		  // hideProgramDesc: true,
-		  // hideRequiredCourses: true,
+			hideMarketText: introContentHideMarketText,
+			hideProgramDesc: introContentHideProgramDesc,
+			hideRequiredCourses: introContentHideRequiredCourses,
 		//   breadcrumbs: [
 		// 	{
 		// 	  text: "Academic programs",

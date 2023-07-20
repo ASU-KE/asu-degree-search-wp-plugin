@@ -97,6 +97,18 @@
 	"introContentHideRequiredCourses":{
 		"type": "boolean",
 		"default": false
+	},
+	"atAGlanceHide":{
+		"type": "boolean",
+		"default": false
+	},
+	"atAGlanceApplicationRequirementsHide":{
+		"type": "boolean",
+		"default": false
+	},
+	"atAGlanceChangeMajorRequirementsHide":{
+		"type": "boolean",
+		"default": false
 	}
   }
 }

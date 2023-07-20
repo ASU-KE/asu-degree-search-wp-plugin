@@ -32,7 +32,10 @@ const Inspector = ( props ) => {
 			introContentImageAltText,
 			introContentHideMarketText,
 			introContentHideProgramDesc,
-			introContentHideRequiredCourses
+			introContentHideRequiredCourses,
+			atAGlanceHide,
+			atAGlanceApplicationRequirementsHide,
+			atAGlanceChangeMajorRequirementsHide
 		},
 		setAttributes,
 	} = props;
@@ -288,6 +291,47 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {introContentHideRequiredCourses: value} );
+								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'At a glance', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'At a glance - hide section' }
+							help={'MathIntensity MinMathReq'}
+							checked={ atAGlanceHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {atAGlanceHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'At a glance - hide application requirements' }
+							help={'hide application requirements'}
+							checked={ atAGlanceApplicationRequirementsHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {atAGlanceApplicationRequirementsHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'At a glance - hide change major requirements' }
+							help={'hide change major requirements'}
+							checked={ atAGlanceChangeMajorRequirementsHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {atAGlanceChangeMajorRequirementsHide: value} );
 								}
 							}
 						/>

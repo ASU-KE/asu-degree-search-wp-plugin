@@ -27,7 +27,10 @@ const save = ( props ) => {
 			introContentImageAltText,
 			introContentHideMarketText,
 			introContentHideProgramDesc,
-			introContentHideRequiredCourses
+			introContentHideRequiredCourses,
+			atAGlanceHide,
+			atAGlanceApplicationRequirementsHide,
+			atAGlanceChangeMajorRequirementsHide
 		},
 		className,
 	} = props;
@@ -56,6 +59,9 @@ const save = ( props ) => {
 			data-introContentHideMarketText={ introContentHideMarketText }
 			data-introContentHideProgramDesc={ introContentHideProgramDesc }
 			data-introContentHideRequiredCourses={ introContentHideRequiredCourses }
+			data-atAGlanceHide={ atAGlanceHide }
+			data-atAGlanceApplicationRequirementsHide={ atAGlanceApplicationRequirementsHide }
+			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
 		></div>
 	);
 };

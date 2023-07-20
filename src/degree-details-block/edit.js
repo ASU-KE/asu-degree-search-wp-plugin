@@ -40,7 +40,10 @@ const Edit = ( props ) => {
 			introContentImageAltText,
 			introContentHideMarketText,
 			introContentHideProgramDesc,
-			introContentHideRequiredCourses
+			introContentHideRequiredCourses,
+			atAGlanceHide,
+			atAGlanceApplicationRequirementsHide,
+			atAGlanceChangeMajorRequirementsHide
 		},
 		className,
 	} = props;
@@ -65,7 +68,10 @@ const Edit = ( props ) => {
 		introContentImageAltText,
 		introContentHideMarketText,
 		introContentHideProgramDesc,
-		introContentHideRequiredCourses
+		introContentHideRequiredCourses,
+		atAGlanceHide,
+		atAGlanceApplicationRequirementsHide,
+		atAGlanceChangeMajorRequirementsHide
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

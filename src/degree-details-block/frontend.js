@@ -28,10 +28,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const introContentImageUrl = detailBlock.dataset.introcontentimageurl
 	const introContentImageAltText = detailBlock.dataset.introcontentimagealttext
 
-	// const defaultView = listingBlock.dataset.defaultview
-	// const hasFilters = listingBlock.dataset.hasfilters === "true"
-	// const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
-	// const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
+	const atAGlanceHide = detailBlock.dataset.ataglancehide === "true"
+	const atAGlanceApplicationRequirementsHide = detailBlock.dataset.ataglanceapplicationrequirementshide === "true"
+	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
 
 
 	const customProps = {
@@ -111,8 +110,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  //   },
 		  // ],
 		},
-		// atAGlance: {
-		//   // hide: true,
+		atAGlance: {
+			hide: atAGlanceHide,
 		//   offeredBy: {
 		// 	text: "Herberger Instite for Design and the Arts",
 		// 	url: "#",
@@ -139,58 +138,59 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   mathIntensity: "General",
 		//   timeCommitment: "120 credit hours(about 4 years)",
 		// },
-		// applicationRequirements: {
-		//   hide: true,
-		// },
-		// changeMajorRequirements: {
-		//   hide: true,
-		// },
-		nextSteps: {
-		  cards: {
-			learnMore: {
-			  icon: "info-circle",
-			  title: "Lear more about our programs",
-			  content:
-				"Tell us what type of student you are and we'll get you the information you need.",
-			  buttonLink: {
-				label: "Request information",
-				ariaLabel: "Request information",
-				color: "maroon",
-				href: "https://admission.asu.edu/contact/request-info",
-			  },
+			applicationRequirements: {
+				hide: atAGlanceApplicationRequirementsHide,
 			},
-			apply: {
-			  icon: "file-alt",
-			  title: "Apply to program",
-			  content:
-				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
-			  buttonLink: {
-				label: "Apply now",
-				ariaLabel: "Apply now",
-				color: "maroon",
-				href: "https://admission.asu.edu/apply",
-			  },
-			},
-			visit: {
-			  icon: "map-marker-alt",
-			  title: "Visit our campus",
-			  content:
-				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-			  buttonLink: {
-				label: "Schedule a visit",
-				ariaLabel: "Schedule a visit",
-				color: "maroon",
-				href: "https://visit.asu.edu/",
-			  },
-			},
-		  },
+			changeMajorRequirements: {
+			hide: atAGlanceChangeMajorRequirementsHide,
+			}
 		},
-		// affordingCollege: {
-		//   hide: true,
+		// nextSteps: {
+		//   cards: {
+		// 	learnMore: {
+		// 	  icon: "info-circle",
+		// 	  title: "Lear more about our programs",
+		// 	  content:
+		// 		"Tell us what type of student you are and we'll get you the information you need.",
+		// 	  buttonLink: {
+		// 		label: "Request information",
+		// 		ariaLabel: "Request information",
+		// 		color: "maroon",
+		// 		href: "https://admission.asu.edu/contact/request-info",
+		// 	  },
+		// 	},
+		// 	apply: {
+		// 	  icon: "file-alt",
+		// 	  title: "Apply to program",
+		// 	  content:
+		// 		"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
+		// 	  buttonLink: {
+		// 		label: "Apply now",
+		// 		ariaLabel: "Apply now",
+		// 		color: "maroon",
+		// 		href: "https://admission.asu.edu/apply",
+		// 	  },
+		// 	},
+		// 	visit: {
+		// 	  icon: "map-marker-alt",
+		// 	  title: "Visit our campus",
+		// 	  content:
+		// 		"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
+		// 	  buttonLink: {
+		// 		label: "Schedule a visit",
+		// 		ariaLabel: "Schedule a visit",
+		// 		color: "maroon",
+		// 		href: "https://visit.asu.edu/",
+		// 	  },
+		// 	},
+		//   },
 		// },
-		// flexibleDegreeOptions: {
-		//   hide: true,
-		// },
+		affordingCollege: {
+		  hide: true,
+		},
+		flexibleDegreeOptions: {
+		  hide: true,
+		},
 		careerOutlook: {
 		  // OPTIONAL
 		  image: {
@@ -322,6 +322,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
 		hero={ customProps.hero }
 		introContent={ customProps.introContent }
+		atAGlance={ customProps.atAGlance }
 		/>,
 		detailBlock
 	);

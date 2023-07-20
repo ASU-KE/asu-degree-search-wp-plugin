@@ -117,6 +117,18 @@
 	"flexibleDegreeOptionsHide":{
 		"type": "boolean",
 		"default": false
+	},
+	"careerOutlookImageUrl":{
+		"type": "string",
+		"default": ""
+	},
+	"careerOutlookImageAltText":{
+		"type": "string",
+		"default": ""
+	},
+	"exampleCareersHide":{
+		"type": "boolean",
+		"default": false
 	}
   }
 }

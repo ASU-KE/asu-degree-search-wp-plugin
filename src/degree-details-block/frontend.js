@@ -35,6 +35,10 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
 
+	const careerOutlookImageUrl = detailBlock.dataset.careeroutlookimageurl
+	const careerOutlookImageAltText = detailBlock.dataset.careeroutlookimagealttext
+	const exampleCareersHide = detailBlock.dataset.examplecareershide === "true"
+
 
 	const customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -195,17 +199,14 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  hide: flexibleDegreeOptionsHide,
 		},
 		careerOutlook: {
-		  // OPTIONAL
 		  image: {
-			url: "https://source.unsplash.com/random/1200x750",
-			altText:
-			  "Random image. REPLACE with appropriate alt text for accessibility.",
+			url: careerOutlookImageUrl,
+			altText: careerOutlookImageAltText,
 		  },
 		},
-		// OPTIONAL
-		// exampleCareers: {
-		//   hide: true,
-		// },
+		exampleCareers: {
+			hide: exampleCareersHide,
+		},
 		globalOpportunity: {
 		  // OPTIONAL
 		  image: {
@@ -321,13 +322,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
 	render(
 		<DetailPage
-		dataSource={ customProps.dataSource }
-		anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
-		hero={ customProps.hero }
-		introContent={ customProps.introContent }
-		atAGlance={ customProps.atAGlance }
-		affordingCollege={ customProps.affordingCollege }
-		flexibleDegreeOptions={ customProps.flexibleDegreeOptions }
+			dataSource={ customProps.dataSource }
+			anchorMenu={ anchorMenuEnabled ? customProps.anchorMenu : null}
+			hero={ customProps.hero }
+			introContent={ customProps.introContent }
+			atAGlance={ customProps.atAGlance }
+			affordingCollege={ customProps.affordingCollege }
+			flexibleDegreeOptions={ customProps.flexibleDegreeOptions }
+			careerOutlook={ customProps.careerOutlook }
+			exampleCareers={ customProps.exampleCareers }
 		/>,
 		detailBlock
 	);

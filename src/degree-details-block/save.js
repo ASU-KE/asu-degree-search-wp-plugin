@@ -32,7 +32,10 @@ const save = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			affordingCollegeHide,
-			flexibleDegreeOptionsHide
+			flexibleDegreeOptionsHide,
+			careerOutlookImageUrl,
+			careerOutlookImageAltText,
+			exampleCareersHide
 		},
 		className,
 	} = props;
@@ -66,6 +69,9 @@ const save = ( props ) => {
 			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
+			data-careerOutlookImageUrl={ careerOutlookImageUrl }
+			data-careerOutlookImageAltText={ careerOutlookImageAltText }
+			data-exampleCareersHide={ exampleCareersHide }
 		></div>
 	);
 };

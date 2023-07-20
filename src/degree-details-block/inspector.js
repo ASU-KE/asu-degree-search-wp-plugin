@@ -37,7 +37,10 @@ const Inspector = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			affordingCollegeHide,
-			flexibleDegreeOptionsHide
+			flexibleDegreeOptionsHide,
+			careerOutlookImageUrl,
+			careerOutlookImageAltText,
+			exampleCareersHide
 		},
 		setAttributes,
 	} = props;
@@ -359,13 +362,49 @@ const Inspector = ( props ) => {
 					title={ __( 'Flexible degree options', 'unityblocks' ) }
 					initialOpen={ false }
 				>
-										<PanelRow>
+					<PanelRow>
 						<ToggleControl
 							label={ 'Hide flexible degree options section' }
 							checked={ flexibleDegreeOptionsHide }
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {flexibleDegreeOptionsHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Careers', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Career outlook image URL' }
+							help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ careerOutlookImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { careerOutlookImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Career outlook image alt text' }
+              				help={'required for a11y'}
+							value={ careerOutlookImageAltText }
+							onChange={ ( value ) =>
+								setAttributes( { careerOutlookImageAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide example careers section' }
+							checked={ exampleCareersHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {exampleCareersHide: value} );
 								}
 							}
 						/>

@@ -43,7 +43,9 @@ const Edit = ( props ) => {
 			introContentHideRequiredCourses,
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
-			atAGlanceChangeMajorRequirementsHide
+			atAGlanceChangeMajorRequirementsHide,
+			affordingCollegeHide,
+			flexibleDegreeOptionsHide
 		},
 		className,
 	} = props;
@@ -71,7 +73,9 @@ const Edit = ( props ) => {
 		introContentHideRequiredCourses,
 		atAGlanceHide,
 		atAGlanceApplicationRequirementsHide,
-		atAGlanceChangeMajorRequirementsHide
+		atAGlanceChangeMajorRequirementsHide,
+		affordingCollegeHide,
+		flexibleDegreeOptionsHide
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

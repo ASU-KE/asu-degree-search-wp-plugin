@@ -32,6 +32,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const atAGlanceApplicationRequirementsHide = detailBlock.dataset.ataglanceapplicationrequirementshide === "true"
 	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
 
+	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
+	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
+
 
 	const customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -186,10 +189,10 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   },
 		// },
 		affordingCollege: {
-		  hide: true,
+		  hide: affordingCollegeHide,
 		},
 		flexibleDegreeOptions: {
-		  hide: true,
+		  hide: flexibleDegreeOptionsHide,
 		},
 		careerOutlook: {
 		  // OPTIONAL
@@ -323,6 +326,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		hero={ customProps.hero }
 		introContent={ customProps.introContent }
 		atAGlance={ customProps.atAGlance }
+		affordingCollege={ customProps.affordingCollege }
+		flexibleDegreeOptions={ customProps.flexibleDegreeOptions }
 		/>,
 		detailBlock
 	);

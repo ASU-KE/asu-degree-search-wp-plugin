@@ -124,6 +124,14 @@
     "atAGlanceChangeMajorRequirementsHide": {
       "type": "boolean",
       "default": false
+    },
+    "affordingCollegeHide": {
+      "type": "boolean",
+      "default": false
+    },
+    "flexibleDegreeOptionsHide": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

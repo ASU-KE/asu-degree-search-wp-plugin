@@ -35,7 +35,9 @@ const Inspector = ( props ) => {
 			introContentHideRequiredCourses,
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
-			atAGlanceChangeMajorRequirementsHide
+			atAGlanceChangeMajorRequirementsHide,
+			affordingCollegeHide,
+			flexibleDegreeOptionsHide
 		},
 		setAttributes,
 	} = props;
@@ -332,6 +334,38 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {atAGlanceChangeMajorRequirementsHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Affording college', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+										<PanelRow>
+						<ToggleControl
+							label={ 'hide affording college section' }
+							checked={ affordingCollegeHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {affordingCollegeHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Flexible degree options', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+										<PanelRow>
+						<ToggleControl
+							label={ 'Hide flexible degree options section' }
+							checked={ flexibleDegreeOptionsHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {flexibleDegreeOptionsHide: value} );
 								}
 							}
 						/>

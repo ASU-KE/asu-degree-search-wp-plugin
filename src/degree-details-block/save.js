@@ -30,7 +30,9 @@ const save = ( props ) => {
 			introContentHideRequiredCourses,
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
-			atAGlanceChangeMajorRequirementsHide
+			atAGlanceChangeMajorRequirementsHide,
+			affordingCollegeHide,
+			flexibleDegreeOptionsHide
 		},
 		className,
 	} = props;
@@ -62,6 +64,8 @@ const save = ( props ) => {
 			data-atAGlanceHide={ atAGlanceHide }
 			data-atAGlanceApplicationRequirementsHide={ atAGlanceApplicationRequirementsHide }
 			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
+			data-affordingCollegeHide={ affordingCollegeHide }
+			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 		></div>
 	);
 };

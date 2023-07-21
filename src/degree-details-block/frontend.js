@@ -39,6 +39,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const careerOutlookImageAltText = detailBlock.dataset.careeroutlookimagealttext
 	const exampleCareersHide = detailBlock.dataset.examplecareershide === "true"
 
+	const globalOpportunityImageUrl = detailBlock.dataset.globalopportunityimageurl
+	const globalOpportunityAltText = detailBlock.dataset.globalopportunityalttext
+
 
 	const customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -210,9 +213,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		globalOpportunity: {
 		  // OPTIONAL
 		  image: {
-			url: "https://source.unsplash.com/random/1200x750",
-			altText:
-			  "Random image. REPLACE with appropriate alt text for accessibility.",
+			url: globalOpportunityImageUrl,
+			altText: globalOpportunityAltText,
 		  },
 		},
 		// OPTIONAL
@@ -331,6 +333,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			flexibleDegreeOptions={ customProps.flexibleDegreeOptions }
 			careerOutlook={ customProps.careerOutlook }
 			exampleCareers={ customProps.exampleCareers }
+			globalOpportunity={ customProps.globalOpportunity }
 		/>,
 		detailBlock
 	);

@@ -35,7 +35,9 @@ const save = ( props ) => {
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
-			exampleCareersHide
+			exampleCareersHide,
+			globalOpportunityImageUrl,
+			globalOpportunityAltText
 		},
 		className,
 	} = props;
@@ -72,6 +74,8 @@ const save = ( props ) => {
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }
 			data-careerOutlookImageAltText={ careerOutlookImageAltText }
 			data-exampleCareersHide={ exampleCareersHide }
+			data-globalOpportunityImageUrl={ globalOpportunityImageUrl }
+			data-globalOpportunityAltText={ globalOpportunityAltText }
 		></div>
 	);
 };

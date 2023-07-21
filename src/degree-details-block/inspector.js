@@ -40,7 +40,9 @@ const Inspector = ( props ) => {
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
-			exampleCareersHide
+			exampleCareersHide,
+			globalOpportunityImageUrl,
+			globalOpportunityAltText
 		},
 		setAttributes,
 	} = props;
@@ -406,6 +408,31 @@ const Inspector = ( props ) => {
 								value ? false : true
 								setAttributes( {exampleCareersHide: value} );
 								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Global opportunity', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Global opportunity image URL' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ globalOpportunityImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { globalOpportunityImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Global opportunity image alt text' }
+              				help={'required for a11y'}
+							value={ globalOpportunityAltText }
+							onChange={ ( value ) =>
+								setAttributes( { globalOpportunityAltText: value } )
 							}
 						/>
 					</PanelRow>

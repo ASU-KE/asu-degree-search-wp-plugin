@@ -144,6 +144,14 @@
     "exampleCareersHide": {
       "type": "boolean",
       "default": false
+    },
+    "globalOpportunityImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "globalOpportunityAltText": {
+      "type": "string",
+      "default": ""
     }
   }
 }

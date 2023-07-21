@@ -48,7 +48,9 @@ const Edit = ( props ) => {
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
-			exampleCareersHide
+			exampleCareersHide,
+			globalOpportunityImageUrl,
+			globalOpportunityAltText
 		},
 		className,
 	} = props;
@@ -81,7 +83,9 @@ const Edit = ( props ) => {
 		flexibleDegreeOptionsHide,
 		careerOutlookImageUrl,
 		careerOutlookImageAltText,
-		exampleCareersHide
+		exampleCareersHide,
+		globalOpportunityImageUrl,
+		globalOpportunityAltText
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

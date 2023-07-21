@@ -37,7 +37,21 @@ const save = ( props ) => {
 			careerOutlookImageAltText,
 			exampleCareersHide,
 			globalOpportunityImageUrl,
-			globalOpportunityAltText
+			globalOpportunityAltText,
+			whyChooseAsuCardsFacultyImageUrl,
+			whyChooseAsuCardsFacultyAltText,
+			whyChooseAsuCardsProgramsImageUrl,
+			whyChooseAsuCardsProgramsAltText,
+			whyChooseAsuCardsResearchImageUrl,
+			whyChooseAsuCardsResearchAltText,
+			whyChooseAsuCardsInclusionImageUrl,
+			whyChooseAsuCardsInclusionAltText,
+			whyChooseAsuCardsMentorsImageUrl,
+			whyChooseAsuCardsMentorsAltText,
+			whyChooseAsuCardsHonorsImageUrl,
+			whyChooseAsuCardsHonorsAltText,
+			attendOnlineImageUrl,
+			attendOnlineAltText
 		},
 		className,
 	} = props;
@@ -76,6 +90,20 @@ const save = ( props ) => {
 			data-exampleCareersHide={ exampleCareersHide }
 			data-globalOpportunityImageUrl={ globalOpportunityImageUrl }
 			data-globalOpportunityAltText={ globalOpportunityAltText }
+			data-whyChooseAsuCardsFacultyImageUrl={ whyChooseAsuCardsFacultyImageUrl }
+			data-whyChooseAsuCardsFacultyAltText={ whyChooseAsuCardsFacultyAltText }
+			data-whyChooseAsuCardsProgramsImageUrl={ whyChooseAsuCardsProgramsImageUrl }
+			data-whyChooseAsuCardsProgramsAltText={ whyChooseAsuCardsProgramsAltText }
+			data-whyChooseAsuCardsResearchImageUrl={ whyChooseAsuCardsResearchImageUrl }
+			data-whyChooseAsuCardsResearchAltText={ whyChooseAsuCardsResearchAltText }
+			data-whyChooseAsuCardsInclusionImageUrl={ whyChooseAsuCardsInclusionImageUrl }
+			data-whyChooseAsuCardsInclusionAltText={ whyChooseAsuCardsInclusionAltText }
+			data-whyChooseAsuCardsMentorsImageUrl={ whyChooseAsuCardsMentorsImageUrl }
+			data-whyChooseAsuCardsMentorsAltText={ whyChooseAsuCardsMentorsAltText }
+			data-whyChooseAsuCardsHonorsImageUrl={ whyChooseAsuCardsHonorsImageUrl }
+			data-whyChooseAsuCardsHonorsAltText={ whyChooseAsuCardsHonorsAltText }
+			data-attendOnlineImageUrl={ attendOnlineImageUrl }
+			data-attendOnlineAltText={ attendOnlineAltText }
 		></div>
 	);
 };

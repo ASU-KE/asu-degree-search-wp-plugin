@@ -42,6 +42,21 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const globalOpportunityImageUrl = detailBlock.dataset.globalopportunityimageurl
 	const globalOpportunityAltText = detailBlock.dataset.globalopportunityalttext
 
+	const whyChooseAsuCardsFacultyImageUrl = detailBlock.dataset.whychooseasucardsfacultyimageurl
+	const whyChooseAsuCardsFacultyAltText = detailBlock.dataset.whychooseasucardsfacultyalttext
+	const whyChooseAsuCardsProgramsImageUrl = detailBlock.dataset.whychooseasucardsprogramsimageurl
+	const whyChooseAsuCardsProgramsAltText = detailBlock.dataset.whychooseasucardsprogramsalttext
+	const whyChooseAsuCardsResearchImageUrl = detailBlock.dataset.whychooseasucardsresearchimageurl
+	const whyChooseAsuCardsResearchAltText = detailBlock.dataset.whychooseasucardsresearchalttext
+	const whyChooseAsuCardsInclusionImageUrl = detailBlock.dataset.whychooseasucardsinclusionimageurl
+	const whyChooseAsuCardsInclusionAltText = detailBlock.dataset.whychooseasucardsinclusionalttext
+	const whyChooseAsuCardsMentorsImageUrl = detailBlock.dataset.whychooseasucardsmentorsimageurl
+	const whyChooseAsuCardsMentorsAltText = detailBlock.dataset.whychooseasucardsmentorsalttext
+	const whyChooseAsuCardsHonorsImageUrl = detailBlock.dataset.whychooseasucardshonorsimageurl
+	const whyChooseAsuCardsHonorsAltText = detailBlock.dataset.whychooseasucardshonorsalttext
+
+	const attendOnlineImageUrl = detailBlock.dataset.attendonlineimageurl
+	const attendOnlineAltText = detailBlock.dataset.attendonlinealttext
 
 	const customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -219,101 +234,93 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 		// OPTIONAL
 		whyChooseAsu: {
-		  sectionIntroText:
-			"ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
+		//  sectionIntroText:"ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
 		  cards: {
 			faculty: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?career`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsFacultyImageUrl,
+				altText: whyChooseAsuCardsFacultyAltText,
 			  },
-			  title: "World-class faculty",
-			  text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
-			  button: {
-				label: "Faculty excellence",
-				color: "maroon",
-				href: "https://www.asu.edu/academics/faculty-excellence",
-			  },
+			//   title: "World-class faculty",
+			//   text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
+			//   button: {
+			// 	label: "Faculty excellence",
+			// 	color: "maroon",
+			// 	href: "https://www.asu.edu/academics/faculty-excellence",
+			//   },
 			},
 			programs: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?job`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsProgramsImageUrl,
+				altText: whyChooseAsuCardsProgramsAltText,
 			  },
-			  title: "Highly ranked programs",
-			  text: "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10.",
-			  button: {
-				label: "ASU rankings",
-				color: "maroon",
-				href: "https://www.asu.edu/rankings",
-			  },
+			//   title: "Highly ranked programs",
+			//   text: "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10.",
+			//   button: {
+			// 	label: "ASU rankings",
+			// 	color: "maroon",
+			// 	href: "https://www.asu.edu/rankings",
+			//   },
 			},
 			research: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?career`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsResearchImageUrl,
+				altText: whyChooseAsuCardsResearchAltText,
 			  },
-			  title: "Research opportunities",
-			  text: "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market.",
-			  button: {
-				label: "Research opportunities",
-				color: "maroon",
-				href: "https://provost.asu.edu/uresearch",
-			  },
+			//   title: "Research opportunities",
+			//   text: "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market.",
+			//   button: {
+			// 	label: "Research opportunities",
+			// 	color: "maroon",
+			// 	href: "https://provost.asu.edu/uresearch",
+			//   },
 			},
 			inclusion: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?online`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsInclusionImageUrl,
+				altText: whyChooseAsuCardsInclusionAltText
 			  },
-			  title: "An inclusive environment",
-			  text: "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success.",
-			  button: {
-				label: "ASU Charter",
-				color: "maroon",
-				href: "https://www.asu.edu/about/charter-mission",
-			  },
+			//   title: "An inclusive environment",
+			//   text: "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success.",
+			//   button: {
+			// 	label: "ASU Charter",
+			// 	color: "maroon",
+			// 	href: "https://www.asu.edu/about/charter-mission",
+			//   },
 			},
 			mentors: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?classroom`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsMentorsImageUrl,
+				altText: whyChooseAsuCardsMentorsAltText,
 			  },
-			  title: "Mentor network",
-			  text: "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories.",
-			  button: {
-				label: "ASU Mentor network",
-				color: "maroon",
-				href: "https://mentorship.asu.edu",
-			  },
+			//   title: "Mentor network",
+			//   text: "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories.",
+			//   button: {
+			// 	label: "ASU Mentor network",
+			// 	color: "maroon",
+			// 	href: "https://mentorship.asu.edu",
+			//   },
 			},
 			honors: {
 			  image: {
-				url: `https://source.unsplash.com/random/600x600?school`,
-				altText:
-				  "Random image. REPLACE with appropriate alt text for accessibility.",
+				url: whyChooseAsuCardsHonorsImageUrl,
+				altText: whyChooseAsuCardsHonorsAltText,
 			  },
-			  title: "Global education",
-			  text: "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!",
-			  button: {
-				label: "Explore",
-				color: "maroon",
-				href: "https://goglobal.asu.edu",
-			  },
+			//   title: "Global education",
+			//   text: "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!",
+			//   button: {
+			// 	label: "Explore",
+			// 	color: "maroon",
+			// 	href: "https://goglobal.asu.edu",
+			//   },
 			},
 		  },
 		},
 		attendOnline: {
 		  // OPTIONAL
 		  image: {
-			url: "https://source.unsplash.com/random/1200x750",
-			altText:
-			  "Random image. REPLACE with appropriate alt text for accessibility.",
+			url: attendOnlineImageUrl,
+			altText: attendOnlineAltText,
 		  },
 		},
 		programContactInfo: {
@@ -334,6 +341,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			careerOutlook={ customProps.careerOutlook }
 			exampleCareers={ customProps.exampleCareers }
 			globalOpportunity={ customProps.globalOpportunity }
+			whyChooseAsu={ customProps.whyChooseAsu }
+			attendOnline={ customProps.attendOnline }
 		/>,
 		detailBlock
 	);

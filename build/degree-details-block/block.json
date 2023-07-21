@@ -152,6 +152,62 @@
     "globalOpportunityAltText": {
       "type": "string",
       "default": ""
+    },
+    "whyChooseAsuCardsFacultyImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsFacultyAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsProgramsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsProgramsAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsResearchImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsResearchAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsInclusionImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsInclusionAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsMentorsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsMentorsAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsHonorsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "whyChooseAsuCardsHonorsAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "attendOnlineImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "attendOnlineAltText": {
+      "type": "string",
+      "default": ""
     }
   }
 }

@@ -50,7 +50,21 @@ const Edit = ( props ) => {
 			careerOutlookImageAltText,
 			exampleCareersHide,
 			globalOpportunityImageUrl,
-			globalOpportunityAltText
+			globalOpportunityAltText,
+			whyChooseAsuCardsFacultyImageUrl,
+			whyChooseAsuCardsFacultyAltText,
+			whyChooseAsuCardsProgramsImageUrl,
+			whyChooseAsuCardsProgramsAltText,
+			whyChooseAsuCardsResearchImageUrl,
+			whyChooseAsuCardsResearchAltText,
+			whyChooseAsuCardsInclusionImageUrl,
+			whyChooseAsuCardsInclusionAltText,
+			whyChooseAsuCardsMentorsImageUrl,
+			whyChooseAsuCardsMentorsAltText,
+			whyChooseAsuCardsHonorsImageUrl,
+			whyChooseAsuCardsHonorsAltText,
+			attendOnlineImageUrl,
+			attendOnlineAltText
 		},
 		className,
 	} = props;
@@ -85,7 +99,21 @@ const Edit = ( props ) => {
 		careerOutlookImageAltText,
 		exampleCareersHide,
 		globalOpportunityImageUrl,
-		globalOpportunityAltText
+		globalOpportunityAltText,
+		whyChooseAsuCardsFacultyImageUrl,
+		whyChooseAsuCardsFacultyAltText,
+		whyChooseAsuCardsProgramsImageUrl,
+		whyChooseAsuCardsProgramsAltText,
+		whyChooseAsuCardsResearchImageUrl,
+		whyChooseAsuCardsResearchAltText,
+		whyChooseAsuCardsInclusionImageUrl,
+		whyChooseAsuCardsInclusionAltText,
+		whyChooseAsuCardsMentorsImageUrl,
+		whyChooseAsuCardsMentorsAltText,
+		whyChooseAsuCardsHonorsImageUrl,
+		whyChooseAsuCardsHonorsAltText,
+		attendOnlineImageUrl,
+		attendOnlineAltText
 	};
 	//console.log(`args: ${JSON.stringify(args)}`);
 	return (

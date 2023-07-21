@@ -42,7 +42,21 @@ const Inspector = ( props ) => {
 			careerOutlookImageAltText,
 			exampleCareersHide,
 			globalOpportunityImageUrl,
-			globalOpportunityAltText
+			globalOpportunityAltText,
+			whyChooseAsuCardsFacultyImageUrl,
+			whyChooseAsuCardsFacultyAltText,
+			whyChooseAsuCardsProgramsImageUrl,
+			whyChooseAsuCardsProgramsAltText,
+			whyChooseAsuCardsResearchImageUrl,
+			whyChooseAsuCardsResearchAltText,
+			whyChooseAsuCardsInclusionImageUrl,
+			whyChooseAsuCardsInclusionAltText,
+			whyChooseAsuCardsMentorsImageUrl,
+			whyChooseAsuCardsMentorsAltText,
+			whyChooseAsuCardsHonorsImageUrl,
+			whyChooseAsuCardsHonorsAltText,
+			attendOnlineImageUrl,
+			attendOnlineAltText
 		},
 		setAttributes,
 	} = props;
@@ -433,6 +447,156 @@ const Inspector = ( props ) => {
 							value={ globalOpportunityAltText }
 							onChange={ ( value ) =>
 								setAttributes( { globalOpportunityAltText: value } )
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Why ASU', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Faculty image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsFacultyImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Faculty image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsFacultyAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsProgramsImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsProgramsAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsResearchImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsResearchAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsInclusionImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsInclusionAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Mentors image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsMentorsImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsMentorsImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Mentors image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsMentorsAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsMentorsAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Honors image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ whyChooseAsuCardsHonorsImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsHonorsImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Honors image alt text' }
+              				help={'required for a11y'}
+							value={ whyChooseAsuCardsHonorsAltText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsHonorsAltText: value } )
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Attend online', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Attend online image' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ attendOnlineImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { attendOnlineImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Attend online image alt text' }
+              				help={'required for a11y'}
+							value={ attendOnlineAltText }
+							onChange={ ( value ) =>
+								setAttributes( { attendOnlineAltText: value } )
 							}
 						/>
 					</PanelRow>

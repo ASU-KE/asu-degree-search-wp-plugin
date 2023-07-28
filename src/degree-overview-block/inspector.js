@@ -20,7 +20,9 @@ const Inspector = ( props ) => {
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
-			hero,
+			heroImageUrl,
+			heroAltText,
+			heroImageSize,
 			introContent,
 			programList,
 			hasFilters,
@@ -52,30 +54,25 @@ const Inspector = ( props ) => {
 					<PanelRow>
 						<SelectControl
 							label={'View style'}
-							help={ 'The degree overview list can be styled as a list or cards.' }
+							help={ 'The degree overview list style - Degree cards will be added into future update' }
 							value={ defaultView }
 							options={[
-								{ label: 'Grid style', value: "grid-view" },
 								{ label: 'List style', value: "list-view" }
 							]}
 							onChange={ ( value ) => setAttributes( { defaultView: value } ) }
 							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
-					<PanelRow>
-						<SelectControl
-							label={'hero'}
-							help={ 'hero' }
-							value={ hero }
-							options={[
-								{ label: 'Ground', value: 'GROUND' },
-								{ label: 'Online', value: 'ONLNE' },
-								{ label: 'No preference', value: 'NOPREF' }
-							]}
-							onChange={ ( value ) => setAttributes( { hero: value } ) }
-							__nextHasNoMarginBottom
+					{/* <PanelRow>
+						<TextControl
+							label={ 'View style - Grid images' }
+              				help={'If using grid style, user can set card images. Name the uploaded image using the academic plan code of the degree, ex. "BAACCBS.jpg". Set the date of upload in this field ex. "2023/07"'}
+							value={ wordpressMediaDate }
+							onChange={ ( value ) =>
+								setAttributes( { wordpressMediaDate: value } )
+							}
 						/>
-					</PanelRow>
+					</PanelRow> */}
 					<PanelRow>
 						<TextControl
 							label={ 'College Academic Org' }
@@ -160,6 +157,45 @@ const Inspector = ( props ) => {
 
 
 				</PanelBody>
+				<PanelBody
+					title={ __( 'Hero settings', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image URL' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ heroImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { heroImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image alt text' }
+              				help={'required for a11y'}
+							value={ heroAltText }
+							onChange={ ( value ) =>
+								setAttributes( { heroAltText: value } )
+							}
+						/>
+					</PanelRow>
+				<PanelRow>
+						<SelectControl
+							label={'Hero image size'}
+							help={ 'Set vertical height of hero' }
+							value={ heroImageSize }
+							options={[
+								{ label: 'Small', value: 'small' },
+								{ label: 'Medium', value: 'medium' },
+								{ label: 'Large', value: 'large' }
+							]}
+							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					</PanelBody>
 			</InspectorControls>
 		</>
 	);

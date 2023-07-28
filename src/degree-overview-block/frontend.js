@@ -7,10 +7,6 @@ import { ListingPage } from "../../resources/app-degree-pages/src/components/Lis
 // Load each DOM element on page using the Gutenberg-generated class for the Testimonial block
 const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 
-	//const actionUrls = listingBlock.dataset.actionurls
-	// const hero = listingBlock.dataset.hero
-	// const introContent = listingBlock.dataset.introcontent
-	// const programList = listingBlock.dataset.programlist
 	const dataSourceBlacklistAcadPlans = listingBlock.dataset.datasourceblacklistacadplans
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
@@ -20,6 +16,12 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
 	const hasSearchBar = listingBlock.dataset.hassearchbar === "true"
 	const degreesPerPage = Number(listingBlock.dataset.degreesperpage)
+
+	const heroImageUrl = listingBlock.dataset.heroimageurl
+	const heroAltText = listingBlock.dataset.heroalttext
+	const heroImageSize = listingBlock.dataset.heroimagesize
+
+	//const wordpressMediaDate = listingBlock.dataset.wordpressmediadate
 
 	const dataSource = {
         endpoint: "https://degrees.apps.asu.edu/t5/service",
@@ -33,8 +35,8 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
       };
 
 	const actionUrls = {
-        // applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
-        majorInfoUrl: `/examples/detail-page.html?acadPlan={ACAD_PLAN_CODE}`,
+        applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
+        majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
@@ -45,14 +47,14 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		actionUrls: actionUrls,
 		hero: {
 		  image: {
-		    url: "/programs/resources/images/ds_header_undergrad.jpg",
-		    altText: "Undergraduate Degrees",
-		    size: "medium",
+		    url: heroImageUrl,
+		    altText: heroAltText,
+		    size: heroImageSize,
 		  },
-		  title: {
-		    text: "Undergraduate Degrees",
-		    highlightColor: "gold",
-		  },
+		//   title: {
+		//     text: "Undergraduate Degrees",
+		//     highlightColor: "gold",
+		//   },
 		},
 		//introContent,
 		hasFilters: hasFilters, // OPTIONAL
@@ -63,23 +65,13 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		  settings: {
 			hideCollegeSchool: false,
 			defaultView: defaultView, //"grid-view" or "list-view"
-			cardDefaultImage: {
-			  url: `examples/assets/img/ds_header_undergrad.jpg`,
-			}
+			// cardDefaultImage: {
+			//   url: `/wp-content/uploads/${wordpressMediaDate}/{ACAD_PLAN_CODE}.jpg`,
+			//   imageAltText: `{DEGREE_IMG_ALT_TEXT} cover image`,
+			// }
 		  }
 		},
 		degreesPerPage: degreesPerPage,
 	  }
 
-	render(
-		<ListingPage
-			actionUrls={ actionUrls }
-			//hero={ customProps.hero }
-			introContent={ customProps.introContent }
-			programList={ customProps.programList }
-			hasFilters={ hasFilters }
-			hasSearchBar={ hasSearchBar }
-			degreesPerPage={degreesPerPage}
-		/>,
-		listingBlock
-	);
+	render( <ListingPage {...customProps} />, listingBlock );

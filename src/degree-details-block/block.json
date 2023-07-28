@@ -12,7 +12,7 @@
     "html": false,
     "align": ["wide", "full"]
   },
-  "textdomain": "asu-degree-search",
+  "textdomain": "asu-degree-search-details-block",
   "viewScript": ["file:./frontend.js", "asu-degree-detail-view-script"],
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

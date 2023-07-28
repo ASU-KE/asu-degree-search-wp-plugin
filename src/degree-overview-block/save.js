@@ -15,7 +15,9 @@ const save = ( props ) => {
 			dataSourceProgram,
 			defaultView,
 			degreesPerPage,
-			hero,
+			heroImageUrl,
+			heroAltText,
+			heroImageSize,
 			introContent,
 			programList,
 			hasFilters,
@@ -35,7 +37,9 @@ const save = ( props ) => {
 			data-dataSourceProgram={ dataSourceProgram }
 			data-defaultView={ defaultView }
 			data-degreesPerPage={ degreesPerPage }
-			data-hero={ hero }
+			data-heroImageUrl={ heroImageUrl }
+			data-heroAltText={ heroAltText }
+			data-heroImageSize={ heroImageSize }
 			data-introContent={ introContent }
 			data-programList={ programList }
 			data-hasFilters={ hasFilters }

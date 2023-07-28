@@ -20,7 +20,7 @@
       "full"
     ]
   },
-  "textdomain": "asu-degree-search",
+  "textdomain": "asu-degree-search-details-block",
   "viewScript": [
     "file:./frontend.js",
     "asu-degree-detail-view-script"

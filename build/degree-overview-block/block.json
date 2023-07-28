@@ -20,7 +20,7 @@
       "full"
     ]
   },
-  "textdomain": "asu-degree-search",
+  "textdomain": "asu-degree-search-overview-block",
   "viewScript": [
     "file:./frontend.js",
     "asu-degree-overview-view-script"
@@ -28,12 +28,6 @@
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "attributes": {
-    "actionUrls": {
-      "type": "object",
-      "default": {
-        "majorInfoUrl": "/examples/detail-page.html?acadPlan={BAACCBS}"
-      }
-    },
     "degreesPerPage": {
       "type": "string",
       "default": "8"
@@ -66,23 +60,22 @@
       ],
       "default": "list-view"
     },
-    "hero": {
+    "heroImageUrl": {
       "type": "string",
-      "default": "/resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
+      "default": ""
     },
-    "introContent": {
-      "type": "object",
-      "default": {
-        "type": "text",
-        "title": {
-          "text": "This is introductory marketing copy. Lorem ipsum dolor sit amet"
-        },
-        "contents": [
-          {
-            "text": "Lorem, ipsum dolorsit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?"
-          }
-        ]
-      }
+    "heroAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "heroImageSize": {
+      "type": "string",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "medium"
     },
     "studentType": {
       "type": "string",
@@ -99,25 +92,6 @@
     "hasSearchBar": {
       "type": "boolean",
       "default": true
-    },
-    "programList": {
-      "type": "object",
-      "default": {
-        "dataSource": {
-          "endpoint": "https://degrees.apps.asu.edu/t5/service",
-          "method": "findAllDegrees",
-          "init": "false",
-          "program": "undergrad",
-          "cert": "false"
-        },
-        "settings": {
-          "hideCollegeSchool": true,
-          "defaultView": "list-view",
-          "cardDefaultImage": {
-            "url": "examples/assets/img/ds_header_undergrad.jpg"
-          }
-        }
-      }
     }
   }
 }

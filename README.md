@@ -35,6 +35,8 @@ This block uses `wp-scripts` for the build process:
 		- [ASU Degree Search REST API](#asu-degree-search-rest-api)
 		    - [Example API queries](#degree-search-rest-api-queries-for-reference)
 				- [Available methods](#available-methods)
+* [ASU Degree Overview](#asu-degree-overview)
+* [ASU Degree Details](#asu-degree-details)
 
 ### ASU Degree RFI Form
 
@@ -280,3 +282,26 @@ Most of these props either configure the submission process or pre-configure the
 * [Web Service Data Fields](https://docs.google.com/spreadsheets/d/18_0EuMOTdrJHhIFgVsl9o8QSpuCPjIF823D1B91MzgU/edit#gid=0)
 * [ASU Header notes (including on ASU best practices for Google Tag Manager)](https://unity.web.asu.edu/asuheader/index.html)
 * [Offical Google docs on data layers](https://developers.google.com/tag-platform/tag-manager/web/datalayer)
+
+
+### ASU Degree Overview
+
+The ASU Degree Overview and ASU Degree Details block are designed to work together. The overview block should be added to a page located at "/degrees/undergrad" or "/degrees/graduate" depending on the program level that is displayed. The overview block will generate URLs for each individual degree. An example undergrad URL is "/degrees/undergrad/degree-name". To view the details of the specific degree, the site editor needs to create a page located at the generated URL, and add the degree details block to that page with the academic plan code of the degree.
+
+Hero image is required.
+
+### ASU Degree Details
+
+Multiple images are required:
+- Hero
+- Intro content
+- Career outlook
+- Global opportunity
+- Why ASU:
+	- Faculty
+	- Programs
+	- Research
+	- Inclusion
+	- Mentors
+	- Honors
+- Attend online

@@ -4,3 +4,74 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+#application-requirements {
+	.accordion {
+
+		.accordion-item	{
+			border-bottom: 1px solid #d0d0d0;
+			border-top: 1px solid #d0d0d0;
+			margin-top: 1.5rem;
+			height: 100%;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-moz-box-orient: vertical;
+			-moz-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			overflow: hidden;
+			border-color: #d0d0d0;
+			border-left: 0.5rem solid #ffc627;
+			height: auto;
+
+			.accordion-header {
+				padding: 0.5rem;
+				overflow: hidden;
+
+				h4 {
+					margin: 0;
+
+					a {
+						padding: 0.5rem 1.5rem;
+						color: #191919;
+						text-decoration: none;
+						display: flex;
+						flex-wrap: nowrap;
+						justify-content: space-between;
+						align-items: center;
+						svg.fa-chevron-up {
+							margin-left: 1.5rem;
+							-webkit-transition-duration: .4s;
+							-moz-transition-duration: .4s;
+							-o-transition-duration: .4s;
+							transition-duration: .4s;
+							-webkit-align-self: flex-start;
+							-ms-flex-item-align: start;
+							align-self: flex-start;
+						}
+
+					}
+					a.collapsed {
+						svg.fa-chevron-up {
+							transform: rotate(180deg);
+						}
+					}
+				}
+
+			}
+
+			.accordion-body {
+				padding: 0 32px 24px 32px;
+				background-color: #fafafa;
+				border-top: 1px solid #d0d0d0;
+			}
+		}
+	}
+
+}
+

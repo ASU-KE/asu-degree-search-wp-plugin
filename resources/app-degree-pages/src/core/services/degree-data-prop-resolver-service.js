@@ -32,8 +32,7 @@ const isValidActiveProgram = row =>
 // @ts-ignore
 function degreeDataPropResolverService(row = {}) {
   return {
-		getMajorDesc: () => row["Descr100"],
-    getMajorDescUrlFix: () => row["Descr100"].replace(/\s+/g, '-').replace(/[ ,()]/g, '').toLowerCase(),
+    getMajorDesc: () => row["Descr100"],
     getInstitution: () => row["Institution"],
     getAcadPlan: () => row["AcadPlan"],
     getDegree: () => row["Degree"],

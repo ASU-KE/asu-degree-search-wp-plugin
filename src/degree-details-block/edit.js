@@ -9,6 +9,19 @@ import { DetailPage } from "../../resources/app-degree-pages/src/components/Deta
 // import Controls from './controls';
 import Inspector from './inspector';
 import { useBlockProps } from "@wordpress/block-editor";
+// default img
+import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/detail-page/hero.jpg"
+import ImgDefaultIntro from "../../resources/app-degree-pages/dist/assets/img/detail-page/intro.jpg"
+import ImgAttendOnline from "../../resources/app-degree-pages/dist/assets/img/detail-page/attend-online.jpg"
+import ImgCareerOutlook from "../../resources/app-degree-pages/dist/assets/img/detail-page/career-outlook.jpg"
+import ImgCustomizeFaculty from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-faculty-600.jpg"
+import ImgCustomizeHonors from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-honors-600.jpg"
+import ImgCustomizeInclusion from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-inclusion-600.jpg"
+import ImgCustomizeMentor from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-mentor-600.jpg"
+import ImgCustomizePrograms from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-programs-600.jpg"
+import ImgCustomizeResearch from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-research-600.jpg"
+import ImgGlobalOpportunity from "../../resources/app-degree-pages/dist/assets/img/detail-page/global-opportunity.jpg"
+
 
 
 /**
@@ -99,7 +112,7 @@ const Edit = ( props ) => {
 		},
 		hero: {
 		  image: {
-		    url: heroImageUrl,
+		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 		    altText: heroAltText,
 		    size: heroImageSize, //"medium",
 		  },
@@ -128,7 +141,7 @@ const Edit = ( props ) => {
 		// 	},
 		//   ],
 			image: {
-				url: introContentImageUrl,
+				url: introContentImageUrl ? introContentImageUrl : ImgDefaultIntro,
 				altText: introContentImageAltText,
 			},
 		  // optional
@@ -229,7 +242,7 @@ const Edit = ( props ) => {
 		},
 		careerOutlook: {
 		  image: {
-			url: careerOutlookImageUrl,
+			url: careerOutlookImageUrl ? careerOutlookImageUrl : ImgCareerOutlook,
 			altText: careerOutlookImageAltText,
 		  },
 		},
@@ -239,7 +252,7 @@ const Edit = ( props ) => {
 		globalOpportunity: {
 		  // OPTIONAL
 		  image: {
-			url: globalOpportunityImageUrl,
+			url: globalOpportunityImageUrl ? globalOpportunityImageUrl : ImgGlobalOpportunity,
 			altText: globalOpportunityAltText,
 		  },
 		},
@@ -249,7 +262,7 @@ const Edit = ( props ) => {
 		  cards: {
 			faculty: {
 			  image: {
-				url: whyChooseAsuCardsFacultyImageUrl,
+				url: whyChooseAsuCardsFacultyImageUrl ? whyChooseAsuCardsFacultyImageUrl : ImgCustomizeFaculty,
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
 			//   title: "World-class faculty",
@@ -262,7 +275,7 @@ const Edit = ( props ) => {
 			},
 			programs: {
 			  image: {
-				url: whyChooseAsuCardsProgramsImageUrl,
+				url: whyChooseAsuCardsProgramsImageUrl ? whyChooseAsuCardsProgramsImageUrl : ImgCustomizePrograms,
 				altText: whyChooseAsuCardsProgramsAltText,
 			  },
 			//   title: "Highly ranked programs",
@@ -275,7 +288,7 @@ const Edit = ( props ) => {
 			},
 			research: {
 			  image: {
-				url: whyChooseAsuCardsResearchImageUrl,
+				url: whyChooseAsuCardsResearchImageUrl ? whyChooseAsuCardsResearchImageUrl : ImgCustomizeResearch,
 				altText: whyChooseAsuCardsResearchAltText,
 			  },
 			//   title: "Research opportunities",
@@ -288,7 +301,7 @@ const Edit = ( props ) => {
 			},
 			inclusion: {
 			  image: {
-				url: whyChooseAsuCardsInclusionImageUrl,
+				url: whyChooseAsuCardsInclusionImageUrl ? whyChooseAsuCardsInclusionImageUrl : ImgCustomizeInclusion,
 				altText: whyChooseAsuCardsInclusionAltText
 			  },
 			//   title: "An inclusive environment",
@@ -301,7 +314,7 @@ const Edit = ( props ) => {
 			},
 			mentors: {
 			  image: {
-				url: whyChooseAsuCardsMentorsImageUrl,
+				url: whyChooseAsuCardsMentorsImageUrl ? whyChooseAsuCardsMentorsImageUrl : ImgCustomizeMentor,
 				altText: whyChooseAsuCardsMentorsAltText,
 			  },
 			//   title: "Mentor network",
@@ -314,7 +327,7 @@ const Edit = ( props ) => {
 			},
 			honors: {
 			  image: {
-				url: whyChooseAsuCardsHonorsImageUrl,
+				url: whyChooseAsuCardsHonorsImageUrl ? whyChooseAsuCardsHonorsImageUrl : ImgCustomizeHonors,
 				altText: whyChooseAsuCardsHonorsAltText,
 			  },
 			//   title: "Global education",
@@ -330,7 +343,7 @@ const Edit = ( props ) => {
 		attendOnline: {
 		  // OPTIONAL
 		  image: {
-			url: attendOnlineImageUrl,
+			url: attendOnlineImageUrl ? attendOnlineImageUrl : ImgAttendOnline,
 			altText: attendOnlineAltText,
 		  },
 		},

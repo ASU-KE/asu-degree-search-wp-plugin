@@ -1,6 +1,18 @@
 const { render } = wp.element;
 
 import { DetailPage } from "../../resources/app-degree-pages/src/components/DetailPage"
+// default img
+import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/detail-page/hero.jpg"
+import ImgDefaultIntro from "../../resources/app-degree-pages/dist/assets/img/detail-page/intro.jpg"
+import ImgAttendOnline from "../../resources/app-degree-pages/dist/assets/img/detail-page/attend-online.jpg"
+import ImgCareerOutlook from "../../resources/app-degree-pages/dist/assets/img/detail-page/career-outlook.jpg"
+import ImgCustomizeFaculty from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-faculty-600.jpg"
+import ImgCustomizeHonors from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-honors-600.jpg"
+import ImgCustomizeInclusion from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-inclusion-600.jpg"
+import ImgCustomizeMentor from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-mentor-600.jpg"
+import ImgCustomizePrograms from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-programs-600.jpg"
+import ImgCustomizeResearch from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-research-600.jpg"
+import ImgGlobalOpportunity from "../../resources/app-degree-pages/dist/assets/img/detail-page/global-opportunity.jpg"
 
 const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
@@ -88,7 +100,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 		hero: {
 		  image: {
-		    url: heroImageUrl,
+		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 		    altText: heroAltText,
 		    size: heroImageSize, //"medium",
 		  },
@@ -117,7 +129,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		// 	},
 		//   ],
 			image: {
-				url: introContentImageUrl,
+				url: introContentImageUrl ? introContentImageUrl : ImgDefaultIntro,
 				altText: introContentImageAltText,
 			},
 		  // optional
@@ -218,7 +230,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 		careerOutlook: {
 		  image: {
-			url: careerOutlookImageUrl,
+			url: careerOutlookImageUrl ? careerOutlookImageUrl : ImgCareerOutlook,
 			altText: careerOutlookImageAltText,
 		  },
 		},
@@ -228,7 +240,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		globalOpportunity: {
 		  // OPTIONAL
 		  image: {
-			url: globalOpportunityImageUrl,
+			url: globalOpportunityImageUrl ? globalOpportunityImageUrl : ImgGlobalOpportunity,
 			altText: globalOpportunityAltText,
 		  },
 		},
@@ -238,7 +250,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  cards: {
 			faculty: {
 			  image: {
-				url: whyChooseAsuCardsFacultyImageUrl,
+				url: whyChooseAsuCardsFacultyImageUrl ? whyChooseAsuCardsFacultyImageUrl : ImgCustomizeFaculty,
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
 			//   title: "World-class faculty",
@@ -251,7 +263,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			},
 			programs: {
 			  image: {
-				url: whyChooseAsuCardsProgramsImageUrl,
+				url: whyChooseAsuCardsProgramsImageUrl ? whyChooseAsuCardsProgramsImageUrl : ImgCustomizePrograms,
 				altText: whyChooseAsuCardsProgramsAltText,
 			  },
 			//   title: "Highly ranked programs",
@@ -264,7 +276,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			},
 			research: {
 			  image: {
-				url: whyChooseAsuCardsResearchImageUrl,
+				url: whyChooseAsuCardsResearchImageUrl ? whyChooseAsuCardsResearchImageUrl : ImgCustomizeResearch,
 				altText: whyChooseAsuCardsResearchAltText,
 			  },
 			//   title: "Research opportunities",
@@ -277,7 +289,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			},
 			inclusion: {
 			  image: {
-				url: whyChooseAsuCardsInclusionImageUrl,
+				url: whyChooseAsuCardsInclusionImageUrl ? whyChooseAsuCardsInclusionImageUrl : ImgCustomizeInclusion,
 				altText: whyChooseAsuCardsInclusionAltText
 			  },
 			//   title: "An inclusive environment",
@@ -290,7 +302,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			},
 			mentors: {
 			  image: {
-				url: whyChooseAsuCardsMentorsImageUrl,
+				url: whyChooseAsuCardsMentorsImageUrl ? whyChooseAsuCardsMentorsImageUrl : ImgCustomizeMentor,
 				altText: whyChooseAsuCardsMentorsAltText,
 			  },
 			//   title: "Mentor network",
@@ -303,7 +315,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			},
 			honors: {
 			  image: {
-				url: whyChooseAsuCardsHonorsImageUrl,
+				url: whyChooseAsuCardsHonorsImageUrl ? whyChooseAsuCardsHonorsImageUrl : ImgCustomizeHonors,
 				altText: whyChooseAsuCardsHonorsAltText,
 			  },
 			//   title: "Global education",
@@ -319,7 +331,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		attendOnline: {
 		  // OPTIONAL
 		  image: {
-			url: attendOnlineImageUrl,
+			url: attendOnlineImageUrl ? attendOnlineImageUrl : ImgAttendOnline,
 			altText: attendOnlineAltText,
 		  },
 		},

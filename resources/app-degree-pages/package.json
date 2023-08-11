@@ -98,6 +98,7 @@
     "webpack-merge": "^5.8.0"
   },
   "volta": {
-    "extends": "../../package.json"
+    "extends": "../../package.json",
+    "yarn": "1.22.19"
   }
 }

@@ -1,6 +1,7 @@
 const { render } = wp.element;
 
 import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
+import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
 
 
 // It is possible to load multiple forms onto a page.
@@ -47,7 +48,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		actionUrls: actionUrls,
 		hero: {
 		  image: {
-		    url: heroImageUrl,
+		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 		    altText: heroAltText,
 		    size: heroImageSize,
 		  },

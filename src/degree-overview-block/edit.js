@@ -2,7 +2,8 @@
  * External dependencies
  */
 import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
-
+// default img
+import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
 /**
  * Internal dependencies
  */
@@ -63,7 +64,7 @@ const Edit = ( props ) => {
 		actionUrls: actionUrls,
 		hero: {
 		  image: {
-		    url: heroImageUrl,
+		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 		    altText: heroAltText,
 		    size: heroImageSize,
 		  },

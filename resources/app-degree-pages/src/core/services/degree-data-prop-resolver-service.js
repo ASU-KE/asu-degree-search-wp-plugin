@@ -37,6 +37,7 @@ function degreeDataPropResolverService(row = {}) {
     getInstitution: () => row["Institution"],
     getAcadPlan: () => row["AcadPlan"],
     getDegree: () => row["Degree"],
+		getDegreeFix: () => row["Degree"].toLowerCase(),
     getDegreeMajorMap: () => row["degreeMajorMap"],
     isUndergradProgram: () => isUndergradProgram(row),
     isGradProgram: () => !isUndergradProgram(row),

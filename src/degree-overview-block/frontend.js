@@ -36,7 +36,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 
 	const actionUrls = {
         applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
-        majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}`,
+        majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}-{DEGREE_LEVEL}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038

@@ -44,12 +44,12 @@
 
       const dataSource = {
         endpoint: "https://degrees.apps.asu.edu/t5/service",
-        method: "findAllDegrees",
+        method: "findDegreeByCollege",
         init: "false", // "true" | "false"Î
         program: "undergrad", // graduate | undergrad
         cert: "false", // "true" | "false"
-        // collegeAcadOrg: "CGF", // OPTIONAL example values: CLW, CTB, CTE
-        // departmentCode: "CSFIS", // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL
+        collegeAcadOrg: "CGF", // OPTIONAL example values: CLW, CTB, CTE
+        //departmentCode: ["CSFIS","CHL"], // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL
         // blacklistAcadPlans: ["BAACCBS", "LAACTBS"], // OPTIONAL example filters out Accountancy and Actuarial Science
       };
 

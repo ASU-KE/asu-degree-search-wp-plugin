@@ -72,7 +72,7 @@
     "jest-transform-css": "^2.1.0",
     "jest-transform-file": "^1.1.1",
     "jsdom-screenshot": "^4.0.0",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.31",
     "react": ">= 16.14.0 < 18",
     "react-dom": ">= 16.14.0 < 18",
     "react-router-dom": "^6.2.1",

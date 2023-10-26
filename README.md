@@ -12,7 +12,7 @@
 
 * Contributors:      ASU-KE
 * Tested up to:      6.1
-* Current vesion:    0.1.0
+* Current vesion:    1.0.0
 
 
 <br />
@@ -288,7 +288,13 @@ Most of these props either configure the submission process or pre-configure the
 
 The ASU Degree Overview and ASU Degree Details block are designed to work together. The overview block should be added to a page located at "/degrees/undergrad" or "/degrees/graduate" depending on the program level that is displayed. The overview block will generate URLs for each individual degree. An example undergrad URL is "/degrees/undergrad/degree-name". To view the details of the specific degree, the site editor needs to create a page located at the generated URL, and add the degree details block to that page with the academic plan code of the degree.
 
-Hero image is required.
+***Developer note***
+After intial <code>npm i</code> or any <code>npm update</code>, developer must re-add custom code to <code>/node_modules/@asu/app-degree-pages/</code>
+```
+ getMajorDescUrlFix: () => row["Descr100"].replace(/\s+/g, '-').replace(/[ ,()]/g, '').toLowerCase(),
+ getDegreeFix: () => row["Degree"].toLowerCase(),
+
+```
 
 ### ASU Degree Details
 

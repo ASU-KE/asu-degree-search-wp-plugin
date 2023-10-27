@@ -3,7 +3,7 @@
  */
 import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
 // default img
-import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
+import ImgDefaultHero from "../../resources/app-degree-pages/src/assets/img/listing-page/hero.jpg"
 /**
  * Internal dependencies
  */

@@ -10,17 +10,17 @@ import { DetailPage } from "../../resources/app-degree-pages/src/components/Deta
 import Inspector from './inspector';
 import { useBlockProps } from "@wordpress/block-editor";
 // default img
-import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/detail-page/hero.jpg"
-import ImgDefaultIntro from "../../resources/app-degree-pages/dist/assets/img/detail-page/intro.jpg"
-import ImgAttendOnline from "../../resources/app-degree-pages/dist/assets/img/detail-page/attend-online.jpg"
-import ImgCareerOutlook from "../../resources/app-degree-pages/dist/assets/img/detail-page/career-outlook.jpg"
-import ImgCustomizeFaculty from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-faculty-600.jpg"
-import ImgCustomizeHonors from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-honors-600.jpg"
-import ImgCustomizeInclusion from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-inclusion-600.jpg"
-import ImgCustomizeMentor from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-mentor-600.jpg"
-import ImgCustomizePrograms from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-programs-600.jpg"
-import ImgCustomizeResearch from "../../resources/app-degree-pages/dist/assets/img/detail-page/customize-research-600.jpg"
-import ImgGlobalOpportunity from "../../resources/app-degree-pages/dist/assets/img/detail-page/global-opportunity.jpg"
+import ImgDefaultHero from "../../resources/app-degree-pages/src/assets/img/detail-page/hero.jpg"
+import ImgDefaultIntro from "../../resources/app-degree-pages/src/assets/img/detail-page/intro.jpg"
+import ImgAttendOnline from "../../resources/app-degree-pages/src/assets/img/detail-page/attend-online.jpg"
+import ImgCareerOutlook from "../../resources/app-degree-pages/src/assets/img/detail-page/career-outlook.jpg"
+import ImgCustomizeFaculty from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-faculty-600.jpg"
+import ImgCustomizeHonors from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-honors-600.jpg"
+import ImgCustomizeInclusion from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-inclusion-600.jpg"
+import ImgCustomizeMentor from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-mentor-600.jpg"
+import ImgCustomizePrograms from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-programs-600.jpg"
+import ImgCustomizeResearch from "../../resources/app-degree-pages/src/assets/img/detail-page/customize-research-600.jpg"
+import ImgGlobalOpportunity from "../../resources/app-degree-pages/src/assets/img/detail-page/global-opportunity.jpg"
 
 
 

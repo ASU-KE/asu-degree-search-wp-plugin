@@ -1,7 +1,7 @@
 const { render } = wp.element;
 
 import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
-import ImgDefaultHero from "../../resources/app-degree-pages/dist/assets/img/listing-page/hero.jpg"
+import ImgDefaultHero from "../../resources/app-degree-pages/src/assets/img/listing-page/hero.jpg"
 
 
 // It is possible to load multiple forms onto a page.
@@ -35,9 +35,16 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
       };
 
+	  let degreeUrl = ""
+	  if(dataSourceProgram === "graduate") {
+		degreeUrl = `{DEGREE_NAME}`
+	  } else {
+		degreeUrl = `{DEGREE_NAME}-{DEGREE_LEVEL}`
+	  }
+
 	const actionUrls = {
         applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
-        majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}-{DEGREE_LEVEL}`,
+        majorInfoUrl: `/degrees/${dataSourceProgram}/${degreeUrl}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038

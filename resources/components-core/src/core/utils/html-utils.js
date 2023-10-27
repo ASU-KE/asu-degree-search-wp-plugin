@@ -1,3 +1,4 @@
+// @ts-check
 import { sanitize } from "dompurify";
 
 /**
@@ -14,7 +15,7 @@ function queryFirstFocusable(targetSelector) {
 
   /** @type {FocusableElement} */
   const focusable = target.querySelector(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabIndex]:not([tabIndex="-1"])'
   );
 
   return focusable;
@@ -23,7 +24,7 @@ function queryFirstFocusable(targetSelector) {
  * @param {string} content
  * @returns {Object}
  */
-export const sanitizeDangerousMarkup = (content) => {
+export const sanitizeDangerousMarkup = content => {
   return { __html: sanitize(content) };
 };
 

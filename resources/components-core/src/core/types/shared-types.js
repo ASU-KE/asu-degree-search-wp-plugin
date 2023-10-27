@@ -1,6 +1,9 @@
+// @ts-check
+
 /**
  * @typedef {Object} ButtonProps
  * @property {string}   [label]
+ * @property {string}   [cardTitle]
  * @property {string}   [ariaLabel]
  * @property {boolean}  [block]
  * @property {boolean}  [disabled]
@@ -22,11 +25,13 @@
  * @property {React.RefObject} [innerRef]
  * @property {function():void} [onClick]
  * @property {"large"|"small"} [size]
+ * @property {string}   [cardTitle]
  */
 
 /**
  * @typedef {Object} TagsProps
  * @property {string}  [label]
+ * @property {string}   [cardTitle]
  * @property {string}  [ariaLabel]
  * @property {string}  [color]
  * @property {boolean} [disabled]
@@ -130,9 +135,12 @@
  * @property {boolean} [disabled]
  * @property {boolean} [pageLinkIcon]
  * @property {boolean} [selectedPage]
+ * @property {boolean}  [ellipses]
  * @property {string} [dataId]
  * @property {function():void} [onClick]
  * @property {React.ReactNode} children
+ * @property {string} [ariaLabel]
+ * @property {boolean} [ariaDisabled]
  */
 
 /**

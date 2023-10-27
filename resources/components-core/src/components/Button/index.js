@@ -1,3 +1,4 @@
+// @ts-check
 /* eslint react/jsx-props-no-spreading: "off" */
 import classNames from "classnames";
 import PropTypes from "prop-types";
@@ -23,6 +24,7 @@ const gaDefaultObject = {
  */
 export const Button = ({
   label,
+  cardTitle,
   ariaLabel,
   block,
   color,
@@ -50,8 +52,8 @@ export const Button = ({
     Tag = "a";
   }
 
-  const handleClick = (text) => {
-    trackGAEvent({ ...gaDefaultObject, text });
+  const handleClick = text => {
+    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
     onClick?.();
   };
 
@@ -66,7 +68,7 @@ export const Button = ({
       aria-label={ariaLabel}
       target={Tag === "a" ? target : null}
     >
-      {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} mr-1`} />}
+      {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} me-1`} />}
       {label}
     </Tag>
   );
@@ -77,6 +79,10 @@ Button.propTypes = {
    * Button label
    */
   label: PropTypes.string,
+  /**
+   * Card title
+   */
+  cardTitle: PropTypes.string,
   /**
     ARIA label for accessibility
   */
@@ -101,18 +107,12 @@ Button.propTypes = {
   element: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.string,
-    PropTypes.shape({
-      $$typeof: PropTypes.symbol,
-      render: PropTypes.func,
-    }),
+    PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
     PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.string,
-        PropTypes.shape({
-          $$typeof: PropTypes.symbol,
-          render: PropTypes.func,
-        }),
+        PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
       ])
     ),
   ]),
@@ -156,6 +156,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   label: "",
+  cardTitle: "",
   ariaLabel: undefined,
   block: undefined,
   color: "gray",

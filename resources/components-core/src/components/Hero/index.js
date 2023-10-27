@@ -1,3 +1,4 @@
+// @ts-check
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
@@ -59,13 +60,13 @@ function headingHeroHtmlTemplate({
   return (
     <div
       className={classNames(`uds-hero`, {
-        [imageSize[image.size]]: image.size,
+        [imageSize[image?.size]]: image?.size,
       })}
     >
       <HeroImage
         className="hero"
-        src={image.url}
-        alt={image.altText}
+        src={image?.url}
+        alt={image?.altText}
         data-testid="hero-image"
       />
 
@@ -118,13 +119,13 @@ function headingHeroHtmlTemplate({
  * @param {HeroProps} props
  * @returns {JSX.Element}
  */
-const Hero = (props) => {
+const Hero = props => {
   const type = props.type || "heading-hero";
 
   const templateTypes = {
     "heading-hero": () => headingHeroHtmlTemplate(props),
     "story-hero": () => storyHeroHtmlTemplate(props),
-    undefined: () => {
+    "undefined": () => {
       // eslint-disable-next-line no-console
       console.error(
         `the type '${type}' is not supported by the 'Hero' component.`

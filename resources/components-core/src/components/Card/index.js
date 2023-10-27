@@ -1,3 +1,4 @@
+// @ts-check
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
@@ -6,7 +7,10 @@ import { trackGAEvent } from "../../core/services/googleAnalytics";
 import { sanitizeDangerousMarkup } from "../../core/utils/html-utils";
 import { Button } from "../Button";
 import { ButtonTag } from "../ButtonTag";
-import { AnchorWrapper, CardWrapper } from "./index.styles";
+// eslint-disable-next-line import/no-cycle
+import { Image } from "../Image";
+import { CardWrapper } from "./index.styles";
+import { emailAddressParser } from "./utils/emailAddressParser";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -28,8 +32,6 @@ export const Card = ({
   type,
   width,
   horizontal,
-  clickable,
-  clickHref,
   image,
   imageAltText,
   title,
@@ -42,38 +44,14 @@ export const Card = ({
   linkLabel,
   linkUrl,
   tags,
+  showBorders,
+  cardLink,
 }) => {
-  if (clickable && clickHref) {
-    return (
-      <AnchorWrapper role="button" href={clickHref} className="c-card">
-        <BaseCard
-          type={type}
-          width={width}
-          horizontal={horizontal}
-          clickable={clickable}
-          image={image}
-          imageAltText={imageAltText}
-          title={title}
-          icon={icon}
-          body={body}
-          eventFormat={eventFormat}
-          eventLocation={eventLocation}
-          eventTime={eventTime}
-          buttons={buttons}
-          linkLabel={linkLabel}
-          linkUrl={linkUrl}
-          tags={tags}
-        />
-      </AnchorWrapper>
-    );
-  }
-
   return (
     <BaseCard
       type={type}
       width={width}
       horizontal={horizontal}
-      clickable={clickable}
       image={image}
       imageAltText={imageAltText}
       title={title}
@@ -86,6 +64,8 @@ export const Card = ({
       linkLabel={linkLabel}
       linkUrl={linkUrl}
       tags={tags}
+      showBorders={showBorders}
+      cardLink={cardLink}
     />
   );
 };
@@ -103,14 +83,6 @@ Card.propTypes = {
    * Enable horizontal mode
    */
   horizontal: PropTypes.bool,
-  /**
-   * Enable clickable card
-   */
-  clickable: PropTypes.bool,
-  /**
-   * Card target if clickable
-   */
-  clickHref: PropTypes.string,
   /**
    * Card title
    */
@@ -172,14 +144,20 @@ Card.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  /**
+   * Remove card borders
+   */
+  showBorders: PropTypes.bool,
+  /**
+   * Card link
+   */
+  cardLink: PropTypes.string,
 };
 
 Card.defaultProps = {
   type: "default",
   width: "100%",
   horizontal: false,
-  clickable: false,
-  clickHref: undefined,
   body: undefined,
   eventFormat: "stack",
   eventTime: undefined,
@@ -191,6 +169,7 @@ Card.defaultProps = {
   linkLabel: undefined,
   linkUrl: undefined,
   tags: undefined,
+  showBorders: true,
 };
 
 /*
@@ -200,7 +179,6 @@ const BaseCard = ({
   type,
   width,
   horizontal,
-  clickable,
   image,
   imageAltText,
   title,
@@ -213,6 +191,8 @@ const BaseCard = ({
   linkLabel,
   linkUrl,
   tags,
+  showBorders,
+  cardLink,
 }) => {
   const cardClass = classNames("card", "cards-components", {
     [`card-degree`]: type === "degree",
@@ -220,18 +200,20 @@ const BaseCard = ({
     [`card-story`]: type === "story",
     [`w-${width.replace("%", "")}`]: width !== "100%",
     [`card-horizontal`]: horizontal,
-    [`card-hover`]: clickable,
+    [`borderless`]: !showBorders,
   });
 
   return (
     <>
       <CardWrapper className={cardClass} data-testid="card-container">
         {!!image && (
-          <img
-            className="card-img-top"
+          <Image
             src={image}
             alt={imageAltText}
-            data-testid="card-image"
+            dataTestId="card-image"
+            cssClasses={["card-img-top"]}
+            cardLink={cardLink}
+            title={title}
           />
         )}
         {!image && icon && (
@@ -253,6 +235,7 @@ const BaseCard = ({
               linkLabel={linkLabel}
               linkUrl={linkUrl}
               tags={tags}
+              cardLink={cardLink}
             />
           </div>
         ) : (
@@ -267,6 +250,7 @@ const BaseCard = ({
             linkLabel={linkLabel}
             linkUrl={linkUrl}
             tags={tags}
+            cardLink={cardLink}
           />
         )}
       </CardWrapper>
@@ -278,7 +262,6 @@ BaseCard.propTypes = {
   type: PropTypes.oneOf(["default", "degree", "event", "news", "story"]),
   width: PropTypes.oneOf(["25%", "50%", "75%", "100%"]),
   horizontal: PropTypes.bool,
-  clickable: PropTypes.bool,
   title: PropTypes.string.isRequired,
   icon: PropTypes.arrayOf(PropTypes.string), // React Font Awesome icon prefix and name string to be rendered in button label. Ex: ['fab', 'drupal']
   body: PropTypes.string,
@@ -310,13 +293,14 @@ BaseCard.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  showBorders: PropTypes.bool,
+  cardLink: PropTypes.string,
 };
 
 BaseCard.defaultProps = {
   type: "default",
   width: "100%",
   horizontal: false,
-  clickable: false,
   body: "",
   eventFormat: "stack",
   eventTime: "",
@@ -328,6 +312,7 @@ BaseCard.defaultProps = {
   linkLabel: undefined,
   linkUrl: undefined,
   tags: undefined,
+  showBorders: true,
 };
 
 const CardContent = ({
@@ -341,11 +326,14 @@ const CardContent = ({
   linkLabel,
   linkUrl,
   tags,
+  cardLink,
 }) => (
   <>
     {!!title && (
       <div className="card-header" data-testid="card-title">
-        <h3 className="card-title">{title}</h3>
+        <h3 className="card-title">
+          {cardLink ? <a href={cardLink}>{title}</a> : title}
+        </h3>
       </div>
     )}
     {!!body && (
@@ -363,11 +351,14 @@ const CardContent = ({
     )}
     {buttons && (
       <div className="card-buttons">
-        {buttons.map((button) => (
-          <div className="card-button" data-testid="card-button">
+        {buttons.map(button => (
+          <div
+            className="card-button"
+            data-testid="card-button"
+            key={`${button.label}-${button.href}`}
+          >
             {/* @ts-ignore */}
             <Button
-              key={`${button.label}-${button.href}`}
               ariaLabel={button.ariaLabel}
               color={button.color}
               icon={button.icon}
@@ -376,6 +367,7 @@ const CardContent = ({
               onClick={button.onClick}
               size={button.size}
               target={button.target}
+              cardTitle={title}
             />
           </div>
         ))}
@@ -384,7 +376,7 @@ const CardContent = ({
     {linkUrl && linkLabel && (
       <div className="card-link" data-testid="card-link">
         <a
-          href={linkUrl}
+          href={emailAddressParser(linkUrl)}
           onClick={() =>
             trackGAEvent({
               ...gaDefaultObject,
@@ -399,7 +391,7 @@ const CardContent = ({
     )}
     {tags && (
       <div className="card-tags" data-testid="card-tags">
-        {tags.map((tag) => (
+        {tags.map(tag => (
           // @ts-ignore
           <ButtonTag
             key={`${tag.label}-${tag.href}`}
@@ -408,6 +400,7 @@ const CardContent = ({
             href={tag.href}
             label={tag.label}
             onClick={tag.onClick}
+            cardTitle={title}
           />
         ))}
       </div>
@@ -445,6 +438,7 @@ CardContent.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  cardLink: PropTypes.string,
 };
 
 CardContent.defaultProps = {

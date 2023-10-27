@@ -1,3 +1,4 @@
+// @ts-check
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
@@ -18,27 +19,34 @@ export const PageItem = ({
   pageLinkIcon,
   selectedPage,
   onClick,
+  ellipses,
+  ariaLabel,
   children,
+  ariaDisabled,
 }) => {
   return (
     <li
       className={classNames("page-item", {
         [`disabled`]: disabled,
         [`active`]: selectedPage,
+        [`elipses`]: ellipses,
       })}
     >
       {isClickeable ? (
         <button
+          type="button"
+          aria-label={ariaLabel}
           className={classNames("page-link", {
             [`page-link-icon`]: pageLinkIcon,
           })}
-          type="button"
           onClick={onClick}
           data-testid="page-link"
           data-id={dataId}
+          aria-current={selectedPage ? "page" : null}
+          aria-disabled={ariaDisabled}
         >
           {children}
-          {selectedPage && <span className="sr-only">(current)</span>}
+          {selectedPage && <span className="visually-hidden">(current)</span>}
         </button>
       ) : (
         <span className="page-link" data-testid="page-link">
@@ -56,7 +64,10 @@ PageItem.propTypes = {
   selectedPage: PropTypes.bool,
   dataId: PropTypes.string,
   onClick: PropTypes.func,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  ellipses: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  ariaDisabled: PropTypes.bool,
 };
 
 PageItem.defaultProps = {

@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * example:
  * const gen = generator();

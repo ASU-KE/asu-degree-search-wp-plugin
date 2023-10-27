@@ -2,12 +2,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { Accordion } from "../../components/Accordion";
+import { AnchorMenu } from "../../components/AnchorMenu";
+import { Article } from "../../components/Article";
 import { Button } from "../../components/Button";
 import { ButtonIconOnly } from "../../components/ButtonIconOnly";
 import { ButtonTag } from "../../components/ButtonTag";
+// eslint-disable-next-line import/no-cycle
 import { Card } from "../../components/Card";
 import { Hero } from "../../components/Hero";
 import { Pagination } from "../../components/Pagination";
+import { RankingCard } from "../../components/RankingCard";
+import { Testimonial } from "../../components/Testimonial";
+import { Video } from "../../components/Video";
 import { spreadClasses } from "./css-utils";
 import { sanitizeDangerousMarkup } from "./html-utils";
 import { idGenerator } from "./id-generator";
@@ -69,6 +76,12 @@ export const initButtonTag = ({ targetSelector, props }) =>
  */
 export const initCard = ({ targetSelector, props }) =>
   RenderReact(Card, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
+export const initRankingCard = ({ targetSelector, props }) =>
+  RenderReact(RankingCard, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props

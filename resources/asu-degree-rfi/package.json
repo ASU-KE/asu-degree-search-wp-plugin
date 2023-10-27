@@ -72,7 +72,7 @@
     "jsdoc-ts-utils": "^2.0.1",
     "jsdom-screenshot": "^4.0.0",
     "postcss": "^8.4.19",
-    "semantic-release": "^17.4.2",
+    "semantic-release": "^19.0.3",
     "semantic-release-monorepo": "^7.0.4",
     "storybook-css-modules-preset": "^1.1.1",
     "style-loader": "^2.0.0",

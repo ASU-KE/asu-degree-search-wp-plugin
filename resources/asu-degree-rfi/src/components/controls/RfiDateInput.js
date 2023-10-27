@@ -1,76 +1,74 @@
 // @ts-check
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
-import { Field, useFormikContext } from 'formik';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { RfiLabel, RfiError } from './controls-helpers';
+import { Field, useFormikContext } from "formik";
+import PropTypes from "prop-types";
+import React from "react";
 
-const RfiDateInput = ( {
-	label,
-	name,
-	id,
-	requiredIcon,
-	required,
-	helperText,
-	autoFocus,
-	onBlur,
-} ) => {
-	// Surface values from Formik context
-	const { values } = useFormikContext();
+import { RfiLabel, RfiError } from "./controls-helpers";
 
-	// Ideally we'd not have implementation logic in this generic component, but
-	// due to structural challenges in obtaining sibling field values via form
-	// context, implementing that here with conditional protections is the most
-	// reasonable solve identified. TODO One option might be to break out and
-	// create a unique component just for special case fields.
-	function customValidate( value ) {
-		let error;
-		// Require ZipCode unless Campus is "ONLNE".
-		if ( id === 'ZipCode' && values.Campus !== 'ONLNE' && ! value ) {
-			error = 'Error: Zip code is required';
-		}
-		return error;
-	}
+const RfiDateInput = ({
+  label,
+  name,
+  id,
+  requiredIcon,
+  required,
+  helperText,
+  autoFocus,
+  onBlur,
+}) => {
+  // Surface values from Formik context
+  const { values } = useFormikContext();
 
-	return (
-		<Field name={ name }>
-			{ ( { field, form: { touched, errors }, meta } ) => {
-				const isError = meta.touched && meta.error;
-				return (
-					<div className="form-group">
-						<RfiLabel
-							label={ label }
-							name={ name }
-							id={ id }
-							requiredIcon={ requiredIcon }
-						/>
-						<div className="input-group input-group-trailing-icon">
-							<Field
-								id={ id }
-								name={ name }
-								type="text"
-								{ ...field }
-								className="form-control"
-								required={ required }
-								placeholder={ helperText }
-								autoFocus={ autoFocus }
-								onBlur={ ( e ) => {
-									field.onBlur?.( e );
-									onBlur?.( e );
-								} }
-							/>
-							<i className="far fa-calendar" aria-hidden="true" />
-						</div>
-						<RfiError
-							isError={ !! isError }
-							metaError={ meta.error }
-						/>
-					</div>
-				);
-			} }
-		</Field>
-	);
+  // Ideally we'd not have implementation logic in this generic component, but
+  // due to structural challenges in obtaining sibling field values via form
+  // context, implementing that here with conditional protections is the most
+  // reasonable solve identified. TODO One option might be to break out and
+  // create a unique component just for special case fields.
+  function customValidate(value) {
+    let error;
+    // Require ZipCode unless Campus is "ONLNE".
+    if (id === "ZipCode" && values.Campus !== "ONLNE" && !value) {
+      error = "Error: Zip code is required";
+    }
+    return error;
+  }
+
+  return (
+    <Field name={name}>
+      {({ field, form: { touched, errors }, meta }) => {
+        const isError = meta.touched && meta.error;
+        return (
+          <div className="form-group">
+            <RfiLabel
+              label={label}
+              name={name}
+              id={id}
+              requiredIcon={requiredIcon}
+            />
+            <div className="input-group input-group-trailing-icon">
+              <Field
+                id={id}
+                name={name}
+                type="text"
+                {...field}
+                className="form-control"
+                required={required}
+                placeholder={helperText}
+                autoFocus={autoFocus}
+                onBlur={e => {
+                  field.onBlur?.(e);
+                  onBlur?.(e);
+                }}
+              />
+              <i className="far fa-calendar" aria-hidden="true" />
+            </div>
+            <RfiError isError={!!isError} metaError={meta.error} />
+          </div>
+        );
+      }}
+    </Field>
+  );
 };
 
 // Note on requiredIcon. Yup required status is not readily available so we
@@ -78,22 +76,22 @@ const RfiDateInput = ( {
 // Formik has a better way to do it.
 
 RfiDateInput.defaultProps = {
-	id: undefined,
-	requiredIcon: undefined,
-	required: undefined,
-	autoFocus: undefined,
-	helperText: undefined,
+  id: undefined,
+  requiredIcon: undefined,
+  required: undefined,
+  autoFocus: undefined,
+  helperText: undefined,
 };
 
 RfiDateInput.propTypes = {
-	label: PropTypes.string.isRequired,
-	name: PropTypes.string.isRequired,
-	id: PropTypes.string,
-	requiredIcon: PropTypes.bool,
-	required: PropTypes.bool,
-	helperText: PropTypes.string,
-	autoFocus: PropTypes.bool,
-	onBlur: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  requiredIcon: PropTypes.bool,
+  required: PropTypes.bool,
+  helperText: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  onBlur: PropTypes.func,
 };
 
 export { RfiDateInput };

@@ -1,70 +1,68 @@
 // @ts-check
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
-import { Field, useFormikContext } from 'formik';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { RfiLabel, RfiError } from './controls-helpers';
+import { Field, useFormikContext } from "formik";
+import PropTypes from "prop-types";
+import React from "react";
 
-const RfiTextInput = ( {
-	label,
-	name,
-	id,
-	requiredIcon,
-	required,
-	helperText,
-	autoFocus,
-	onBlur,
-} ) => {
-	// Surface values from Formik context
-	const { values } = useFormikContext();
+import { RfiLabel, RfiError } from "./controls-helpers";
 
-	// Ideally we'd not have implementation logic in this generic component, but
-	// due to structural challenges in obtaining sibling field values via form
-	// context, implementing that here with conditional protections is the most
-	// reasonable solve identified. TODO One option might be to break out and
-	// create a unique component just for special case fields.
-	const customValidate = ( value ) => {
-		let error;
-		// Require ZipCode unless Campus is "ONLNE".
-		if ( id === 'ZipCode' && values.Campus !== 'ONLNE' && ! value ) {
-			error = 'Error: Zip code is required';
-		}
-		return error;
-	};
+const RfiTextInput = ({
+  label,
+  name,
+  id,
+  requiredIcon,
+  required,
+  helperText,
+  autoFocus,
+  onBlur,
+}) => {
+  // Surface values from Formik context
+  const { values } = useFormikContext();
 
-	return (
-		<Field name={ name } validate={ customValidate }>
-			{ ( { field, form: { touched, errors }, meta } ) => {
-				const isError = meta.touched && meta.error;
-				return (
-					<div className="form-group">
-						<RfiLabel
-							label={ label }
-							name={ name }
-							id={ id }
-							requiredIcon={ requiredIcon }
-						/>
-						<Field
-							id={ id }
-							name={ name }
-							type="text"
-							{ ...field }
-							className="form-control"
-							required={ required }
-							placeholder={ helperText }
-							autoFocus={ autoFocus }
-							onBlur={ onBlur }
-						/>
-						<RfiError
-							isError={ !! isError }
-							metaError={ meta.error }
-						/>
-					</div>
-				);
-			} }
-		</Field>
-	);
+  // Ideally we'd not have implementation logic in this generic component, but
+  // due to structural challenges in obtaining sibling field values via form
+  // context, implementing that here with conditional protections is the most
+  // reasonable solve identified. TODO One option might be to break out and
+  // create a unique component just for special case fields.
+  const customValidate = value => {
+    let error;
+    // Require ZipCode unless Campus is "ONLNE".
+    if (id === "ZipCode" && values.Campus !== "ONLNE" && !value) {
+      error = "Error: Zip code is required";
+    }
+    return error;
+  };
+
+  return (
+    <Field name={name} validate={customValidate}>
+      {({ field, form: { touched, errors }, meta }) => {
+        const isError = meta.touched && meta.error;
+        return (
+          <div className="form-group">
+            <RfiLabel
+              label={label}
+              name={name}
+              id={id}
+              requiredIcon={requiredIcon}
+            />
+            <Field
+              id={id}
+              name={name}
+              type="text"
+              {...field}
+              className="form-control"
+              required={required}
+              placeholder={helperText}
+              autoFocus={autoFocus}
+              onBlur={onBlur}
+            />
+            <RfiError isError={!!isError} metaError={meta.error} />
+          </div>
+        );
+      }}
+    </Field>
+  );
 };
 
 // Note on requiredIcon. Yup required status is not readily available so we
@@ -72,22 +70,22 @@ const RfiTextInput = ( {
 // Formik has a better way to do it.
 
 RfiTextInput.defaultProps = {
-	id: undefined,
-	requiredIcon: undefined,
-	required: undefined,
-	autoFocus: undefined,
-	helperText: undefined,
+  id: undefined,
+  requiredIcon: undefined,
+  required: undefined,
+  autoFocus: undefined,
+  helperText: undefined,
 };
 
 RfiTextInput.propTypes = {
-	label: PropTypes.string.isRequired,
-	name: PropTypes.string.isRequired,
-	id: PropTypes.string,
-	requiredIcon: PropTypes.bool,
-	required: PropTypes.bool,
-	onBlur: PropTypes.func,
-	helperText: PropTypes.string,
-	autoFocus: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  requiredIcon: PropTypes.bool,
+  required: PropTypes.bool,
+  onBlur: PropTypes.func,
+  helperText: PropTypes.string,
+  autoFocus: PropTypes.bool,
 };
 
 export { RfiTextInput };

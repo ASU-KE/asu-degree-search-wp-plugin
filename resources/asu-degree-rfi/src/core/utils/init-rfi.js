@@ -1,8 +1,8 @@
 // @ts-nocheck
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import { AsuRfi } from '../../components/AsuRfi';
+import { AsuRfi } from "../../components/AsuRfi";
 
 /**
  * @typedef {Object} ComponentProps
@@ -14,12 +14,12 @@ import { AsuRfi } from '../../components/AsuRfi';
 /**
  * @param {ComponentProps} props
  */
-const RenderReact = ( component, props, target ) => {
-	ReactDOM.render( React.createElement( component, props ), target );
+const RenderReact = (component, props, target) => {
+  ReactDOM.render(React.createElement(component, props), target);
 };
 
 /**
  * @param {ComponentProps} props
  */
-export const initRfi = ( { targetSelector, props } ) =>
-	RenderReact( AsuRfi, props, document.querySelector( targetSelector ) );
+export const initRfi = ({ targetSelector, props }) =>
+  RenderReact(AsuRfi, props, document.querySelector(targetSelector));

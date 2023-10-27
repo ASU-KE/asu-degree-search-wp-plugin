@@ -3,13 +3,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-// Requires peer dependency of @asu/bootstrap4-theme
+// Requires peer dependency of @asu/unity-bootstrap-theme
 // We import the styles in .storybook/preview-head.html for Storybook
 // rendering, but otherwise, we only worry about using the correct markup and
 // tweaking a few styles
 
 import { RfiMainForm } from "../stepper/RfiMainForm";
-//import './style.css';
+import "./index.css";
 
 /**
  * @typedef {import("../../core/types/rfi-types").RFIProps} RFIProps
@@ -19,7 +19,6 @@ import { RfiMainForm } from "../stepper/RfiMainForm";
  * @param {RFIProps} props
  * @return {JSX.Element}
  */
-
 const AsuRfi = ({
   appPathFolder,
   campus,
@@ -39,7 +38,6 @@ const AsuRfi = ({
   dataSourceAsuOnline,
   dataSourceCountriesStates,
   submissionUrl,
-  sourceID,
 }) => (
   <div>
     <RfiMainForm
@@ -61,7 +59,6 @@ const AsuRfi = ({
       dataSourceAsuOnline={dataSourceAsuOnline}
       dataSourceCountriesStates={dataSourceCountriesStates}
       submissionUrl={submissionUrl}
-      sourceID={sourceID}
     />
   </div>
 );
@@ -88,9 +85,6 @@ AsuRfi.defaultProps = {
     "https://cms.asuonline.asu.edu/lead-submissions-v3.5/programs",
   dataSourceCountriesStates:
     "https://api.myasuplat-dpl.asu.edu/api/codeset/countries",
-
-  sourceID: "123456789",
-  submissionUrl: "https://httpbin.org/post",
 };
 
 AsuRfi.propTypes = {
@@ -112,5 +106,4 @@ AsuRfi.propTypes = {
   dataSourceAsuOnline: PropTypes.string,
   dataSourceCountriesStates: PropTypes.string,
   submissionUrl: PropTypes.string.isRequired,
-  sourceID: PropTypes.string.isRequired,
 };

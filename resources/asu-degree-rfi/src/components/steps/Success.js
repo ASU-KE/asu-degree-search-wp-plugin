@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 // @ts-check
-// import { sanitizeDangerousMarkup } from "@asu/components-core/dist/libCore.es";
 import { sanitizeDangerousMarkup } from "../../../../components-core/src";
 import PropTypes from "prop-types";
 import React from "react";

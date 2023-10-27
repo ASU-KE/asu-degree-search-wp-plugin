@@ -1,6 +1,5 @@
 // @ts-check
-// import { getCurrentScriptPath } from "@asu/components-core/dist/libCore.es";
-import { getCurrentScriptPath } from "../../../../components-core/src";
+import { getCurrentScriptPath } from "../../../../components-core/src/core/utils/script-utils";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -17,7 +16,6 @@ import { optionalForm } from "../steps/Optional";
 import { programInterestForm } from "../steps/ProgramInterest";
 import { successForm } from "../steps/Success";
 import { RfiStepper } from "./RfiStepper";
-import RfiImage from "../../assets/img/rfi-default.png";
 
 const currentScript = getCurrentScriptPath();
 
@@ -40,8 +38,9 @@ const RfiMainForm = ({
   dataSourceAsuOnline,
   dataSourceCountriesStates,
   submissionUrl,
-  sourceID,
 }) => {
+  const RfiImage = `../../../src/assets/img/WS2-DefaultImagev01-Final.png`;
+
   return (
     <div className="container rfi-container-inner">
       <div className="row">
@@ -64,7 +63,6 @@ const RfiMainForm = ({
                 country={country}
                 stateProvince={stateProvince}
                 successMsg={successMsg}
-                sourceID={sourceID}
                 test={test}
                 dataSourceDegreeSearch={dataSourceDegreeSearch}
                 dataSourceAsuOnline={dataSourceAsuOnline}
@@ -87,12 +85,12 @@ const RfiMainForm = ({
                   optionalForm.component,
                   successForm.component,
                 ]}
-                handleSubmit={(value) => {
+                handleSubmit={value => {
                   // MARSHALL FIELDS FOR THE PAYLOAD
 
                   let payload = value;
                   payload = submissionFormFieldPrep(payload);
-                  payload = submissionSetHiddenFields(payload, test, sourceID);
+                  payload = submissionSetHiddenFields(payload, test);
 
                   // Patch ASUOnline clientid or enterpriseclientid and also
                   // ga_clientid onto payload.
@@ -124,8 +122,8 @@ const RfiMainForm = ({
                       body: JSON.stringify(payload),
                     }
                   )
-                    .then((response) => response.json())
-                    .then((response) => {
+                    .then(response => response.json())
+                    .then(response => {
                       // eslint-disable-next-line no-console
                       console.log("Successful submit:", response);
                     });
@@ -139,6 +137,7 @@ const RfiMainForm = ({
   );
 };
 
+// Props
 RfiMainForm.defaultProps = {
   campus: undefined,
   actualCampus: undefined,
@@ -153,7 +152,6 @@ RfiMainForm.defaultProps = {
   stateProvince: undefined,
   successMsg: `Keep an eye on your inbox and in the meantime, check out some more of the <a href="https://www.asu.edu/about">amazing facts, figures, or other links</a> that ASU has to offer.`,
   test: false,
-  sourceID: "123456789",
 };
 
 RfiMainForm.propTypes = {
@@ -175,7 +173,6 @@ RfiMainForm.propTypes = {
   dataSourceAsuOnline: PropTypes.string.isRequired,
   dataSourceCountriesStates: PropTypes.string.isRequired,
   submissionUrl: PropTypes.string.isRequired,
-  sourceID: PropTypes.string.isRequired,
 };
 
 export { RfiMainForm };

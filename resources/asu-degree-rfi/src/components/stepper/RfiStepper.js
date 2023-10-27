@@ -1,12 +1,12 @@
 // @ts-check
 /* eslint-disable no-unused-vars, react/no-danger, react/no-unused-prop-types */
-// import { sanitizeDangerousMarkup } from "@asu/components-core/dist/libCore.es";
 import { sanitizeDangerousMarkup } from "../../../../components-core/src";
 import { Formik, Form } from "formik";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Button, Progress } from "reactstrap";
 import * as Yup from "yup";
+
 import { trackGAEvent } from "../../core/services/googleAnalytics";
 
 const defaultButtonEvent = {
@@ -23,7 +23,7 @@ const mapSections = {
   2: "More about me",
 };
 
-const RfiStepper = (props) => {
+const RfiStepper = props => {
   const [step, setStep] = useState(0);
   const [email, setEmail] = useState("");
   const section = mapSections[step];
@@ -41,8 +41,8 @@ const RfiStepper = (props) => {
           `&fields=AcadPlan,EmailAddr&program=graduate&cert=true`;
 
         const res = await fetch(serviceUrl)
-          .then((response) => response.json())
-          .catch((error) => new Error(error));
+          .then(response => response.json())
+          .catch(error => new Error(error));
         // Structure of response: response.programs[0].EmailAddr
         if (res.programs) {
           const {
@@ -69,7 +69,7 @@ const RfiStepper = (props) => {
   // types that require custom validation with cross-step dependencies should
   // see RfiTextInputs.js for a more flexible field-based approach.
   // See Formik validation flavors: https://formik.org/docs/guides/validation
-  const validate = (values) => {
+  const validate = values => {
     const errors = {};
     const { programOfInterest, programOfInterestOptional } = props;
     // If on step 1 and Interest1 is empty and we don't have a
@@ -203,13 +203,13 @@ const RfiStepper = (props) => {
               }
               // Advance the step.
               next();
-              Object.keys(initialValues[step + 1]).map((key) =>
+              Object.keys(initialValues[step + 1]).map(key =>
                 setFieldTouched(key, false, false)
               );
             }, 400);
           }}
         >
-          {(formik) => {
+          {formik => {
             // Render lastStep without stepper buttons.
             if (step === lastStep) {
               return (
@@ -269,7 +269,6 @@ const RfiStepperButtons = ({
         {stepNum > 0 ? (
           <Button
             type="button"
-						className={`btn-maroon`}
             onClick={() => {
               handleBack();
               trackGAEvent({
@@ -292,7 +291,7 @@ const RfiStepperButtons = ({
         {stepNum < lastStep - 1 ? (
           <Button
             type="submit"
-            className={`rfi-button-step${stepNum + 1} btn-maroon`}
+            className={`rfi-button-step${stepNum + 1}`}
             onClick={() =>
               trackGAEvent({
                 ...defaultButtonEvent,
@@ -349,7 +348,9 @@ RfiStepper.defaultProps = {
 };
 
 RfiStepper.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   validationSchemas: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   initialValues: PropTypes.arrayOf(PropTypes.object).isRequired,
   formComponents: PropTypes.arrayOf(PropTypes.func).isRequired,
   handleSubmit: PropTypes.func.isRequired,

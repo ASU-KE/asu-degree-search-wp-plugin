@@ -52,6 +52,9 @@ const Inspector = ( props ) => {
 							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
+
+					{dataSourceProgram == 'undergrad' && (
+
 					<PanelRow>
 						<ToggleControl
 							label={ 'Certificates and minors' }
@@ -64,6 +67,8 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					)}
+
 					<PanelRow>
 						<SelectControl
 							label={'View style'}

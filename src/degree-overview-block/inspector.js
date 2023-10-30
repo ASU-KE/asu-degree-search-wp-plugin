@@ -18,6 +18,7 @@ const Inspector = ( props ) => {
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
+			dataSourceCert,
 			defaultView,
 			degreesPerPage,
 			heroImageUrl,
@@ -49,6 +50,18 @@ const Inspector = ( props ) => {
 							]}
 							onChange={ ( value ) => setAttributes( { dataSourceProgram: value } ) }
 							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Certificates and minors' }
+							help={'Show or hide undergrad certificates and minors. Only applicable to undergrad programs.'}
+							checked={ dataSourceCert }
+              				onChange={ (value) => {
+                				value ? false : true
+                				setAttributes( {dataSourceCert: value} );
+								}
+							}
 						/>
 					</PanelRow>
 					<PanelRow>

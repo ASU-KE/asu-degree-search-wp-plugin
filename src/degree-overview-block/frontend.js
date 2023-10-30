@@ -12,6 +12,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
+	const dataSourceCert = listingBlock.dataset.datasourcecert
 
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -29,7 +30,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         method: "findAllDegrees",
         init: "false", // "true" | "false"Î
         program: dataSourceProgram, // graduate | undergrad
-        cert: "false", // "true" | "false"
+        cert: dataSourceCert, // "true" | "false"
         collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
         departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
         blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science

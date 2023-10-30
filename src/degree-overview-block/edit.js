@@ -26,6 +26,7 @@ const Edit = ( props ) => {
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
+			dataSourceCert,
 			programList,
 			defaultView,
 			degreesPerPage,
@@ -45,7 +46,7 @@ const Edit = ( props ) => {
         method: "findAllDegrees",
         init: "false", // "true" | "false"Î
         program: dataSourceProgram, // graduate | undergrad
-        cert: "false", // "true" | "false"
+        cert: dataSourceCert, // "true" | "false"
         collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
         departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
         blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science

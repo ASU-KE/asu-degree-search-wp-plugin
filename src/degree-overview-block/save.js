@@ -13,6 +13,7 @@ const save = ( props ) => {
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
 			dataSourceProgram,
+			dataSourceCert,
 			defaultView,
 			degreesPerPage,
 			heroImageUrl,
@@ -35,6 +36,7 @@ const save = ( props ) => {
 			data-dataSourceCollegeAcadOrg={ dataSourceCollegeAcadOrg }
 			data-dataSourceDepartmentCode={ dataSourceDepartmentCode }
 			data-dataSourceProgram={ dataSourceProgram }
+			data-dataSourceCert={ dataSourceCert }
 			data-defaultView={ defaultView }
 			data-degreesPerPage={ degreesPerPage }
 			data-heroImageUrl={ heroImageUrl }

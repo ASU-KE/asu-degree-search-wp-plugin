@@ -38,6 +38,10 @@
 			"enum": [ "undergrad", "graduate" ],
 			"default": "undergrad"
 		},
+		"dataSourceCert": {
+			"type": "boolean",
+			"default": false
+		},
 		"defaultView": {
 			"type":"string",
 			"enum": [ "grid-view", "list-view" ],

@@ -79,6 +79,7 @@ const Edit = ( props ) => {
 		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {
 		  dataSource: dataSource,
+		  cert: dataSourceCert,
 		  // OPTIONAL
 		  settings: {
 			hideCollegeSchool: false,

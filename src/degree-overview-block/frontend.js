@@ -1,7 +1,7 @@
 const { render } = wp.element;
 
-import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
-import ImgDefaultHero from "../../resources/app-degree-pages/src/assets/img/listing-page/hero.jpg"
+import { ListingPage } from "../../resources/asu-unity-stack/packages/app-degree-pages/src/components/ListingPage"
+import ImgDefaultHero from "../../resources/asu-unity-stack/packages/app-degree-pages/src/assets/img/listing-page/hero.jpg"
 
 
 // It is possible to load multiple forms onto a page.
@@ -12,7 +12,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
-	const dataSourceCert = listingBlock.dataset.datasourcecert === "true"
+	const dataSourceCert = String(listingBlock.dataset.datasourcecert)
 
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -39,6 +39,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	  let degreeUrl = ""
 	  if(dataSourceProgram === "graduate") {
 		degreeUrl = `{DEGREE_NAME}`
+		dataSource.cert = "false"
 	  } else {
 		degreeUrl = `{DEGREE_NAME}-{DEGREE_LEVEL}`
 	  }

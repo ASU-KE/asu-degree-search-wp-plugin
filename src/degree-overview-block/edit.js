@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { ListingPage } from "../../resources/app-degree-pages/src/components/ListingPage"
+import { ListingPage } from "../../resources/asu-unity-stack/packages/app-degree-pages/src/components/ListingPage"
 // default img
-import ImgDefaultHero from "../../resources/app-degree-pages/src/assets/img/listing-page/hero.jpg"
+import ImgDefaultHero from "../../resources/asu-unity-stack/packages/app-degree-pages/src/assets/img/listing-page/hero.jpg"
 /**
  * Internal dependencies
  */
@@ -79,7 +79,6 @@ const Edit = ( props ) => {
 		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {
 		  dataSource: dataSource,
-		  cert: dataSourceCert,
 		  // OPTIONAL
 		  settings: {
 			hideCollegeSchool: false,

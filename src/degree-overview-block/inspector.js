@@ -61,7 +61,7 @@ const Inspector = ( props ) => {
 							help={'Show or hide undergrad certificates and minors. Only applicable to undergrad programs.'}
 							checked={ dataSourceCert }
               				onChange={ (value) => {
-                				value ? false : true
+                				value ? true : false
                 				setAttributes( {dataSourceCert: value} );
 								}
 							}

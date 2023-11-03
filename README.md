@@ -295,6 +295,15 @@ After intial <code>npm i</code> or any <code>npm update</code>, developer must r
  getDegreeFix: () => row["Degree"].toLowerCase(),
 
 ```
+Build will fail due to import setup. <code>/node_modules/@asu/components_core/package.json</code> needs exports updated for current directory (.):
+```
+"exports": {
+    "./dist/libCore.es.js": {
+      "default": "./src/index.js"
+    },
+    ".": "./dist/libCore.es.js"
+  }
+```
 
 ### ASU Degree Details
 

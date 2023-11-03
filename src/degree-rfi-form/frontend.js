@@ -1,6 +1,6 @@
 const { render } = wp.element;
 
-import { AsuRfi } from '../../resources/asu-degree-rfi/src/components/AsuRfi';
+import { AsuRfi } from '../../resources/asu-unity-stack/packages/app-rfi/src/components/AsuRfi';
 // import { AsuRfi } from "@asu/app-rfi/dist/appRfi.es";
 
 // It is possible to load multiple forms onto a page.

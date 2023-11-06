@@ -25,6 +25,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 
 	const actionApplyNowUrl = listingBlock.dataset.actionapplynowurl
 	const enableIntroContent = listingBlock.dataset.enableintrocontent === "true"
+	const introContentType = listingBlock.dataset.introcontenttype
 
 	//const wordpressMediaDate = listingBlock.dataset.wordpressmediadate
 
@@ -55,22 +56,135 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
       };
 	let introContent = null
-	if (enableIntroContent){
-		introContent = {
-			type: "text",
-			title: {
-			  text:
-				"This is introductory marketing copy. Lorem ipsum dolor sit amet",
-			  // component: "h2", default h2
-			},
-			contents: [
-			  {
-				text: `<strong>Lorem, ipsum dolor</strong> sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
-		  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
-		  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
-			  },
-			],
-		  };
+	if(enableIntroContent){
+		if(introContentType === "text") {
+			introContent = {
+				type: "text",
+				title: {
+				  text:
+					"ASU offers more than 800 undergraduate and graduate degrees, minors and certificates in a wide range of academic disciplines. Explore the degree programs below to find the path that's right for you.",
+				  highlightColor: "gold",
+				},
+				content: {
+				  text:
+					"ASU offers more than 800 undergraduate and graduate degrees, minors and certificates in a wide range of academic disciplines. Explore the degree programs below to find the path that's right for you.",
+					highlightColor: "gold",
+				},
+			  };
+		}
+		if(introContentType === "text-photo-grid") {
+			 // =======================================================================
+      // Optional introContent configuration which type is "text-photo-grid"
+      // =======================================================================
+      introContent = {
+        type: "text-photo-grid",
+        title: {
+          text:
+            "This is introductory marketing copy. Lorem ipsum dolor sit amet",
+          // component: "h2", default h2
+        },
+        contents: [
+          {
+            text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
+          },
+        ],
+        photoGrid: {
+          images: [
+            {
+              url: "./assets/img/demo-phot-1.jpeg",
+            },
+            {
+              url: "./assets/img/demo-phot-2.jpeg",
+            },
+            {
+              url: "./assets/img/demo-phot-3.jpeg",
+            },
+            {
+              url: "./assets/img/demo-phot-4.jpeg",
+            },
+          ],
+        },
+      };
+		}
+
+		if(introContentType === "text-media") {
+      // =======================================================================
+      // Optional introContent configuration which type is "text-media"
+      // =======================================================================
+      introContent = {
+        type: "text-media",
+        title: {
+          text:
+            "This is introductory marketing copy. Lorem ipsum dolor sit amet",
+          // component: "h2", default h2
+        },
+        contents: [
+          {
+            text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
+          },
+        ],
+        image: {
+          url: "https://source.unsplash.com/random/800x400?a=1",
+        },
+        // video: {
+        //   url: "./assets/video/stock-video-person-drawing.mp4",
+        //   title: "",
+        //   vttUrl: "",
+        // },
+      }; }
+	  if(introContentType === "text-image-overlay") {
+      // =======================================================================
+      // Optional introContent configuration which type is "text-image-overlay"
+      // =======================================================================
+      introContent = {
+        type: "text-image-overlay",
+        header: {
+          text: "Intro Content Image Overlay",
+          // component: "h2", default h2
+        },
+        title: {
+          text: "This is the contents that goes in the box",
+          // component: "h2", default h2
+        },
+        contents: [
+          {
+            text: `Instagram tour operator travel sailing flying package.
+           Territory New York City group discount active lifestyle creditcard
+           insurance wellness kayak guide overnight rural lonely planet.`,
+          },
+          {
+            text: `Train luxury Paris recommendations nature France sight seeing.
+           Flexibility Amsterdam maps.
+           Pacific lonely planet private jet national insurance taxi tourist attractions.
+           Budget Pacific guide caravan Barcelona place to stay maps gateway diary tour operator money`,
+          },
+        ],
+        image: {
+          url: "https://source.unsplash.com/random/800x600?a=1",
+        },
+      };}
+      // =======================================================================
+      // Optional introContent configuration which type is "text"
+      // =======================================================================
+    //   const introContentText = {
+    //     type: "text",
+    //     title: {
+    //       text:
+    //         "This is introductory marketing copy. Lorem ipsum dolor sit amet",
+    //       // component: "h2", default h2
+    //     },
+    //     contents: [
+    //       {
+    //         text: `<strong>Lorem, ipsum dolor</strong> sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+    //   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+    //   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
+    //       },
+    //     ],
+    //   };
 	}
 
 

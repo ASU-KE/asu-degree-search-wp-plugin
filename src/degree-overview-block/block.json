@@ -80,6 +80,11 @@
 		"enableIntroContent":{
 			"type": "boolean",
 			"default": false
+		},
+		"introContentType":{
+			"type": "string",
+			"enum": [ "text", "text-photo-grid", "text-media", "text-image-overlay" ],
+			"default": "text"
 		}
 	}
 }

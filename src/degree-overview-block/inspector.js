@@ -30,6 +30,7 @@ const Inspector = ( props ) => {
 			hasSearchBar,
 			actionApplyNowUrl,
 			enableIntroContent,
+			introContentType,
 		},
 		setAttributes,
 	} = props;
@@ -242,6 +243,24 @@ const Inspector = ( props ) => {
 
 						/>
 					</PanelRow>
+					{enableIntroContent == true && (
+						<PanelRow>
+						<SelectControl
+							label={'Intro content type'}
+							help={ 'Set style for CTA intro content before search area.<br/>Basic text<br/>Photo grid<br/>Media<br/>Image overlay' }
+							value={ introContentType }
+							options={[
+								{ label: 'Basic text', value: 'text' },
+								{ label: 'Photo grid', value: 'text-photo-grid' },
+								{ label: 'Media', value: 'text-media' },
+								{ label: 'Image overlay', value: 'text-image-overlay' }
+							]}
+							onChange={ ( value ) => setAttributes( { introContentType: value } ) }
+							__nextHasNoMarginBottom
+						/>
+						</PanelRow>
+					)}
+
 					</PanelBody>
 			</InspectorControls>
 		</>

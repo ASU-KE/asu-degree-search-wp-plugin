@@ -25,6 +25,7 @@ const save = ( props ) => {
 			hasSearchBar,
 			actionApplyNowUrl,
 			enableIntroContent,
+			introContentType,
 		},
 		className,
 	} = props;
@@ -50,6 +51,7 @@ const save = ( props ) => {
 			data-hasSearchBar={ hasSearchBar }
 			data-actionApplyNowUrl={ actionApplyNowUrl }
 			data-enableIntroContent={ enableIntroContent }
+			data-introContentType={ introContentType }
 		></div>
 	);
 };

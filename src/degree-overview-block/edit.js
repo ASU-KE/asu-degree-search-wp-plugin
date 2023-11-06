@@ -36,6 +36,7 @@ const Edit = ( props ) => {
 			introContent,
 			hasFilters,
 			hasSearchBar,
+			actionApplyNowUrl,
 		},
 		className,
 	} = props;
@@ -53,7 +54,7 @@ const Edit = ( props ) => {
       };
 
 	const actionUrls = {
-        applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
+        applyNowUrl: actionApplyNowUrl, // OPTIONAL
         majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`

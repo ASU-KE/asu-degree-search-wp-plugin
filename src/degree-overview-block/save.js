@@ -23,6 +23,7 @@ const save = ( props ) => {
 			programList,
 			hasFilters,
 			hasSearchBar,
+			actionApplyNowUrl,
 		},
 		className,
 	} = props;
@@ -46,6 +47,7 @@ const save = ( props ) => {
 			data-programList={ programList }
 			data-hasFilters={ hasFilters }
 			data-hasSearchBar={ hasSearchBar }
+			data-actionApplyNowUrl={ actionApplyNowUrl }
 		></div>
 	);
 };

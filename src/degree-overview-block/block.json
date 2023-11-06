@@ -72,6 +72,10 @@
 		"hasSearchBar": {
 			"type": "boolean",
 			"default": true
+		},
+		"actionApplyNowUrl":{
+			"type": "string",
+			"default": "https://admission.asu.edu/apply"
 		}
 	}
 }

@@ -28,6 +28,7 @@ const Inspector = ( props ) => {
 			programList,
 			hasFilters,
 			hasSearchBar,
+			actionApplyNowUrl,
 		},
 		setAttributes,
 	} = props;
@@ -153,6 +154,16 @@ const Inspector = ( props ) => {
                 setAttributes( {hasSearchBar: value} );
             } }
 
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Apply Now URL' }
+              				help={'OPTIONAL change CTA button URL.'}
+							value={ actionApplyNowUrl }
+							onChange={ ( value ) =>
+								setAttributes( { actionApplyNowUrl: value } )
+							}
 						/>
 					</PanelRow>
 				</PanelBody>

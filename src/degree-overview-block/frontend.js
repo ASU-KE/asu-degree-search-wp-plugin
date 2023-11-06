@@ -23,6 +23,8 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const heroAltText = listingBlock.dataset.heroalttext
 	const heroImageSize = listingBlock.dataset.heroimagesize
 
+	const actionApplyNowUrl = listingBlock.dataset.actionapplynowurl
+
 	//const wordpressMediaDate = listingBlock.dataset.wordpressmediadate
 
 	const dataSource = {
@@ -45,7 +47,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	  }
 
 	const actionUrls = {
-        applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
+        applyNowUrl: actionApplyNowUrl, // OPTIONAL
         majorInfoUrl: `/degrees/${dataSourceProgram}/${degreeUrl}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`

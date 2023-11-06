@@ -100,6 +100,10 @@
     "actionApplyNowUrl": {
       "type": "string",
       "default": "https://admission.asu.edu/apply"
+    },
+    "enableIntroContent": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

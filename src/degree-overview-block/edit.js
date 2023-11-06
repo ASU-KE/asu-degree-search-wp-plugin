@@ -33,10 +33,11 @@ const Edit = ( props ) => {
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
-			introContent,
+			//introContent,
 			hasFilters,
 			hasSearchBar,
 			actionApplyNowUrl,
+			enableIntroContent,
 		},
 		className,
 	} = props;
@@ -61,6 +62,24 @@ const Edit = ( props ) => {
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
       };
 
+	let introContent = null;
+
+	if(enableIntroContent){
+		introContent = {
+			type: "text",
+			title: {
+			  text:
+				"ASU offers more than 800 undergraduate and graduate degrees, minors and certificates in a wide range of academic disciplines. Explore the degree programs below to find the path that's right for you.",
+			  highlightColor: "gold",
+			},
+			content: {
+			  text:
+				"ASU offers more than 800 undergraduate and graduate degrees, minors and certificates in a wide range of academic disciplines. Explore the degree programs below to find the path that's right for you.",
+				highlightColor: "gold",
+			},
+		  };
+	}
+
 	let customProps = {
 		appPathFolder: "http://localhost:3000/dist",
 		actionUrls: actionUrls,
@@ -75,7 +94,7 @@ const Edit = ( props ) => {
 		//     highlightColor: "gold",
 		//   },
 		},
-		//introContent,
+		introContent: introContent,
 		hasFilters: hasFilters, // OPTIONAL
 		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {

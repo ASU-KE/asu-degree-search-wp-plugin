@@ -29,6 +29,7 @@ const Inspector = ( props ) => {
 			hasFilters,
 			hasSearchBar,
 			actionApplyNowUrl,
+			enableIntroContent,
 		},
 		setAttributes,
 	} = props;
@@ -222,6 +223,23 @@ const Inspector = ( props ) => {
 							]}
 							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
 							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					</PanelBody>
+					<PanelBody
+					title={ __( 'Intro marketing text settings', 'unityblocks' ) }
+					initialOpen={ false }
+					>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Display intro content' }
+							help={'Show or hide intro content/CTA area'}
+							checked={ enableIntroContent }
+              onChange={ (value) => {
+                value ? false : true
+                setAttributes( {enableIntroContent: value} );
+            } }
+
 						/>
 					</PanelRow>
 					</PanelBody>

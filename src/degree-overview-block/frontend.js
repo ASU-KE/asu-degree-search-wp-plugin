@@ -24,6 +24,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const heroImageSize = listingBlock.dataset.heroimagesize
 
 	const actionApplyNowUrl = listingBlock.dataset.actionapplynowurl
+	const enableIntroContent = listingBlock.dataset.enableintrocontent === "true"
 
 	//const wordpressMediaDate = listingBlock.dataset.wordpressmediadate
 
@@ -53,10 +54,30 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
       };
+	let introContent = null
+	if (enableIntroContent){
+		introContent = {
+			type: "text",
+			title: {
+			  text:
+				"This is introductory marketing copy. Lorem ipsum dolor sit amet",
+			  // component: "h2", default h2
+			},
+			contents: [
+			  {
+				text: `<strong>Lorem, ipsum dolor</strong> sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
+			  },
+			],
+		  };
+	}
+
 
 	let customProps = {
 		appPathFolder: "http://localhost:3000/dist",
 		actionUrls: actionUrls,
+		introContent: introContent,
 		hero: {
 		  image: {
 		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
@@ -68,7 +89,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 		//     highlightColor: "gold",
 		//   },
 		},
-		//introContent,
+		introContent: introContent,
 		hasFilters: hasFilters, // OPTIONAL
 		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {

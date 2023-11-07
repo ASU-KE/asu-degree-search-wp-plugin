@@ -8,7 +8,6 @@ import { useBlockProps } from "@wordpress/block-editor";
 const save = ( props ) => {
 	const {
 		attributes: {
-			actionUrls,
 			dataSourceBlacklistAcadPlans,
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
@@ -19,13 +18,17 @@ const save = ( props ) => {
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
-			introContent,
-			programList,
 			hasFilters,
 			hasSearchBar,
 			actionApplyNowUrl,
 			enableIntroContent,
 			introContentType,
+			introContentTitleText,
+			introContentContentsText,
+			introContentPhotoGridImagesUrl1,
+			introContentPhotoGridImagesUrl2,
+			introContentPhotoGridImagesUrl3,
+			introContentPhotoGridImagesUrl4,
 		},
 		className,
 	} = props;
@@ -34,7 +37,6 @@ const save = ( props ) => {
 		<div
 		id="asu-degree-overview-container"
 		{...useBlockProps.save()}
-			data-actionurls={ 'a string' }
 			data-dataSourceBlacklistAcadPlans={ dataSourceBlacklistAcadPlans }
 			data-dataSourceCollegeAcadOrg={ dataSourceCollegeAcadOrg }
 			data-dataSourceDepartmentCode={ dataSourceDepartmentCode }
@@ -45,13 +47,17 @@ const save = ( props ) => {
 			data-heroImageUrl={ heroImageUrl }
 			data-heroAltText={ heroAltText }
 			data-heroImageSize={ heroImageSize }
-			data-introContent={ introContent }
-			data-programList={ programList }
 			data-hasFilters={ hasFilters }
 			data-hasSearchBar={ hasSearchBar }
 			data-actionApplyNowUrl={ actionApplyNowUrl }
 			data-enableIntroContent={ enableIntroContent }
 			data-introContentType={ introContentType }
+			data-introContentTitleText={ introContentTitleText }
+			data-introContentContentsText={ introContentContentsText }
+			data-introContentPhotoGridImagesUrl1={ introContentPhotoGridImagesUrl1 }
+			data-introContentPhotoGridImagesUrl2={ introContentPhotoGridImagesUrl2 }
+			data-introContentPhotoGridImagesUrl3={ introContentPhotoGridImagesUrl3 }
+			data-introContentPhotoGridImagesUrl4={ introContentPhotoGridImagesUrl4 }
 		></div>
 	);
 };

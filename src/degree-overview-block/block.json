@@ -72,6 +72,43 @@
 		"hasSearchBar": {
 			"type": "boolean",
 			"default": true
+		},
+		"actionApplyNowUrl":{
+			"type": "string",
+			"default": "https://admission.asu.edu/apply"
+		},
+		"enableIntroContent":{
+			"type": "boolean",
+			"default": false
+		},
+		"introContentType":{
+			"type": "string",
+			"enum": [ "text", "text-photo-grid", "text-media", "text-image-overlay" ],
+			"default": "text"
+		},
+		"introContentTitleText":{
+			"type": "string",
+			"default": "ASU offers more than 800 undergraduate and graduate degrees, minors and certificates in a wide range of academic disciplines. Explore the degree programs below to find the path that's right for you."
+		},
+		"introContentContentsText":{
+			"type": "string",
+			"default": "<strong>Lorem, ipsum dolor</strong> sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?<br/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque? <br/>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?"
+		},
+		"introContentPhotoGridImagesUrl1":{
+			"type": "string",
+			"default": "https://source.unsplash.com/random/800x400?a=1"
+		},
+		"introContentPhotoGridImagesUrl2":{
+			"type": "string",
+			"default": "https://source.unsplash.com/random/800x400?a=1"
+		},
+		"introContentPhotoGridImagesUrl3":{
+			"type": "string",
+			"default": "https://source.unsplash.com/random/800x400?a=1"
+		},
+		"introContentPhotoGridImagesUrl4":{
+			"type": "string",
+			"default": "https://source.unsplash.com/random/800x400?a=1"
 		}
 	}
 }

@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
+import { PanelBody, PanelRow, SelectControl, TextControl, ToggleControl, TextareaControl } from '@wordpress/components';
 
 /**
  * Inspector controls
@@ -13,7 +13,6 @@ import { PanelBody, PanelRow, SelectControl, TextControl, ToggleControl } from '
 const Inspector = ( props ) => {
 	const {
 		attributes: {
-			actionUrls,
 			dataSourceBlacklistAcadPlans,
 			dataSourceCollegeAcadOrg,
 			dataSourceDepartmentCode,
@@ -24,10 +23,18 @@ const Inspector = ( props ) => {
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
-			introContent,
 			programList,
 			hasFilters,
 			hasSearchBar,
+			actionApplyNowUrl,
+			enableIntroContent,
+			introContentType,
+			introContentTitleText,
+			introContentContentsText,
+			introContentPhotoGridImagesUrl1,
+			introContentPhotoGridImagesUrl2,
+			introContentPhotoGridImagesUrl3,
+			introContentPhotoGridImagesUrl4,
 		},
 		setAttributes,
 	} = props;
@@ -155,6 +162,16 @@ const Inspector = ( props ) => {
 
 						/>
 					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Apply Now URL' }
+              				help={'OPTIONAL change CTA button URL.'}
+							value={ actionApplyNowUrl }
+							onChange={ ( value ) =>
+								setAttributes( { actionApplyNowUrl: value } )
+							}
+						/>
+					</PanelRow>
 				</PanelBody>
 
 				<PanelBody
@@ -214,6 +231,135 @@ const Inspector = ( props ) => {
 						/>
 					</PanelRow>
 					</PanelBody>
+					<PanelBody
+					title={ __( 'Intro marketing text settings', 'unityblocks' ) }
+					initialOpen={ false }
+					/>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Display intro content' }
+							help={'Show or hide intro content/CTA area'}
+							checked={ enableIntroContent }
+              onChange={ (value) => {
+                value ? false : true
+                setAttributes( {enableIntroContent: value} );
+            } }
+
+						/>
+					</PanelRow>
+					{enableIntroContent == true && (
+						<PanelBody>
+							<PanelRow>
+								<SelectControl
+									label={'Intro content type'}
+									help={ 'Set style for CTA intro content before search area.<br/>Basic text<br/>Photo grid<br/>Media<br/>Image overlay' }
+									value={ introContentType }
+									options={[
+										{ label: 'Basic text', value: 'text' },
+										{ label: 'Photo grid', value: 'text-photo-grid' },
+										{ label: 'Media', value: 'text-media' },
+										{ label: 'Image overlay', value: 'text-image-overlay' }
+									]}
+									onChange={ ( value ) => setAttributes( { introContentType: value } ) }
+									__nextHasNoMarginBottom
+								/>
+							</PanelRow>
+							<PanelRow>
+								<TextControl
+									label={ 'Title' }
+									help={'Main CTA title, HTML not allowed'}
+									value={ introContentTitleText }
+									onChange={ ( value ) =>
+										setAttributes( { introContentTitleText: value } )
+									}
+								/>
+							</PanelRow>
+							<PanelRow>
+								<TextareaControl
+									label={ 'Content' }
+									help={'HTML allowed (strong, br, etc.)'}
+									value={ introContentContentsText }
+									onChange={ ( value ) =>
+										setAttributes( { introContentContentsText: value } )
+									}
+								/>
+							</PanelRow>
+						</PanelBody>
+
+					)}
+					{introContentType == 'text-photo-grid' && (
+						<PanelBody>
+							<PanelRow>
+								<TextControl
+									label={ 'Photo grid image 1' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl1 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl1: value } )
+									}
+								/>
+							</PanelRow>
+							<PanelRow>
+								<TextControl
+									label={ 'Photo grid image 2' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl2 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl2: value } )
+									}
+								/>
+							</PanelRow>
+							<PanelRow>
+								<TextControl
+									label={ 'Photo grid image 3' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl3 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl3: value } )
+									}
+								/>
+							</PanelRow>
+							<PanelRow>
+								<TextControl
+									label={ 'Photo grid image 4' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl4 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl4: value } )
+									}
+								/>
+							</PanelRow>
+
+						</PanelBody>
+					)}
+					{introContentType == 'text-media' && (
+						<PanelBody>
+							<PanelRow>
+								<TextControl
+									label={ 'Media image' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl1 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl1: value } )
+									}
+								/>
+							</PanelRow>
+						</PanelBody>
+					)}
+					{introContentType == 'text-image-overlay' && (
+						<PanelBody>
+							<PanelRow>
+								<TextControl
+									label={ 'Image overlay image' }
+									help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+									value={ introContentPhotoGridImagesUrl1 }
+									onChange={ ( value ) =>
+										setAttributes( { introContentPhotoGridImagesUrl1: value } )
+									}
+								/>
+							</PanelRow>
+						</PanelBody>
+					)}
 			</InspectorControls>
 		</>
 	);

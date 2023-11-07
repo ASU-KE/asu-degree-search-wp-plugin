@@ -27,15 +27,22 @@ const Edit = ( props ) => {
 			dataSourceDepartmentCode,
 			dataSourceProgram,
 			dataSourceCert,
-			programList,
 			defaultView,
 			degreesPerPage,
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
-			introContent,
 			hasFilters,
 			hasSearchBar,
+			actionApplyNowUrl,
+			enableIntroContent,
+			introContentType,
+			introContentTitleText,
+			introContentContentsText,
+			introContentPhotoGridImagesUrl1,
+			introContentPhotoGridImagesUrl2,
+			introContentPhotoGridImagesUrl3,
+			introContentPhotoGridImagesUrl4,
 		},
 		className,
 	} = props;
@@ -52,13 +59,69 @@ const Edit = ( props ) => {
         blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
       };
 
+	let degreeUrl = ""
+	if(dataSourceProgram === "graduate") {
+		degreeUrl = `{DEGREE_NAME}`
+		dataSource.cert = "false"
+	} else {
+		degreeUrl = `{DEGREE_NAME}-{DEGREE_LEVEL}`
+	}
+
 	const actionUrls = {
-        applyNowUrl: "https://admission.asu.edu/apply", // OPTIONAL
-        majorInfoUrl: `/degrees/${dataSourceProgram}/{DEGREE_NAME}`,
+        applyNowUrl: actionApplyNowUrl, // OPTIONAL
+        majorInfoUrl: `/degrees/${dataSourceProgram}/${degreeUrl}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
-      };
+    };
+
+	let introContent = null;
+
+	if(enableIntroContent){
+		introContent = {
+			type: introContentType,
+			//...introContentType === "text-image-overlay" && {
+			//     header: {
+			//       text: "Intro Content Image Overlay",
+    		//       // component: "h2", default h2
+    		//     },
+			//},
+			title: {
+				text: introContentTitleText,
+				//highlightColor: "gold",
+				// component: "h2", default h2
+			},
+			contents: [{
+				text: introContentContentsText,
+				//highlightColor: "gold",
+			}],
+			...introContentType === "text-photo-grid" && {
+				photoGrid: {
+					images: [
+						{url: introContentPhotoGridImagesUrl1,},
+						{url: introContentPhotoGridImagesUrl2,},
+						{url: introContentPhotoGridImagesUrl3,},
+						{url: introContentPhotoGridImagesUrl4,},
+					],
+				},
+			},
+			...introContentType === "text-media" && {
+				image: {
+					url: introContentPhotoGridImagesUrl1,
+				},
+				// video: {
+    			// url: "./assets/video/stock-video-person-drawing.mp4",
+    			// title: "",
+    			// vttUrl: "",
+    			// },
+			},
+			...introContentType === "text-image-overlay" && {
+				image: {
+					url: introContentPhotoGridImagesUrl1,
+				},
+			},
+		}
+	}
 
 	let customProps = {
 		appPathFolder: "http://localhost:3000/dist",
@@ -74,7 +137,7 @@ const Edit = ( props ) => {
 		//     highlightColor: "gold",
 		//   },
 		},
-		//introContent,
+		introContent: introContent,
 		hasFilters: hasFilters, // OPTIONAL
 		hasSearchBar: hasSearchBar, // OPTIONAL
 		programList: {

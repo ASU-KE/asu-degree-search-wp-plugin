@@ -44,7 +44,7 @@ const Inspector = ( props ) => {
 			<InspectorControls>
 				<PanelBody
 					title={ __( 'Program selection', 'unityblocks' ) }
-					initialOpen={ false }
+					initialOpen={ true }
 				>
 					<PanelRow>
 						<SelectControl
@@ -68,7 +68,7 @@ const Inspector = ( props ) => {
 							help={'Show or hide undergrad certificates and minors. Only applicable to undergrad programs.'}
 							checked={ dataSourceCert }
               				onChange={ (value) => {
-                				value ? true : false
+                				value ? false : true
                 				setAttributes( {dataSourceCert: value} );
 								}
 							}

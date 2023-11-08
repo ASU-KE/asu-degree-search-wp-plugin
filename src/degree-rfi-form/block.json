@@ -13,8 +13,8 @@
     "align": ["wide", "full"]
   },
   "textdomain": "asu-degree-search",
-  "viewScript": ["file:./frontend.js", "asu-degree-rfi-form-view-script"],
-  "editorScript": "file:./index.js",
+  "viewScript": ["file:./frontend.js", "asu-degree-rfi-form-view-script", "file:./custom-rfi-image.js"],
+  "editorScript": ["file:./index.js", "file:./custom-rfi-image.js"],
   "style": "file:./style-index.css",
   "attributes": {
     "campus": {

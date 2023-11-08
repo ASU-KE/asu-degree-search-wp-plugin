@@ -8,11 +8,11 @@ import ImgDefaultHero from "../../resources/asu-unity-stack/packages/app-degree-
 // Load each DOM element on page using the Gutenberg-generated class for the Testimonial block
 const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 
-	const dataSourceBlacklistAcadPlans = listingBlock.dataset.datasourceblacklistacadplans
+	const dataSourceBlacklistAcadPlans = null //listingBlock.dataset.datasourceblacklistacadplans
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
-	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
+	const dataSourceDepartmentCode = null //listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
-	const dataSourceCert = String(listingBlock.dataset.datasourcecert)
+	const dataSourceCert = Boolean(listingBlock.dataset.datasourcecert)
 
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"
@@ -38,29 +38,45 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const dataSource = {
         endpoint: "https://degrees.apps.asu.edu/t5/service",
         method: "findAllDegrees",
-        init: "false", // "true" | "false"Î
         program: dataSourceProgram, // graduate | undergrad
-        cert: dataSourceCert, // "true" | "false"
-        collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
-        departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
-        blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
-    };
+		init: "false", // "true" | "false"
+		collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
+		...dataSourceProgram === "graduate" && {
+			blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
+			departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
+		},
+		...dataSourceProgram === "undergrad" && {
+			blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
+			departmentCode: dataSourceDepartmentCode, // OPTIONAL example values: CMANAGE, CHUMARTCLT, CHL, CSFIS
+		},
+		...dataSourceCert && {
+			blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : null, // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
+			cert: dataSourceCert,
+			showInactivePrograms:"true",
+		},
+      };
 
 	let degreeUrl = ""
+	let degreeUrlLevel = dataSourceProgram
 	if(dataSourceProgram === "graduate") {
 		degreeUrl = `{DEGREE_NAME}`
 		dataSource.cert = "false"
 	} else {
 		degreeUrl = `{DEGREE_NAME}-{DEGREE_LEVEL}`
+		if(dataSourceCert){
+			degreeUrlLevel = "minors"
+			dataSource.cert = "true"
+		}
 	}
 
 	const actionUrls = {
         applyNowUrl: actionApplyNowUrl, // OPTIONAL
-        majorInfoUrl: `/degrees/${dataSourceProgram}/${degreeUrl}`,
+        majorInfoUrl: `/degrees/${degreeUrlLevel}/${degreeUrl}`,
         // majorInfoUrl:
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
     };
+
 	let introContent = null
 
 	if(enableIntroContent){

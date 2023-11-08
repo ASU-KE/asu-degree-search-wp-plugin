@@ -304,6 +304,10 @@ Build will fail due to import setup. <code>/node_modules/@asu/components_core/pa
     ".": "./dist/libCore.es.js"
   }
 ```
+#### Known issues
+
+- BS5 update required
+- Certs and minors that are online don't pull through the Minor Map, on campus programs only work
 
 ### ASU Degree Details
 

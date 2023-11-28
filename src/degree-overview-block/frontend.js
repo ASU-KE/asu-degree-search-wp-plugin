@@ -3,14 +3,11 @@ const { render } = wp.element;
 import { ListingPage } from "../../resources/asu-unity-stack/packages/app-degree-pages/src/components/ListingPage"
 import ImgDefaultHero from "../../resources/asu-unity-stack/packages/app-degree-pages/src/assets/img/listing-page/hero.jpg"
 
+	const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 
-// It is possible to load multiple forms onto a page.
-// Load each DOM element on page using the Gutenberg-generated class for the Testimonial block
-const listingBlock = document.getElementById( 'asu-degree-overview-container' )
-
-	const dataSourceBlacklistAcadPlans = null //listingBlock.dataset.datasourceblacklistacadplans
+	const dataSourceBlacklistAcadPlans = listingBlock.dataset.datasourceblacklistacadplans
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
-	const dataSourceDepartmentCode = null //listingBlock.dataset.datasourcedepartmentcode
+	const dataSourceDepartmentCode = listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
 	const dataSourceCert = listingBlock.dataset.datasourcecert === "true"
 

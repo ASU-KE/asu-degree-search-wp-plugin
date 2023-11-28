@@ -12,7 +12,7 @@ const listingBlock = document.getElementById( 'asu-degree-overview-container' )
 	const dataSourceCollegeAcadOrg = listingBlock.dataset.datasourcecollegeacadorg
 	const dataSourceDepartmentCode = null //listingBlock.dataset.datasourcedepartmentcode
 	const dataSourceProgram = listingBlock.dataset.datasourceprogram
-	const dataSourceCert = Boolean(listingBlock.dataset.datasourcecert)
+	const dataSourceCert = listingBlock.dataset.datasourcecert === "true"
 
 	const defaultView = listingBlock.dataset.defaultview
 	const hasFilters = listingBlock.dataset.hasfilters === "true"

@@ -341,6 +341,22 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 	  }
 
+	window.addEventListener('load', () => {
+		const hash = window.location.hash.substring(1)
+		if (hash == `flexible-accelerated-options`) {
+			const checkElementExistence = setInterval(() => {
+				const element = document.getElementById(hash)
+				if (element) {
+					clearInterval(checkElementExistence);
+					let headerOffset = 375
+					let elementPosition = element.getBoundingClientRect().top
+					let offsetPosition = elementPosition + window.scrollY - headerOffset
+					window.scrollTo({top: offsetPosition,behavior: "smooth"})
+				}
+			}, 100)
+		}
+	})
+
 	render(
 		<DetailPage
 			dataSource={ customProps.dataSource }

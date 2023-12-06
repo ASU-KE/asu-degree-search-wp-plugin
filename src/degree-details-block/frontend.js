@@ -348,7 +348,11 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				const element = document.getElementById(hash)
 				if (element) {
 					clearInterval(checkElementExistence);
-					let headerOffset = 375
+					let headerOffset = 250
+					if(anchorMenuEnabled){
+						headerOffset = 350
+					}
+					console.log(headerOffset)
 					let elementPosition = element.getBoundingClientRect().top
 					let offsetPosition = elementPosition + window.scrollY - headerOffset
 					window.scrollTo({top: offsetPosition,behavior: "smooth"})

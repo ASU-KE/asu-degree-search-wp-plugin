@@ -29,8 +29,7 @@ const Inspector = ( props ) => {
 			// dataSourceDegreeSearch,
 			// dataSourceAsuOnline,
 			// dataSourceCountriesStates,
-			submissionUrl,
-      sourceID
+			submissionUrl
 		},
 		setAttributes,
 	} = props;
@@ -151,18 +150,6 @@ const Inspector = ( props ) => {
 							value={ successMsg }
 							onChange={ ( value ) =>
 								setAttributes( { successMsg: value } )
-							}
-						/>
-					</PanelRow>
-          <PanelRow>
-						<TextControl
-							label={ 'Source ID' }
-							help={
-								'Routes form submissions to appropriate department. DO NOT CHANGE WITHOUT APPROVAL, unintended BEHAVIORS WILL OCCUR.'
-							}
-							value={ sourceID }
-							onChange={ ( value ) =>
-								setAttributes( { sourceID: value } )
 							}
 						/>
 					</PanelRow>

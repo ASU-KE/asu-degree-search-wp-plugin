@@ -38,8 +38,7 @@ const Edit = ( props ) => {
 			dataSourceDegreeSearch,
 			dataSourceAsuOnline,
 			dataSourceCountriesStates,
-			submissionUrl,
-			sourceID
+			submissionUrl
 		},
 		className,
 	} = props;
@@ -61,8 +60,7 @@ const Edit = ( props ) => {
 		dataSourceDegreeSearch,
 		dataSourceAsuOnline,
 		dataSourceCountriesStates,
-		submissionUrl,
-    sourceID
+		submissionUrl
 	};
 	console.log(`args: ${JSON.stringify(args)}`);
 	return (

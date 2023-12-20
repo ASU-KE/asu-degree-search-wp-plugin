@@ -24,8 +24,7 @@ const save = ( props ) => {
 			dataSourceDegreeSearch,
 			dataSourceAsuOnline,
 			dataSourceCountriesStates,
-			submissionUrl,
-      sourceID
+			submissionUrl
 		},
 		className,
 	} = props;
@@ -47,7 +46,6 @@ const save = ( props ) => {
 			data-datasourceonline={ dataSourceAsuOnline }
 			data-datasourcecountriesstates={ dataSourceCountriesStates }
 			data-submissionurl={ submissionUrl }
-      data-sourceid={ sourceID }
 		></div>
 	);
 };

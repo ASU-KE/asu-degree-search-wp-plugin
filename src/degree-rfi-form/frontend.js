@@ -25,7 +25,6 @@ rfiForms.forEach( ( form ) => {
 	const dataSourceAsuOnline = form.dataset.datasourceasuonline;
 	const dataSourceCountriesStates = form.dataset.datasourcecountriesstates;
 	const submissionUrl = form.dataset.submissionurl;
-	const sourceID = form.dataset.sourceid;
 
 	render(
 		<AsuRfi
@@ -42,7 +41,6 @@ rfiForms.forEach( ( form ) => {
 			// dataSourceAsuOnline={ dataSourceAsuOnline }
 			// dataSourceCountriesStates={ dataSourceCountriesStates }
 			submissionUrl={ submissionUrl }
-			sourceID={ sourceID }
 		/>,
 		form
 	);

@@ -69,6 +69,10 @@
     "submissionUrl": {
       "type": "string",
       "default": "https://httpbin.org/post"
-    }
+    },
+		"sourceID": {
+			"type": "string",
+			"default": "ASU-DEGREE-SEARCH"
+		}
   }
 }

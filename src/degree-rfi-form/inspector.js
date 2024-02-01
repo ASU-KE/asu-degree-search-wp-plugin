@@ -29,7 +29,8 @@ const Inspector = ( props ) => {
 			// dataSourceDegreeSearch,
 			// dataSourceAsuOnline,
 			// dataSourceCountriesStates,
-			submissionUrl
+			submissionUrl,
+			sourceID
 		},
 		setAttributes,
 	} = props;
@@ -175,6 +176,18 @@ const Inspector = ( props ) => {
                 value ? false : true
 								setAttributes( { test: value } );
 							} }
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Source ID' }
+							help={
+								'Unique identifier for the form. DO NOT CHANGE WITHOUT APPROVAL, unintended BEHAVIORS WILL OCCUR.'
+							}
+							value={ sourceID }
+							onChange={ ( value ) =>
+								setAttributes( { sourceID: value } )
+							}
 						/>
 					</PanelRow>
 				</PanelBody>

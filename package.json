@@ -19,7 +19,7 @@
 		"@asu/components-core": "3.1.4"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^25.4.0",
+		"@wordpress/scripts": "^27.2.0",
 		"swr": "^1.2.2"
 	},
 	"volta": {

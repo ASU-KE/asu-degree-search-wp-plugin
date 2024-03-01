@@ -26,6 +26,23 @@ rfiForms.forEach( ( form ) => {
 	const dataSourceCountriesStates = form.dataset.datasourcecountriesstates;
 	const submissionUrl = form.dataset.submissionurl;
 
+	window.addEventListener("load", (event) => {
+		const postInput = Object.assign(document.createElement('input'), {
+			name: 'action',
+			type: 'hidden',
+			value: 'ke_asu_rfi_form_submit'
+		});
+		// Get the div container by its ID
+		let divContainer = document.getElementById('asu-degree-rfi-container');
+		// Get the form element inside the div container
+		let formElement = divContainer.querySelector('form');
+		// Append this element to the form
+		formElement.appendChild(postInput)
+
+		console.log('apppended the child')
+	})
+
+
 	render(
 		<AsuRfi
 			campus={ campus }

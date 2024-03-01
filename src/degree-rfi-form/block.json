@@ -68,7 +68,7 @@
     },
     "submissionUrl": {
       "type": "string",
-      "default": "https://httpbin.org/post"
+      "default": "/wp-admin/admin-post.php?action=ke_asu_rfi_form_submit"
     },
 		"sourceID": {
 			"type": "string",

@@ -74,7 +74,7 @@
     },
     "dataSourceDegreeSearch": {
       "type": "string",
-      "default": "https://degrees.apps.asu.edu/t5/service"
+      "default": "https://api.myasuplat-dpl.asu.edu/api/codeset"
     },
     "dataSourceAsuOnline": {
       "type": "string",

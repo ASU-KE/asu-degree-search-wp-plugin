@@ -71,39 +71,43 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const attendOnlineAltText = detailBlock.dataset.attendonlinealttext
 
 	const customProps = {
-		appPathFolder: "http://localhost:3000/dist",
+		appPathFolder: ".", // OPTIONAL
 		dataSource: {
-		  endpoint: "https://degrees.apps.asu.edu/t5/service",
-		  method: "findDegreeByAcadPlan",
-		  init: "false",
-		  acadPlan: dataSourceAcadPlan, // any valid acadPlan code example BABUSGLBA
+		  // endpoint: "https://degrees.apps.asu.edu/t5/service", // OPTIONAL
+		  // method: "findDegreeByAcadPlan", // OPTIONAL
+		  // init: "false", // OPTIONAL
+		  acadPlan: dataSourceAcadPlan, // any valid acadPlan code example BABUSGLBA //"TBTGMBGM" - this has major map subPlans
+		  // acadPlan: "FAARTHBA", // this has one on-campus and one online major map
 		  // acadPlan: "LSBISBIS", // this has marketText
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
 		anchorMenu: {
-		  atAGlance: anchorMenuAtAGlance,
-		  applicationRequirements: anchorMenuApplicationRequirements,
-		  changeMajorRequirements: anchorMenuChangeMajorRequirements,
-		  nextSteps: anchorMenuNextSteps,
-		  affordingCollege: anchorMenuAffordingCollege,
-		  flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
-		  careerOutlook: anchorMenuCareerOutlook,
-		  exampleCareers: anchorMenuExampleCareers,
-		  globalOpportunity: anchorMenuGlobalOpportunity,
-		  programContactInfo: anchorMenuProgramContactInfo,
+			applicationRequirements: anchorMenuApplicationRequirements,
+			nextSteps: anchorMenuNextSteps,
+			affordingCollege: anchorMenuAffordingCollege,
+			careerOutlook: anchorMenuCareerOutlook,
+			globalOpportunity: anchorMenuGlobalOpportunity,
+		  //atAGlance: anchorMenuAtAGlance, REMOVE THIS
+		  //changeMajorRequirements: anchorMenuChangeMajorRequirements, REMOVE THIS
+		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
+		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
+		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
+		  //
 		//   externalAnchors: [
-		//     {
-		//       targetIdName: "my-request-form-info-id",
-		//       text: "Request Information",
-		//     },
+		// 	{
+		// 	  targetIdName: "my-request-form-info-id",
+		// 	  // targetIdName: "#my-request-form-info-id", this stil work but is not recommended
+		// 	  text: "Request Information",
+		// 	},
 		//   ],
 		},
 		hero: {
-		  image: {
-		    url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
-		    altText: heroAltText,
-		    size: heroImageSize, //"medium",
-		  },
+		  // hide: true, ADD TO INSPECTOR
+			image: {
+				url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
+				altText: heroAltText,
+				size: heroImageSize, //"medium",
+			},
 		//   title: {
 		// 	text: "Undergraduate Degrees",
 		// 	highlightColor: "gold",
@@ -120,11 +124,13 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		// 	},
 		// 	{
 		// 	  text: "Undergraduate degrees",
-		// 	  url: "listing-page.html",
+		// 	  // this is just an example working on Storybook
+		// 	  url: `${getStoryBookBaseUrl()}?path=/story/program-listing-page--default`,
 		// 	},
 		// 	{
 		// 	  text: "Degree title",
-		// 	  url: "detail-page.html",
+		// 	  // this is just an example working on Storybook
+		// 	  url: `${getStoryBookBaseUrl()}?path=/story/program-detail-page--with-content`,
 		// 	  isActive: true,
 		// 	},
 		//   ],
@@ -132,13 +138,13 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: introContentImageUrl ? introContentImageUrl : ImgDefaultIntro,
 				altText: introContentImageAltText,
 			},
-		  // optional
+		  // OPTIONAL
 		  // video: {
-		  //   url: "/assets/video/stock-video-person-drawing.mp4",
+		  //   url: "./examples/assets/video/stock-video-person-drawing.mp4",
 		  //   altText: "",
 		  //   vttUrl: "",
 		  // },
-		  // optional, override market text
+		  // OPTIONAL, override market text
 		  // contents: [
 		  //   {
 		  //     text: `Can you imagine yourself hosting successful events and meetings?
@@ -159,7 +165,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		// 	  url: "#",
 		// 	},
 		// 	{
-		// 	  text: "West campus",
+		// 	  text: "West Valley campus",
 		// 	  url: "#",
 		// 	},
 		// 	{
@@ -174,54 +180,52 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   firstRequirementMathCourse: "MAT 142 - College Mathematics",
 		//   mathIntensity: "General",
 		//   timeCommitment: "120 credit hours(about 4 years)",
-		// },
-			applicationRequirements: {
-				hide: atAGlanceApplicationRequirementsHide,
-			},
-			changeMajorRequirements: {
-			hide: atAGlanceChangeMajorRequirementsHide,
-			}
 		},
-		// nextSteps: {
-		//   cards: {
-		// 	learnMore: {
-		// 	  icon: "info-circle",
-		// 	  title: "Lear more about our programs",
-		// 	  content:
-		// 		"Tell us what type of student you are and we'll get you the information you need.",
-		// 	  buttonLink: {
-		// 		label: "Request information",
-		// 		ariaLabel: "Request information",
-		// 		color: "maroon",
-		// 		href: "https://admission.asu.edu/contact/request-info",
-		// 	  },
-		// 	},
-		// 	apply: {
-		// 	  icon: "file-alt",
-		// 	  title: "Apply to program",
-		// 	  content:
-		// 		"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
-		// 	  buttonLink: {
-		// 		label: "Apply now",
-		// 		ariaLabel: "Apply now",
-		// 		color: "maroon",
-		// 		href: "https://admission.asu.edu/apply",
-		// 	  },
-		// 	},
-		// 	visit: {
-		// 	  icon: "map-marker-alt",
-		// 	  title: "Visit our campus",
-		// 	  content:
-		// 		"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-		// 	  buttonLink: {
-		// 		label: "Schedule a visit",
-		// 		ariaLabel: "Schedule a visit",
-		// 		color: "maroon",
-		// 		href: "https://visit.asu.edu/",
-		// 	  },
-		// 	},
-		//   },
-		// },
+		applicationRequirements: {
+			hide: atAGlanceApplicationRequirementsHide,
+		},
+		changeMajorRequirements: {
+			hide: atAGlanceChangeMajorRequirementsHide,
+		},
+		nextSteps: { // add ability to customize next steps cards
+			cards: {
+				learnMore: {
+					icon: ["fas", "info-circle"],
+					title: "Learn more about our programs",
+					content:"Tell us what type of student you are and we'll get you the information you need.",
+					buttonLink: {
+						label: "Request information",
+						ariaLabel: "Request information",
+						color: "maroon",
+						href: "https://admission.asu.edu/contact/request-info",
+					},
+				},
+				apply: {
+			  icon: ["fas", "file-alt"],
+			  title: "Apply to program",
+			  content:
+				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
+			  buttonLink: {
+				label: "Apply now",
+				ariaLabel: "Apply now",
+				color: "maroon",
+				href: "https://admission.asu.edu/apply",
+			  },
+			},
+			visit: {
+			  icon: ["fas", "map-marker-alt"],
+			  title: "Visit our campus",
+			  content:
+				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
+			  buttonLink: {
+				label: "Schedule a visit",
+				ariaLabel: "Schedule a visit",
+				color: "maroon",
+				href: "https://visit.asu.edu/",
+			  },
+			},
+		  },
+		},
 		affordingCollege: {
 		  hide: affordingCollegeHide,
 		},
@@ -235,111 +239,113 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  },
 		},
 		exampleCareers: {
-			hide: exampleCareersHide,
+		  hide: exampleCareersHide,
 		},
 		globalOpportunity: {
-		  // OPTIONAL
+		  //   hide: true, // ADD TO INSPECTOR
 		  image: {
 			url: globalOpportunityImageUrl ? globalOpportunityImageUrl : ImgGlobalOpportunity,
 			altText: globalOpportunityAltText,
 		  },
 		},
-		// OPTIONAL
 		whyChooseAsu: {
-		//  sectionIntroText:"ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
+		  hide: false,
+		  sectionIntroText:
+			"CUSTOM INTRO TEXT. ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
 		  cards: {
 			faculty: {
 			  image: {
 				url: whyChooseAsuCardsFacultyImageUrl ? whyChooseAsuCardsFacultyImageUrl : ImgCustomizeFaculty,
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
-			//   title: "World-class faculty",
-			//   text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
-			//   button: {
-			// 	label: "Faculty excellence",
-			// 	color: "maroon",
-			// 	href: "https://www.asu.edu/academics/faculty-excellence",
-			//   },
+			  title: "World-class faculty",
+			  text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
+			  button: {
+				label: "Faculty excellence",
+				color: "maroon",
+				href: "https://www.asu.edu/academics/faculty-excellence",
+			  },
 			},
 			programs: {
 			  image: {
 				url: whyChooseAsuCardsProgramsImageUrl ? whyChooseAsuCardsProgramsImageUrl : ImgCustomizePrograms,
 				altText: whyChooseAsuCardsProgramsAltText,
 			  },
-			//   title: "Highly ranked programs",
-			//   text: "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10.",
-			//   button: {
-			// 	label: "ASU rankings",
-			// 	color: "maroon",
-			// 	href: "https://www.asu.edu/rankings",
-			//   },
+			  title: "Highly ranked programs",
+			  text: "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10.",
+			  button: {
+				label: "ASU rankings",
+				color: "maroon",
+				href: "https://www.asu.edu/rankings",
+			  },
 			},
 			research: {
 			  image: {
 				url: whyChooseAsuCardsResearchImageUrl ? whyChooseAsuCardsResearchImageUrl : ImgCustomizeResearch,
 				altText: whyChooseAsuCardsResearchAltText,
 			  },
-			//   title: "Research opportunities",
-			//   text: "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market.",
-			//   button: {
-			// 	label: "Research opportunities",
-			// 	color: "maroon",
-			// 	href: "https://provost.asu.edu/uresearch",
-			//   },
+			  title: "Research opportunities",
+			  text: "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market.",
+			  button: {
+				label: "Research opportunities",
+				color: "maroon",
+				href: "https://provost.asu.edu/uresearch",
+			  },
 			},
 			inclusion: {
 			  image: {
 				url: whyChooseAsuCardsInclusionImageUrl ? whyChooseAsuCardsInclusionImageUrl : ImgCustomizeInclusion,
-				altText: whyChooseAsuCardsInclusionAltText
+				altText: whyChooseAsuCardsInclusionAltText,
 			  },
-			//   title: "An inclusive environment",
-			//   text: "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success.",
-			//   button: {
-			// 	label: "ASU Charter",
-			// 	color: "maroon",
-			// 	href: "https://www.asu.edu/about/charter-mission",
-			//   },
+			  title: "An inclusive environment",
+			  text: "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success.",
+			  button: {
+				label: "ASU Charter",
+				color: "maroon",
+				href: "https://www.asu.edu/about/charter-mission",
+			  },
 			},
 			mentors: {
 			  image: {
 				url: whyChooseAsuCardsMentorsImageUrl ? whyChooseAsuCardsMentorsImageUrl : ImgCustomizeMentor,
 				altText: whyChooseAsuCardsMentorsAltText,
 			  },
-			//   title: "Mentor network",
-			//   text: "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories.",
-			//   button: {
-			// 	label: "ASU Mentor network",
-			// 	color: "maroon",
-			// 	href: "https://mentorship.asu.edu",
-			//   },
+			  title: "Mentor network",
+			  text: "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories.",
+			  button: {
+				label: "ASU Mentor network",
+				color: "maroon",
+				href: "https://mentorship.asu.edu",
+			  },
 			},
 			honors: {
 			  image: {
 				url: whyChooseAsuCardsHonorsImageUrl ? whyChooseAsuCardsHonorsImageUrl : ImgCustomizeHonors,
 				altText: whyChooseAsuCardsHonorsAltText,
 			  },
-			//   title: "Global education",
-			//   text: "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!",
-			//   button: {
-			// 	label: "Explore",
-			// 	color: "maroon",
-			// 	href: "https://goglobal.asu.edu",
-			//   },
+			  title: "Global education",
+			  text: "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!",
+			  button: {
+				label: "Explore",
+				color: "maroon",
+				href: "https://goglobal.asu.edu",
+			  },
 			},
 		  },
 		},
 		attendOnline: {
-		  // OPTIONAL
+		  // hide: true,// OPTIONAL
 		  image: {
 			url: attendOnlineImageUrl ? attendOnlineImageUrl : ImgAttendOnline,
-			altText: attendOnlineAltText,
+			altText:attendOnlineAltText,
 		  },
 		},
 		programContactInfo: {
-		  departmentUrl: "#",
-		  emailUrl: "#",
+		  // hide: true, // OPTIONAL
+		  department: { text: "", url: "#" },
+		  email: { text: "", url: "#" },
 		},
-	  }
+	  };
 
 	window.addEventListener('load', () => {
 		const hash = window.location.hash.substring(1)
@@ -368,6 +374,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			hero={ customProps.hero }
 			introContent={ customProps.introContent }
 			atAGlance={ customProps.atAGlance }
+			applicationRequirements={ customProps.applicationRequirements }
+			changeMajorRequirements={ customProps.changeMajorRequirements }
+			nextSteps={ customProps.nextSteps }
 			affordingCollege={ customProps.affordingCollege }
 			flexibleDegreeOptions={ customProps.flexibleDegreeOptions }
 			careerOutlook={ customProps.careerOutlook }

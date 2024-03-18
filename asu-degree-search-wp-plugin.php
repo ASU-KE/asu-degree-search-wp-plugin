@@ -27,105 +27,106 @@ function create_block_asu_degree_search_wp_plugin_block_init() {
 }
 add_action( 'init', 'create_block_asu_degree_search_wp_plugin_block_init' );
 
-// todo: add request_validation_callback to validate request parameters before continuing
-// todo: add error handling
-// todo: format $request as a JSON object to send to rfi-api
-// todo: await rfi-api response
-// todo: return response status to client (success, error, unauthorized, invalid format, missing content)
+/**
+ * Make a POST request to an API service using the RFI form
+ * Parameters: WP_REST_Request - Request object sent from client
+ * Returns: WP_REST_Response - Response object sent to client
+ * 
+ */
 function general_form_post(WP_REST_Request $request) {
-	$output = "general_form_post() triggered!";
+
 	// Validate request is not empty
 	if (empty($request)) {
-		$output = "Request is empty.";
-		// add a return statement here with a response object that sattes request is empty
+		// 400 - Bad Request
+		return new WP_REST_Response( array( 'message' => 'Not a valid request, form is empty!' ), 400 );
 	} else {
 		// Get request body as an Array
 		$parameters = $request->get_json_params(); // $parametes is type: Array
-		
-		// Print to validate request body in console
-		$json = json_encode($parameters);	
-		// $output = $output . "\n\tClient Request Body - JSON: \n\t{$json}";
-
-		// Validate request body contains required fields
-		// . . . write a function . . .
-
-		// Sanitize request body
-		// . . . write a function . . .
-		
-		// *** POST to RFI API using cURL and respond to the client
-		// Using cURL is more verbose, but we are able to send the client POST request body to the mock API successfully
-		post_to_rfi_api($parameters);
-
-		// return $rfi_response
-
-
-		// ****************************************
-		// // *** POST to RFI using wp_remote_post
-		// // wp_remote_post returns a response type, with status codes, error codes, and error messages.
-		// // passing $parameters array to body is not working, mock API does not see the body content
-		// $url = 'http://localhost:8080/mock-rfi';
-		// // POST client request to RFI API - returns a RESPONSE object
-		// $rfi_response = wp_remote_post( $url, array(
-		// 	'method'      => 'POST',
-		// 	'headers'     => array('Content-Type: application/json'),
-		// 	'body'        => $parameters
-		// 	)
-		// );
-		// // Send response back to the client after wp_remotepost
-		// if ( is_wp_error( $rfi_response ) ) {
-		// 	$error_message = $rfi_response->get_error_message();
-		// 	echo "Something went wrong: $error_message";
-		// } else {
-		// 	$rfi_response_json = json_encode($rfi_response);
-		// }
-		// *****************************************
-
+		// Validate request contains correct fields
+		$isValidRequest = validate_request_array($parameters);
+		if ($isValidRequest) {
+			// Sanitize form content
+			// . . . todo . . .
+			$sanitizedParameters = $parameters;
+			// POST to API using cURL and respond to the client
+			return post_to_api($sanitizedParameters);
+		} else {
+			// 400 - Bad Request
+			return new WP_REST_Response( array( 'message' => 'Not a valid request, form is incomplete!' ), 400 );
+		}
 	}
-	
-	
-
+}
+/** 
+ * Validate request contains required form fields
+ * Parameters: Array - Request Body from client
+ * Returns: Boolean - Determines if request is valid
+ */
+function validate_request_array(Array $requestBody) {
+	// Required form fields
+	$requiredFields = array(
+		'Zip',
+		'EmailAddress',
+		'FirstName',
+		'LastName',
+		'Phone',
+		'EntryTerm',
+		'GdprConsent',
+		'Campus',
+		'Interest1',
+		'Interest2',
+		'Career',
+		'StudentType',
+		'Source',
+		'URL',
+		'datetime',
+		'enterpriseclientid',
+		'ga_clientid'
+	);
+	// TODO: optomize - lookup async
+    foreach ($requiredFields as $field) {
+        if (!array_key_exists($field, $requestBody)) {
+            return false;
+        }
+    }
+    return true;
 }
 
-function validate_form_data(WP_REST_Request $request) {
-
-}
-
-// use cURL to POST request body to RFI API
-// returns RFI-API response
-function post_to_rfi_api(Array $requestBody) {
-	$url = 'http://localhost:8080/mock-rfi';
-
+/**
+ * POST request body to API using cURL.
+ * Parameters: Array - Request Body from client
+ * Returns: WP_REST_Response - Response object sent to client
+ */
+function post_to_api(Array $requestBody) {
+	// todo: add this url to property file or somewhere other than here
+	// $url = 'http://localhost:8080/mock-rfi';
+	$url = 'https://crm-enterprise-rfi-forms-submit-handler-sandbox.sdc.uto.asu.edu/';
 	$postData = json_encode($requestBody);
-
 	// Initialize cURL session
 	$ch = curl_init();
-
-	// Set options
+	// Set options for HTTP request
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	// CURLOPT_RETURNTRANSFER true returns 'RESPONSE 	| false' 	on success | fail 
-	// CURLOPT_RETURNTRANSFER false retuns 'true 		| false' 	on success | fail
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
 	// Execute cURL session
 	$response = curl_exec($ch);
-
 	// Check for errors
 	if(curl_errno($ch)) {
-		echo 'cURL error: ' . curl_error($ch);
+		// 503 - Service Unavailable
+		$errorMessage = 'cURL error: ' . curl_error($ch);
+		return new WP_REST_Response( array( 'message' => "Form submission unsuccessful: {$errorMessage}" ), 503 );
 	}
-
 	// Close cURL session
 	curl_close($ch);
-
+	// Return Response
 	if ($response) {
+		// 200 - Successful
 		return new WP_REST_Response( array( 'message' => 'Form submission successful!' ), 200 );
     } else {
-        return new WP_REST_Response( array( 'message' => 'Form submission unsuccessful.' ), 200 );
+		// 500 - Internal Server error
+        return new WP_REST_Response( array( 'message' => 'Form submission unsuccessful.' ), 500 );
     }
-
 }
 
 add_action( 'rest_api_init', function () {

@@ -20,6 +20,7 @@ const save = ( props ) => {
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
+			heroHide,
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
@@ -72,6 +73,7 @@ const save = ( props ) => {
 			data-anchorMenuGlobalOpportunity={ anchorMenuGlobalOpportunity }
 			data-anchorMenuProgramContactInfo={ anchorMenuProgramContactInfo }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }
+			data-heroHide={ heroHide }
 			data-heroImageUrl={ heroImageUrl }
 			data-heroAltText={ heroAltText }
 			data-heroImageSize={ heroImageSize }

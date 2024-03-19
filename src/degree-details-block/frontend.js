@@ -30,6 +30,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
 	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
+	const heroHide = detailBlock.dataset.herohide === "true"
 	const heroImageUrl = detailBlock.dataset.heroimageurl
 	const heroAltText = detailBlock.dataset.heroalttext
 	const heroImageSize = detailBlock.dataset.heroimagesize
@@ -102,7 +103,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		//   ],
 		},
 		hero: {
-		  // hide: true, ADD TO INSPECTOR
+			hide: heroHide,
 			image: {
 				url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 				altText: heroAltText,

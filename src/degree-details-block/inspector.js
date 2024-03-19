@@ -25,6 +25,7 @@ const Inspector = ( props ) => {
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
+			heroHide,
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
@@ -221,6 +222,17 @@ const Inspector = ( props ) => {
 					title={ __( 'Hero settings', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide hero section' }
+							checked={ heroHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {heroHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Hero image URL' }

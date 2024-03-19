@@ -46,6 +46,7 @@ const Edit = ( props ) => {
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
+			heroHide,
 			heroImageUrl,
 			heroAltText,
 			heroImageSize,
@@ -114,7 +115,7 @@ const Edit = ( props ) => {
 		//   ],
 		},
 		hero: {
-		  // hide: true, ADD TO INSPECTOR
+			hide: heroHide,
 			image: {
 				url: heroImageUrl ? heroImageUrl : ImgDefaultHero,
 				altText: heroAltText,
@@ -340,6 +341,7 @@ const Edit = ( props ) => {
 			  button: {
 				label: "Explore",
 				color: "maroon",
+				//<code>&quot;gold&quot;</code> \| <code>&quot;maroon&quot;</code> \| <code>&quot;gray&quot;</code> \| <code>&quot;dark&quot;</code> |
 				href: "https://goglobal.asu.edu",
 			  },
 			},
@@ -354,6 +356,7 @@ const Edit = ( props ) => {
 		},
 		programContactInfo: {
 		  // hide: true, // OPTIONAL
+		  //leave blank to load default contact info
 		  department: { text: "", url: "#" },
 		  email: { text: "", url: "#" },
 		},

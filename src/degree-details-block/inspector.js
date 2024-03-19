@@ -45,6 +45,7 @@ const Inspector = ( props ) => {
 			globalOpportunityHide,
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
+			whyChooseAsuHide,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -480,6 +481,17 @@ const Inspector = ( props ) => {
 					title={ __( 'Why ASU', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide why ASU section' }
+							checked={ whyChooseAsuHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {whyChooseAsuHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Faculty image' }

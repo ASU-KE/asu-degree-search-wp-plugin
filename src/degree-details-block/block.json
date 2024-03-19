@@ -146,6 +146,10 @@
 		"type": "string",
 		"default": ""
 	},
+	"whyChooseAsuHide":{
+		"type": "boolean",
+		"default": false
+	},
 	"whyChooseAsuCardsFacultyImageUrl":{
 		"type": "string",
 		"default": ""

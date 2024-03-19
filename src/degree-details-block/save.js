@@ -40,6 +40,7 @@ const save = ( props ) => {
 			globalOpportunityHide,
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
+			whyChooseAsuHide,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -95,6 +96,7 @@ const save = ( props ) => {
 			data-globalOpportunityHide={ globalOpportunityHide }
 			data-globalOpportunityImageUrl={ globalOpportunityImageUrl }
 			data-globalOpportunityAltText={ globalOpportunityAltText }
+			data-whyChooseAsuHide={ whyChooseAsuHide }
 			data-whyChooseAsuCardsFacultyImageUrl={ whyChooseAsuCardsFacultyImageUrl }
 			data-whyChooseAsuCardsFacultyAltText={ whyChooseAsuCardsFacultyAltText }
 			data-whyChooseAsuCardsProgramsImageUrl={ whyChooseAsuCardsProgramsImageUrl }

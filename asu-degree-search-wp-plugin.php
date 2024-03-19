@@ -4,7 +4,7 @@
  * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,6 @@ function create_block_asu_degree_search_wp_plugin_block_init() {
 	register_block_type( __DIR__ . '/build/degree-overview-block' );
 	register_block_type( __DIR__ . '/build/degree-details-block' );
 }
-add_action( 'init', 'create_block_asu_degree_search_wp_plugin_block_init' );
 
 /**
  * Make a POST request to an API service using the RFI form
@@ -41,29 +40,26 @@ function general_form_post(WP_REST_Request $request) {
 		return new WP_REST_Response( array( 'message' => 'Not a valid request, form is empty!' ), 400 );
 	} else {
 		// Get request body as an Array
-		$parameters = $request->get_json_params(); // $parametes is type: Array
+		$body = $request->get_json_params(); // $parametes is type: Array
 		// Validate request contains correct fields
-		$isValidRequest = validate_request_array($parameters);
+		$isValidRequest = validate_request_array($body);
 		if ($isValidRequest) {
-			// Sanitize form content
-			// . . . todo . . .
-			$sanitizedParameters = $parameters;
 			// POST to API using cURL and respond to the client
-			return post_to_api($sanitizedParameters);
+			return post_to_api($body);
 		} else {
 			// 400 - Bad Request
 			return new WP_REST_Response( array( 'message' => 'Not a valid request, form is incomplete!' ), 400 );
 		}
 	}
 }
+
 /** 
  * Validate request contains required form fields
  * Parameters: Array - Request Body from client
  * Returns: Boolean - Determines if request is valid
  */
 function validate_request_array(Array $requestBody) {
-	// Required form fields
-	$requiredFields = array(
+	$requiredFormFields = array(
 		'Zip',
 		'EmailAddress',
 		'FirstName',
@@ -82,8 +78,7 @@ function validate_request_array(Array $requestBody) {
 		'enterpriseclientid',
 		'ga_clientid'
 	);
-	// TODO: optomize - lookup async
-    foreach ($requiredFields as $field) {
+    foreach ($requiredFormFields as $field) {
         if (!array_key_exists($field, $requestBody)) {
             return false;
         }
@@ -97,8 +92,6 @@ function validate_request_array(Array $requestBody) {
  * Returns: WP_REST_Response - Response object sent to client
  */
 function post_to_api(Array $requestBody) {
-	// todo: add this url to property file or somewhere other than here
-	// $url = 'http://localhost:8080/mock-rfi';
 	$url = 'https://crm-enterprise-rfi-forms-submit-handler-sandbox.sdc.uto.asu.edu/';
 	$postData = json_encode($requestBody);
 	// Initialize cURL session
@@ -128,6 +121,8 @@ function post_to_api(Array $requestBody) {
         return new WP_REST_Response( array( 'message' => 'Form submission unsuccessful.' ), 500 );
     }
 }
+
+add_action( 'init', 'create_block_asu_degree_search_wp_plugin_block_init' );
 
 add_action( 'rest_api_init', function () {
 	register_rest_route( 'form', '/submit', array(

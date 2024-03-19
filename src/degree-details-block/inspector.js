@@ -57,6 +57,7 @@ const Inspector = ( props ) => {
 			whyChooseAsuCardsMentorsAltText,
 			whyChooseAsuCardsHonorsImageUrl,
 			whyChooseAsuCardsHonorsAltText,
+			attendOnlineHide,
 			attendOnlineImageUrl,
 			attendOnlineAltText
 		},
@@ -604,6 +605,17 @@ const Inspector = ( props ) => {
 					title={ __( 'Attend online', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide attend online section' }
+							checked={ attendOnlineHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {attendOnlineHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Attend online image' }

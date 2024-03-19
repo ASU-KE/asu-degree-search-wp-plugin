@@ -194,6 +194,10 @@
 		"type": "string",
 		"default": ""
 	},
+	"attendOnlineHide":{
+		"type": "boolean",
+		"default": false
+	},
 	"attendOnlineImageUrl":{
 		"type": "string",
 		"default": ""

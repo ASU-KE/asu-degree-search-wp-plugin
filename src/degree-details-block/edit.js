@@ -78,6 +78,7 @@ const Edit = ( props ) => {
 			whyChooseAsuCardsMentorsAltText,
 			whyChooseAsuCardsHonorsImageUrl,
 			whyChooseAsuCardsHonorsAltText,
+			attendOnlineHide,
 			attendOnlineImageUrl,
 			attendOnlineAltText
 		},
@@ -349,7 +350,7 @@ const Edit = ( props ) => {
 		  },
 		},
 		attendOnline: {
-		  // hide: true,// OPTIONAL
+		  hide: attendOnlineHide,
 		  image: {
 			url: attendOnlineImageUrl ? attendOnlineImageUrl : ImgAttendOnline,
 			altText:attendOnlineAltText,

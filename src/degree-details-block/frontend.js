@@ -69,6 +69,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const whyChooseAsuCardsHonorsImageUrl = detailBlock.dataset.whychooseasucardshonorsimageurl
 	const whyChooseAsuCardsHonorsAltText = detailBlock.dataset.whychooseasucardshonorsalttext
 
+	const attendOnlineHide = detailBlock.dataset.attendonlinehide === "true"
 	const attendOnlineImageUrl = detailBlock.dataset.attendonlineimageurl
 	const attendOnlineAltText = detailBlock.dataset.attendonlinealttext
 
@@ -336,7 +337,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  },
 		},
 		attendOnline: {
-		  // hide: true,// OPTIONAL
+		  hide: attendOnlineHide,
 		  image: {
 			url: attendOnlineImageUrl ? attendOnlineImageUrl : ImgAttendOnline,
 			altText:attendOnlineAltText,

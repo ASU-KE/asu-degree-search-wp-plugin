@@ -52,6 +52,7 @@ const save = ( props ) => {
 			whyChooseAsuCardsMentorsAltText,
 			whyChooseAsuCardsHonorsImageUrl,
 			whyChooseAsuCardsHonorsAltText,
+			attendOnlineHide,
 			attendOnlineImageUrl,
 			attendOnlineAltText
 		},
@@ -106,6 +107,7 @@ const save = ( props ) => {
 			data-whyChooseAsuCardsMentorsAltText={ whyChooseAsuCardsMentorsAltText }
 			data-whyChooseAsuCardsHonorsImageUrl={ whyChooseAsuCardsHonorsImageUrl }
 			data-whyChooseAsuCardsHonorsAltText={ whyChooseAsuCardsHonorsAltText }
+			data-attendOnlineHide={ attendOnlineHide }
 			data-attendOnlineImageUrl={ attendOnlineImageUrl }
 			data-attendOnlineAltText={ attendOnlineAltText }
 		></div>

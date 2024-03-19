@@ -42,6 +42,7 @@ const Inspector = ( props ) => {
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
+			globalOpportunityHide,
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
 			whyChooseAsuCardsFacultyImageUrl,
@@ -442,6 +443,17 @@ const Inspector = ( props ) => {
 					title={ __( 'Global opportunity', 'unityblocks' ) }
 					initialOpen={ false }
 				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide global opportunity section' }
+							checked={ globalOpportunityHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {globalOpportunityHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Global opportunity image URL' }

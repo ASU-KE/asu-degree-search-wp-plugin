@@ -134,6 +134,10 @@
 		"type": "boolean",
 		"default": false
 	},
+	"globalOpportunityHide":{
+		"type": "boolean",
+		"default": false
+	},
 	"globalOpportunityImageUrl":{
 		"type": "string",
 		"default": ""

@@ -52,6 +52,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const careerOutlookImageAltText = detailBlock.dataset.careeroutlookimagealttext
 	const exampleCareersHide = detailBlock.dataset.examplecareershide === "true"
 
+	const globalOpportunityHide = detailBlock.dataset.globalopportunityhide === "true"
 	const globalOpportunityImageUrl = detailBlock.dataset.globalopportunityimageurl
 	const globalOpportunityAltText = detailBlock.dataset.globalopportunityalttext
 
@@ -243,7 +244,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  hide: exampleCareersHide,
 		},
 		globalOpportunity: {
-		  //   hide: true, // ADD TO INSPECTOR
+		  hide: globalOpportunityHide,
 		  image: {
 			url: globalOpportunityImageUrl ? globalOpportunityImageUrl : ImgGlobalOpportunity,
 			altText: globalOpportunityAltText,

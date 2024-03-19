@@ -37,6 +37,7 @@ const save = ( props ) => {
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
+			globalOpportunityHide,
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
 			whyChooseAsuCardsFacultyImageUrl,
@@ -90,6 +91,7 @@ const save = ( props ) => {
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }
 			data-careerOutlookImageAltText={ careerOutlookImageAltText }
 			data-exampleCareersHide={ exampleCareersHide }
+			data-globalOpportunityHide={ globalOpportunityHide }
 			data-globalOpportunityImageUrl={ globalOpportunityImageUrl }
 			data-globalOpportunityAltText={ globalOpportunityAltText }
 			data-whyChooseAsuCardsFacultyImageUrl={ whyChooseAsuCardsFacultyImageUrl }

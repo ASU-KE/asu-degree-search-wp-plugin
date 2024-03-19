@@ -63,6 +63,7 @@ const Edit = ( props ) => {
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
+			globalOpportunityHide,
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
 			whyChooseAsuCardsFacultyImageUrl,
@@ -255,14 +256,14 @@ const Edit = ( props ) => {
 		  hide: exampleCareersHide,
 		},
 		globalOpportunity: {
-		  //   hide: true, // ADD TO INSPECTOR
+		  hide: globalOpportunityHide,
 		  image: {
 			url: globalOpportunityImageUrl ? globalOpportunityImageUrl : ImgGlobalOpportunity,
 			altText: globalOpportunityAltText,
 		  },
 		},
 		whyChooseAsu: {
-		  hide: false,
+		  hide: false, //ADD TO INSPECTOR
 		  sectionIntroText:
 			"CUSTOM INTRO TEXT. ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
 		  cards: {

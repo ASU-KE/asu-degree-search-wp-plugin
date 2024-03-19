@@ -57,6 +57,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const globalOpportunityAltText = detailBlock.dataset.globalopportunityalttext
 
 	const whyChooseAsuHide = detailBlock.dataset.whychooseasuhide === "true"
+	const whyChooseAsuCardsSectionIntroText = detailBlock.dataset.whychooseasucardssectionintrotext
 	const whyChooseAsuCardsFacultyImageUrl = detailBlock.dataset.whychooseasucardsfacultyimageurl
 	const whyChooseAsuCardsFacultyAltText = detailBlock.dataset.whychooseasucardsfacultyalttext
 	const whyChooseAsuCardsProgramsImageUrl = detailBlock.dataset.whychooseasucardsprogramsimageurl
@@ -254,8 +255,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 		whyChooseAsu: {
 		  hide: whyChooseAsuHide,
-		  sectionIntroText:
-			"CUSTOM INTRO TEXT. ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists.",
+		  sectionIntroText: whyChooseAsuCardsSectionIntroText,
 		  cards: {
 			faculty: {
 			  image: {

@@ -150,6 +150,10 @@
 		"type": "boolean",
 		"default": false
 	},
+	"whyChooseAsuCardsSectionIntroText":{
+		"type": "string",
+		"default": "ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists."
+	},
 	"whyChooseAsuCardsFacultyImageUrl":{
 		"type": "string",
 		"default": ""

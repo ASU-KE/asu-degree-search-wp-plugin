@@ -46,6 +46,7 @@ const Inspector = ( props ) => {
 			globalOpportunityImageUrl,
 			globalOpportunityAltText,
 			whyChooseAsuHide,
+			whyChooseAsuCardsSectionIntroText,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -489,6 +490,16 @@ const Inspector = ( props ) => {
 								value ? false : true
 								setAttributes( {whyChooseAsuHide: value} );
 								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Section intro text' }
+							help={'blank space will hide the default text'}
+							value={ whyChooseAsuCardsSectionIntroText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsSectionIntroText: value } )
 							}
 						/>
 					</PanelRow>

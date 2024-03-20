@@ -58,6 +58,7 @@ const Edit = ( props ) => {
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
+			nextStepsHide,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -68,6 +69,8 @@ const Edit = ( props ) => {
 			globalOpportunityAltText,
 			whyChooseAsuHide,
 			whyChooseAsuCardsSectionIntroText,
+			whyChooseAsuCardsFacultyTitle,
+			whyChooseAsuCardsFacultyText,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -205,6 +208,7 @@ const Edit = ( props ) => {
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
 		nextSteps: { // add ability to customize next steps cards
+			hide: nextStepsHide,
 			cards: {
 				learnMore: {
 					icon: ["fas", "info-circle"],
@@ -274,8 +278,8 @@ const Edit = ( props ) => {
 				url: whyChooseAsuCardsFacultyImageUrl ? whyChooseAsuCardsFacultyImageUrl : ImgCustomizeFaculty,
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
-			  title: "World-class faculty",
-			  text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
+			  title: whyChooseAsuCardsFacultyTitle,
+			  text: whyChooseAsuCardsFacultyText,
 			  button: {
 				label: "Faculty excellence",
 				color: "maroon",

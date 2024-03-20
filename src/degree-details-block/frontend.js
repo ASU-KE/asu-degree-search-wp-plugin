@@ -45,6 +45,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const atAGlanceApplicationRequirementsHide = detailBlock.dataset.ataglanceapplicationrequirementshide === "true"
 	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
 
+	const nextStepsHide = detailBlock.dataset.nextstepshide === "true"
+
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
 
@@ -58,6 +60,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
 	const whyChooseAsuHide = detailBlock.dataset.whychooseasuhide === "true"
 	const whyChooseAsuCardsSectionIntroText = detailBlock.dataset.whychooseasucardssectionintrotext
+	const whyChooseAsuCardsFacultyTitle = detailBlock.dataset.whychooseasucardsfacultytitle
 	const whyChooseAsuCardsFacultyImageUrl = detailBlock.dataset.whychooseasucardsfacultyimageurl
 	const whyChooseAsuCardsFacultyAltText = detailBlock.dataset.whychooseasucardsfacultyalttext
 	const whyChooseAsuCardsProgramsImageUrl = detailBlock.dataset.whychooseasucardsprogramsimageurl
@@ -193,6 +196,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
 		nextSteps: { // add ability to customize next steps cards
+			hide: nextStepsHide,
 			cards: {
 				learnMore: {
 					icon: ["fas", "info-circle"],
@@ -262,7 +266,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsFacultyImageUrl ? whyChooseAsuCardsFacultyImageUrl : ImgCustomizeFaculty,
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
-			  title: "World-class faculty",
+			  title: whyChooseAsuCardsFacultyTitle,
 			  text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
 			  button: {
 				label: "Faculty excellence",

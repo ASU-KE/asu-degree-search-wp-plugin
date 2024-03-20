@@ -114,6 +114,10 @@
 		"type": "boolean",
 		"default": false
 	},
+	"nextStepsHide":{
+		"type": "boolean",
+		"default": false
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false
@@ -153,6 +157,14 @@
 	"whyChooseAsuCardsSectionIntroText":{
 		"type": "string",
 		"default": "ASU offers students excellent academics and unique opportunities to customize your college experience and give you an edge, including undergraduate research, internships, access to state-of-the-art facilities, and opportunities to work with world-class faculty and scientists."
+	},
+	"whyChooseAsuCardsFacultyTitle":{
+		"type": "string",
+		"default": "World-class faculty"
+	},
+	"whyChooseAsuCardsFacultyText":{
+		"type": "string",
+		"default": "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community."
 	},
 	"whyChooseAsuCardsFacultyImageUrl":{
 		"type": "string",

@@ -37,6 +37,7 @@ const Inspector = ( props ) => {
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
+			nextStepsHide,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -47,6 +48,8 @@ const Inspector = ( props ) => {
 			globalOpportunityAltText,
 			whyChooseAsuHide,
 			whyChooseAsuCardsSectionIntroText,
+			whyChooseAsuCardsFacultyTitle,
+			whyChooseAsuCardsFacultyText,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -375,6 +378,22 @@ const Inspector = ( props ) => {
 					</PanelRow>
 				</PanelBody>
 				<PanelBody
+					title={ __( 'Next steps', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide next steps section' }
+							checked={ nextStepsHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {nextStepsHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
 					title={ __( 'Affording college', 'unityblocks' ) }
 					initialOpen={ false }
 				>
@@ -503,6 +522,28 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					<PanelBody
+						title={ __( 'Why ASU cards - Faculty', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Faculty title' }
+							value={ whyChooseAsuCardsFacultyTitle }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Faculty text' }
+							value={ whyChooseAsuCardsFacultyText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyText: value } )
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Faculty image' }
@@ -523,6 +564,7 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					</PanelBody>
 					<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Programs image' }

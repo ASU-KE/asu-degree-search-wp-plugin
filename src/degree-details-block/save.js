@@ -32,6 +32,7 @@ const save = ( props ) => {
 			atAGlanceHide,
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
+			nextStepsHide,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -42,6 +43,8 @@ const save = ( props ) => {
 			globalOpportunityAltText,
 			whyChooseAsuHide,
 			whyChooseAsuCardsSectionIntroText,
+			whyChooseAsuCardsFacultyTitle,
+			whyChooseAsuCardsFacultyText,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
 			whyChooseAsuCardsProgramsImageUrl,
@@ -89,6 +92,7 @@ const save = ( props ) => {
 			data-atAGlanceHide={ atAGlanceHide }
 			data-atAGlanceApplicationRequirementsHide={ atAGlanceApplicationRequirementsHide }
 			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
+			data-nextStepsHide={ nextStepsHide }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }
@@ -99,6 +103,8 @@ const save = ( props ) => {
 			data-globalOpportunityAltText={ globalOpportunityAltText }
 			data-whyChooseAsuHide={ whyChooseAsuHide }
 			data-whyChooseAsuCardsSectionIntroText={ whyChooseAsuCardsSectionIntroText }
+			data-whyChooseAsuCardsFacultyTitle={ whyChooseAsuCardsFacultyTitle }
+			data-whyChooseAsuCardsFacultyText={ whyChooseAsuCardsFacultyText }
 			data-whyChooseAsuCardsFacultyImageUrl={ whyChooseAsuCardsFacultyImageUrl }
 			data-whyChooseAsuCardsFacultyAltText={ whyChooseAsuCardsFacultyAltText }
 			data-whyChooseAsuCardsProgramsImageUrl={ whyChooseAsuCardsProgramsImageUrl }

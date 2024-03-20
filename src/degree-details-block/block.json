@@ -166,6 +166,19 @@
 		"type": "string",
 		"default": "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community."
 	},
+	"whyChooseAsuCardsFacultyButtonLabel":{
+		"type": "string",
+		"default": "Faculty excellence"
+	},
+	"whyChooseAsuCardsFacultyButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsFacultyButtonHref":{
+		"type": "string",
+		"default": "https://www.asu.edu/academics/faculty-excellence"
+	},
 	"whyChooseAsuCardsFacultyImageUrl":{
 		"type": "string",
 		"default": ""
@@ -173,6 +186,27 @@
 	"whyChooseAsuCardsFacultyAltText":{
 		"type": "string",
 		"default": ""
+	},
+	"whyChooseAsuCardsProgramsTitle":{
+		"type": "string",
+		"default": "Highly ranked programs"
+	},
+	"whyChooseAsuCardsProgramsText":{
+		"type": "string",
+		"default": "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10."
+	},
+	"whyChooseAsuCardsProgramsButtonLabel":{
+		"type": "string",
+		"default": "ASU rankings"
+	},
+	"whyChooseAsuCardsProgramsButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsProgramsButtonHref":{
+		"type": "string",
+		"default": "https://www.asu.edu/rankings"
 	},
 	"whyChooseAsuCardsProgramsImageUrl":{
 		"type": "string",
@@ -182,6 +216,27 @@
 		"type": "string",
 		"default": ""
 	},
+	"whyChooseAsuCardsResearchTitle":{
+		"type": "string",
+		"default": "Research opportunities"
+	},
+	"whyChooseAsuCardsResearchText":{
+		"type": "string",
+		"default": "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market."
+	},
+	"whyChooseAsuCardsResearchButtonLabel":{
+		"type": "string",
+		"default": "Research opportunities"
+	},
+	"whyChooseAsuCardsResearchButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsResearchButtonHref":{
+		"type": "string",
+		"default": "https://provost.asu.edu/uresearch"
+	},
 	"whyChooseAsuCardsResearchImageUrl":{
 		"type": "string",
 		"default": ""
@@ -189,6 +244,27 @@
 	"whyChooseAsuCardsResearchAltText":{
 		"type": "string",
 		"default": ""
+	},
+	"whyChooseAsuCardsInclusionTitle":{
+		"type": "string",
+		"default": "An inclusive environment"
+	},
+	"whyChooseAsuCardsInclusionText":{
+		"type": "string",
+		"default": "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success."
+	},
+	"whyChooseAsuCardsInclusionButtonLabel":{
+		"type": "string",
+		"default": "ASU Charter"
+	},
+	"whyChooseAsuCardsInclusionButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsInclusionButtonHref":{
+		"type": "string",
+		"default": "https://www.asu.edu/about/charter-mission"
 	},
 	"whyChooseAsuCardsInclusionImageUrl":{
 		"type": "string",
@@ -198,6 +274,27 @@
 		"type": "string",
 		"default": ""
 	},
+	"whyChooseAsuCardsMentorsTitle":{
+		"type": "string",
+		"default": "Mentor network"
+	},
+	"whyChooseAsuCardsMentorsText":{
+		"type": "string",
+		"default": "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories."
+	},
+	"whyChooseAsuCardsMentorsButtonLabel":{
+		"type": "string",
+		"default": "ASU Mentor network"
+	},
+	"whyChooseAsuCardsMentorsButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsMentorsButtonHref":{
+		"type": "string",
+		"default": "https://mentorship.asu.edu/"
+	},
 	"whyChooseAsuCardsMentorsImageUrl":{
 		"type": "string",
 		"default": ""
@@ -205,6 +302,27 @@
 	"whyChooseAsuCardsMentorsAltText":{
 		"type": "string",
 		"default": ""
+	},
+	"whyChooseAsuCardsHonorsTitle":{
+		"type": "string",
+		"default": "Global education"
+	},
+	"whyChooseAsuCardsHonorsText":{
+		"type": "string",
+		"default": "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!"
+	},
+	"whyChooseAsuCardsHonorsButtonLabel":{
+		"type": "string",
+		"default": "Explore"
+	},
+	"whyChooseAsuCardsHonorsButtonColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"whyChooseAsuCardsHonorsButtonHref":{
+		"type": "string",
+		"default": "https://goglobal.asu.edu"
 	},
 	"whyChooseAsuCardsHonorsImageUrl":{
 		"type": "string",

@@ -60,17 +60,52 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
 	const whyChooseAsuHide = detailBlock.dataset.whychooseasuhide === "true"
 	const whyChooseAsuCardsSectionIntroText = detailBlock.dataset.whychooseasucardssectionintrotext
+
 	const whyChooseAsuCardsFacultyTitle = detailBlock.dataset.whychooseasucardsfacultytitle
+	const whyChooseAsuCardsFacultyText = detailBlock.dataset.whychooseasucardsfacultytext
+	const whyChooseAsuCardsFacultyButtonLabel = detailBlock.dataset.whychooseasucardsfacultybuttonlabel
+	const whyChooseAsuCardsFacultyButtonColor = detailBlock.dataset.whychooseasucardsfacultybuttoncolor
+	const whyChooseAsuCardsFacultyButtonHref = detailBlock.dataset.whychooseasucardsfacultybuttonhref
 	const whyChooseAsuCardsFacultyImageUrl = detailBlock.dataset.whychooseasucardsfacultyimageurl
 	const whyChooseAsuCardsFacultyAltText = detailBlock.dataset.whychooseasucardsfacultyalttext
+
+	const whyChooseAsuCardsProgramsTitle = detailBlock.dataset.whychooseasucardsprogramstitle
+	const whyChooseAsuCardsProgramsText = detailBlock.dataset.whychooseasucardsprogramstext
+	const whyChooseAsuCardsProgramsButtonLabel = detailBlock.dataset.whychooseasucardsprogramsbuttonlabel
+	const whyChooseAsuCardsProgramsButtonColor = detailBlock.dataset.whychooseasucardsprogramsbuttoncolor
+	const whyChooseAsuCardsProgramsButtonHref = detailBlock.dataset.whychooseasucardsprogramsbuttonhref
 	const whyChooseAsuCardsProgramsImageUrl = detailBlock.dataset.whychooseasucardsprogramsimageurl
 	const whyChooseAsuCardsProgramsAltText = detailBlock.dataset.whychooseasucardsprogramsalttext
+
+	const whyChooseAsuCardsResearchTitle = detailBlock.dataset.whychooseasucardsresearchtitle
+	const whyChooseAsuCardsResearchText = detailBlock.dataset.whychooseasucardsresearchtext
+	const whyChooseAsuCardsResearchButtonLabel = detailBlock.dataset.whychooseasucardsresearchbuttonlabel
+	const whyChooseAsuCardsResearchButtonColor = detailBlock.dataset.whychooseasucardsresearchbuttoncolor
+	const whyChooseAsuCardsResearchButtonHref = detailBlock.dataset.whychooseasucardsresearchbuttonhref
 	const whyChooseAsuCardsResearchImageUrl = detailBlock.dataset.whychooseasucardsresearchimageurl
 	const whyChooseAsuCardsResearchAltText = detailBlock.dataset.whychooseasucardsresearchalttext
+
+	const whyChooseAsuCardsInclusionTitle = detailBlock.dataset.whychooseasucardsinclusiontitle
+	const whyChooseAsuCardsInclusionText = detailBlock.dataset.whychooseasucardsinclusiontext
+	const whyChooseAsuCardsInclusionButtonLabel = detailBlock.dataset.whychooseasucardsinclusionbuttonlabel
+	const whyChooseAsuCardsInclusionButtonColor = detailBlock.dataset.whychooseasucardsinclusionbuttoncolor
+	const whyChooseAsuCardsInclusionButtonHref = detailBlock.dataset.whychooseasucardsinclusionbuttonhref
 	const whyChooseAsuCardsInclusionImageUrl = detailBlock.dataset.whychooseasucardsinclusionimageurl
 	const whyChooseAsuCardsInclusionAltText = detailBlock.dataset.whychooseasucardsinclusionalttext
+
+	const whyChooseAsuCardsMentorsTitle = detailBlock.dataset.whychooseasucardsmentorstitle
+	const whyChooseAsuCardsMentorsText = detailBlock.dataset.whychooseasucardsmentorstext
+	const whyChooseAsuCardsMentorsButtonLabel = detailBlock.dataset.whychooseasucardsmentorsbuttonlabel
+	const whyChooseAsuCardsMentorsButtonColor = detailBlock.dataset.whychooseasucardsmentorsbuttoncolor
+	const whyChooseAsuCardsMentorsButtonHref = detailBlock.dataset.whychooseasucardsmentorsbuttonhref
 	const whyChooseAsuCardsMentorsImageUrl = detailBlock.dataset.whychooseasucardsmentorsimageurl
 	const whyChooseAsuCardsMentorsAltText = detailBlock.dataset.whychooseasucardsmentorsalttext
+
+	const whyChooseAsuCardsHonorsTitle = detailBlock.dataset.whychooseasucardshonorstitle
+	const whyChooseAsuCardsHonorsText = detailBlock.dataset.whychooseasucardshonorstext
+	const whyChooseAsuCardsHonorsButtonLabel = detailBlock.dataset.whychooseasucardshonorsbuttonlabel
+	const whyChooseAsuCardsHonorsButtonColor = detailBlock.dataset.whychooseasucardshonorsbuttoncolor
+	const whyChooseAsuCardsHonorsButtonHref =detailBlock.dataset.whychooseasucardshonorsbuttonhref
 	const whyChooseAsuCardsHonorsImageUrl = detailBlock.dataset.whychooseasucardshonorsimageurl
 	const whyChooseAsuCardsHonorsAltText = detailBlock.dataset.whychooseasucardshonorsalttext
 
@@ -267,11 +302,11 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				altText: whyChooseAsuCardsFacultyAltText,
 			  },
 			  title: whyChooseAsuCardsFacultyTitle,
-			  text: "The ASU faculty is at the forefront nationally in advancing research and discovery. Our faculty members inspire new ways of thinking, innovating and solving problems socially, culturally and economically in our region and in the international community.",
+			  text: whyChooseAsuCardsFacultyText,
 			  button: {
-				label: "Faculty excellence",
-				color: "maroon",
-				href: "https://www.asu.edu/academics/faculty-excellence",
+				label: whyChooseAsuCardsFacultyButtonLabel,
+				color: whyChooseAsuCardsFacultyButtonColor,
+				href: whyChooseAsuCardsFacultyButtonHref,
 			  },
 			},
 			programs: {
@@ -279,12 +314,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsProgramsImageUrl ? whyChooseAsuCardsProgramsImageUrl : ImgCustomizePrograms,
 				altText: whyChooseAsuCardsProgramsAltText,
 			  },
-			  title: "Highly ranked programs",
-			  text: "A leading service ranking the excellence and innovation of the nation’s top universities, U.S. News & World Report rates many ASU programs among the top 25 in the country, including more than thirty programs ranked in the nation's top 10.",
+			  title: whyChooseAsuCardsProgramsTitle,
+			  text: whyChooseAsuCardsProgramsText,
 			  button: {
-				label: "ASU rankings",
-				color: "maroon",
-				href: "https://www.asu.edu/rankings",
+				label: whyChooseAsuCardsProgramsButtonLabel,
+				color: whyChooseAsuCardsProgramsButtonColor,
+				href: whyChooseAsuCardsProgramsButtonHref,
 			  },
 			},
 			research: {
@@ -292,12 +327,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsResearchImageUrl ? whyChooseAsuCardsResearchImageUrl : ImgCustomizeResearch,
 				altText: whyChooseAsuCardsResearchAltText,
 			  },
-			  title: "Research opportunities",
-			  text: "Students have the opportunity to work with mentors who are experts in their fields and establish professional connections that may last a lifetime. Engage in meaningful research and gain experience that may make you more competitive in the job market.",
+			  title: whyChooseAsuCardsResearchTitle,
+			  text: whyChooseAsuCardsResearchText,
 			  button: {
-				label: "Research opportunities",
-				color: "maroon",
-				href: "https://provost.asu.edu/uresearch",
+				label: whyChooseAsuCardsResearchButtonLabel,
+				color: whyChooseAsuCardsResearchButtonColor,
+				href: whyChooseAsuCardsResearchButtonHref,
 			  },
 			},
 			inclusion: {
@@ -305,12 +340,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsInclusionImageUrl ? whyChooseAsuCardsInclusionImageUrl : ImgCustomizeInclusion,
 				altText: whyChooseAsuCardsInclusionAltText,
 			  },
-			  title: "An inclusive environment",
-			  text: "ASU defines our success not by whom we exclude, but by whom we include and how our students succeed. Our educational programs are designed to broaden access to a quality education and support our students’ success.",
+			  title: whyChooseAsuCardsInclusionTitle,
+			  text: whyChooseAsuCardsInclusionText,
 			  button: {
-				label: "ASU Charter",
-				color: "maroon",
-				href: "https://www.asu.edu/about/charter-mission",
+				label: whyChooseAsuCardsInclusionButtonLabel,
+				color: whyChooseAsuCardsInclusionButtonColor,
+				href: whyChooseAsuCardsInclusionButtonHref,
 			  },
 			},
 			mentors: {
@@ -318,12 +353,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsMentorsImageUrl ? whyChooseAsuCardsMentorsImageUrl : ImgCustomizeMentor,
 				altText: whyChooseAsuCardsMentorsAltText,
 			  },
-			  title: "Mentor network",
-			  text: "Students have access to a powerful online network of diverse mentors. Engaging with the ASU Mentor Network can help to build connections with professionals, both locally and globally, who share career advice, networks, and their own success stories.",
+			  title: whyChooseAsuCardsMentorsTitle,
+			  text: whyChooseAsuCardsMentorsText,
 			  button: {
-				label: "ASU Mentor network",
-				color: "maroon",
-				href: "https://mentorship.asu.edu",
+				label: whyChooseAsuCardsMentorsButtonLabel,
+				color: whyChooseAsuCardsMentorsButtonColor,
+				href: whyChooseAsuCardsMentorsButtonHref,
 			  },
 			},
 			honors: {
@@ -331,12 +366,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				url: whyChooseAsuCardsHonorsImageUrl ? whyChooseAsuCardsHonorsImageUrl : ImgCustomizeHonors,
 				altText: whyChooseAsuCardsHonorsAltText,
 			  },
-			  title: "Global education",
-			  text: "ASU offers more than 300 Global Education programs in over 65 different countries. Whether you are interested in studying abroad, internships, research or service learning, there's a program for you!",
+			  title: whyChooseAsuCardsHonorsTitle,
+			  text: whyChooseAsuCardsHonorsText,
 			  button: {
-				label: "Explore",
-				color: "maroon",
-				href: "https://goglobal.asu.edu",
+				label: whyChooseAsuCardsHonorsButtonLabel,
+				color: whyChooseAsuCardsHonorsButtonColor,
+				href: whyChooseAsuCardsHonorsButtonHref,
 			  },
 			},
 		  },
@@ -350,8 +385,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		},
 		programContactInfo: {
 		  // hide: true, // OPTIONAL
-		  department: { text: "", url: "#" },
-		  email: { text: "", url: "#" },
+		  department: { text: "", url: "" },
+		  email: { text: "", url: "" },
 		},
 	  };
 
@@ -392,6 +427,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			globalOpportunity={ customProps.globalOpportunity }
 			whyChooseAsu={ customProps.whyChooseAsu }
 			attendOnline={ customProps.attendOnline }
+			programContactInfo={ customProps.programContactInfo }
 		/>,
 		detailBlock
 	);

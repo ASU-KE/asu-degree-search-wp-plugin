@@ -50,16 +50,41 @@ const Inspector = ( props ) => {
 			whyChooseAsuCardsSectionIntroText,
 			whyChooseAsuCardsFacultyTitle,
 			whyChooseAsuCardsFacultyText,
+			whyChooseAsuCardsFacultyButtonLabel,
+			whyChooseAsuCardsFacultyButtonColor,
+			whyChooseAsuCardsFacultyButtonHref,
 			whyChooseAsuCardsFacultyImageUrl,
 			whyChooseAsuCardsFacultyAltText,
+			whyChooseAsuCardsProgramsTitle,
+			whyChooseAsuCardsProgramsText,
+			whyChooseAsuCardsProgramsButtonLabel,
+			whyChooseAsuCardsProgramsButtonColor,
+			whyChooseAsuCardsProgramsButtonHref,
 			whyChooseAsuCardsProgramsImageUrl,
 			whyChooseAsuCardsProgramsAltText,
+			whyChooseAsuCardsResearchTitle,
+			whyChooseAsuCardsResearchText,
+			whyChooseAsuCardsResearchButtonLabel,
+			whyChooseAsuCardsResearchButtonColor,
+			whyChooseAsuCardsResearchButtonHref,
 			whyChooseAsuCardsResearchImageUrl,
 			whyChooseAsuCardsResearchAltText,
+			whyChooseAsuCardsInclusionTitle,
+			whyChooseAsuCardsInclusionText,
+			whyChooseAsuCardsInclusionButtonLabel,
+			whyChooseAsuCardsInclusionButtonColor,
+			whyChooseAsuCardsInclusionButtonHref,
 			whyChooseAsuCardsInclusionImageUrl,
 			whyChooseAsuCardsInclusionAltText,
+			whyChooseAsuCardsMentorsTitle,
+			whyChooseAsuCardsMentorsText,
+			whyChooseAsuCardsMentorsButtonLabel,
+			whyChooseAsuCardsMentorsButtonColor,
+			whyChooseAsuCardsMentorsButtonHref,
 			whyChooseAsuCardsMentorsImageUrl,
 			whyChooseAsuCardsMentorsAltText,
+			whyChooseAsuCardsHonorsTitle,
+			whyChooseAsuCardsHonorsText,
 			whyChooseAsuCardsHonorsImageUrl,
 			whyChooseAsuCardsHonorsAltText,
 			attendOnlineHide,
@@ -546,6 +571,39 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<TextControl
+							label={ 'Why ASU cards - Faculty button text' }
+							value={ whyChooseAsuCardsFacultyButtonLabel }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyButtonLabel: value } )
+							}
+						/>
+					</PanelRow>
+						<PanelRow>
+						<SelectControl
+							label={'Why ASU cards - Faculty button color'}
+							help={ 'Set button color' }
+							value={ whyChooseAsuCardsFacultyButtonColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { whyChooseAsuCardsFacultyButtonColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+						</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Faculty button link' }
+							value={ whyChooseAsuCardsFacultyButtonHref }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsFacultyButtonHref: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
 							label={ 'Why ASU cards - Faculty image' }
               				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
 							value={ whyChooseAsuCardsFacultyImageUrl }
@@ -565,10 +623,65 @@ const Inspector = ( props ) => {
 						/>
 					</PanelRow>
 					</PanelBody>
+					<PanelBody
+						title={ __( 'Why ASU cards - Programs', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs title' }
+							value={ whyChooseAsuCardsProgramsTitle }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs text' }
+							value={ whyChooseAsuCardsProgramsText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs button text' }
+							value={ whyChooseAsuCardsProgramsButtonLabel }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsButtonLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Why ASU cards - Programs button color'}
+							help={ 'Set button color' }
+							value={ whyChooseAsuCardsProgramsButtonColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { whyChooseAsuCardsProgramsButtonColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Programs button link' }
+							value={ whyChooseAsuCardsProgramsButtonHref }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsProgramsButtonHref: value } )
+							}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Programs image' }
-              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+			  				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
 							value={ whyChooseAsuCardsProgramsImageUrl }
 							onChange={ ( value ) =>
 								setAttributes( { whyChooseAsuCardsProgramsImageUrl: value } )
@@ -578,10 +691,66 @@ const Inspector = ( props ) => {
 					<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Programs image alt text' }
-              				help={'required for a11y'}
+			  				help={'required for a11y'}
 							value={ whyChooseAsuCardsProgramsAltText }
 							onChange={ ( value ) =>
 								setAttributes( { whyChooseAsuCardsProgramsAltText: value } )
+							}
+						/>
+					</PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Why ASU cards - Research', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research title' }
+							value={ whyChooseAsuCardsResearchTitle }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research text' }
+							value={ whyChooseAsuCardsResearchText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research button text' }
+							value={ whyChooseAsuCardsResearchButtonLabel }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchButtonLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Why ASU cards - Research button color'}
+							help={ 'Set button color' }
+							value={ whyChooseAsuCardsResearchButtonColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { whyChooseAsuCardsResearchButtonColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Research button link' }
+							value={ whyChooseAsuCardsResearchButtonHref }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsResearchButtonHref: value } )
 							}
 						/>
 					</PanelRow>
@@ -605,7 +774,63 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
-					<PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Why ASU cards - Inclusion', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+						<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion title' }
+							value={ whyChooseAsuCardsInclusionTitle }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionTitle: value } )
+							}
+						/>
+						</PanelRow>
+						<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion text' }
+							value={ whyChooseAsuCardsInclusionText }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionText: value } )
+							}
+						/>
+						</PanelRow>
+						<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion button text' }
+							value={ whyChooseAsuCardsInclusionButtonLabel }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionButtonLabel: value } )
+							}
+						/>
+						</PanelRow>
+						<PanelRow>
+						<SelectControl
+							label={'Why ASU cards - Inclusion button color'}
+							help={ 'Set button color' }
+							value={ whyChooseAsuCardsInclusionButtonColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { whyChooseAsuCardsInclusionButtonColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+						</PanelRow>
+						<PanelRow>
+						<TextControl
+							label={ 'Why ASU cards - Inclusion button link' }
+							value={ whyChooseAsuCardsInclusionButtonHref }
+							onChange={ ( value ) =>
+								setAttributes( { whyChooseAsuCardsInclusionButtonHref: value } )
+							}
+						/>
+						</PanelRow>
+						<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Inclusion image' }
               				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
@@ -625,7 +850,63 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
-					<PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Why ASU cards - Mentors', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Mentors title' }
+								value={ whyChooseAsuCardsMentorsTitle }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsMentorsTitle: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Mentors text' }
+								value={ whyChooseAsuCardsMentorsText }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsMentorsText: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Mentors button text' }
+								value={ whyChooseAsuCardsMentorsButtonLabel }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsMentorsButtonLabel: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
+							<SelectControl
+								label={'Why ASU cards - Mentors button color'}
+								help={ 'Set button color' }
+								value={ whyChooseAsuCardsMentorsButtonColor }
+								options={[
+									{ label: 'Gold', value: 'gold' },
+									{ label: 'Maroon', value: 'maroon' },
+									{ label: 'Gray', value: 'gray' },
+									{ label: 'Dark', value: 'dark'}
+								]}
+								onChange={ ( value ) => setAttributes( { whyChooseAsuCardsMentorsButtonColor: value } ) }
+								__nextHasNoMarginBottom
+							/>
+						</PanelRow>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Mentors button link' }
+								value={ whyChooseAsuCardsMentorsButtonHref }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsMentorsButtonHref: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Mentors image' }
               				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
@@ -645,7 +926,30 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
-					<PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Why ASU cards - Honors', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Honors title' }
+								value={ whyChooseAsuCardsHonorsTitle }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsHonorsTitle: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Honors text' }
+								value={ whyChooseAsuCardsHonorsText }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsHonorsText: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Honors image' }
               				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
@@ -665,6 +969,8 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					</PanelBody>
+
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Attend online', 'unityblocks' ) }

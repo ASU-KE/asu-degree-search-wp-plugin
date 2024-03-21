@@ -60,6 +60,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const nextStepsCardsApplyButtonLinkColor = detailBlock.dataset.nextstepscardsapplybuttonlinkcolor
 	const nextStepsCardsApplyButtonLinkHref = detailBlock.dataset.nextstepscardsapplybuttonlinkhref
 
+	const nextStepsCardsVisitIconPrefix = detailBlock.dataset.nextstepscardsvisiticonprefix
+	const nextStepsCardsVisitIconName = detailBlock.dataset.nextstepscardsvisiticonname
+	const nextStepsCardsVisitTitle = detailBlock.dataset.nextstepscardsvisittitle
+	const nextStepsCardsVisitContent = detailBlock.dataset.nextstepscardsvisitcontent
+	const nextStepsCardsVisitButtonLinkLabel = detailBlock.dataset.nextstepscardsvisitbuttonlinklabel
+	const nextStepsCardsVisitButtonLinkAriaLabel = detailBlock.dataset.nextstepscardsvisitbuttonlinkarialabel
+	const nextStepsCardsVisitButtonLinkColor = detailBlock.dataset.nextstepscardsvisitbuttonlinkcolor
+	const nextStepsCardsVisitButtonLinkHref = detailBlock.dataset.nextstepscardsvisitbuttonlinkhref
+
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
 
@@ -269,16 +278,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			  },
 			},
 			visit: {
-			  icon: ["fas", "map-marker-alt"],
-			  title: "Visit our campus",
-			  content:
-				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-			  buttonLink: {
-				label: "Schedule a visit",
-				ariaLabel: "Schedule a visit",
-				color: "maroon",
-				href: "https://visit.asu.edu/",
-			  },
+				icon: [nextStepsCardsVisitIconPrefix, nextStepsCardsVisitIconName],
+				title: nextStepsCardsVisitTitle,
+				content:nextStepsCardsVisitContent,
+				buttonLink: {
+					label: nextStepsCardsVisitButtonLinkLabel,
+					ariaLabel: nextStepsCardsVisitButtonLinkAriaLabel,
+					color: nextStepsCardsVisitButtonLinkColor,
+					href: nextStepsCardsVisitButtonLinkHref,
+				},
 			},
 		  },
 		},

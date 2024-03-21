@@ -131,6 +131,39 @@
 		"type": "string",
 		"default": "https://admission.asu.edu/apply"
 	},
+	"nextStepsCardsVisitIconPrefix":{
+		"type": "string",
+		"default": "fas"
+	},
+	"nextStepsCardsVisitIconName":{
+		"type": "string",
+		"default": "map-marker-alt"
+	},
+	"nextStepsCardsVisitTitle":{
+		"type": "string",
+		"default": "Visit our campus"
+	},
+	"nextStepsCardsVisitContent":{
+		"type": "string",
+		"default": "An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus."
+	},
+	"nextStepsCardsVisitButtonLinkLabel":{
+		"type": "string",
+		"default": "Schedule a visit"
+	},
+	"nextStepsCardsVisitButtonLinkAriaLabel":{
+		"type": "string",
+		"default": "Schedule a visit"
+	},
+	"nextStepsCardsVisitButtonLinkColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"nextStepsCardsVisitButtonLinkHref":{
+		"type": "string",
+		"default": "https://admission.asu.edu/contact/request-info"
+	},
 	"nextStepsCardsLearnMoreIconPrefix":{
 		"type": "string",
 		"default": "fas"

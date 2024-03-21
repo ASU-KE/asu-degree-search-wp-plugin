@@ -38,7 +38,6 @@ const Edit = ( props ) => {
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
-			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
@@ -135,7 +134,6 @@ const Edit = ( props ) => {
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
 		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
 		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
 		  //

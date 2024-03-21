@@ -17,7 +17,6 @@ const Inspector = ( props ) => {
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
-			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
@@ -151,18 +150,6 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuAffordingCollege: value} );
-								}
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Anchor menu - Flexible degree options' }
-							help={'Show or hide Flexible degree options link'}
-							checked={ anchorMenuFlexibleDegreeOptions }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {anchorMenuFlexibleDegreeOptions: value} );
 								}
 							}
 						/>

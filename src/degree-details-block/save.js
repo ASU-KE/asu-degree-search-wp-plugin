@@ -12,7 +12,6 @@ const save = ( props ) => {
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
-			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
@@ -103,7 +102,6 @@ const save = ( props ) => {
 			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
 			data-anchorMenuNextSteps={ anchorMenuNextSteps }
 			data-anchorMenuAffordingCollege={ anchorMenuAffordingCollege }
-			data-anchorMenuFlexibleDegreeOptions={ anchorMenuFlexibleDegreeOptions }
 			data-anchorMenuCareerOutlook={ anchorMenuCareerOutlook }
 			data-anchorMenuExampleCareers={ anchorMenuExampleCareers }
 			data-anchorMenuGlobalOpportunity={ anchorMenuGlobalOpportunity }

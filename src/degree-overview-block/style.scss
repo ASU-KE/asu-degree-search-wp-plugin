@@ -4,3 +4,9 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+#asu-degree-overview-container .no-space .container form label {
+	display: block;
+}
+#asu-degree-overview-container .no-space .container form select {
+	width: 100%;
+}

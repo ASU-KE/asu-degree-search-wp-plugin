@@ -21,10 +21,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"anchorMenuAtAGlance":{
-			"type": "boolean",
-			"default": false
-		},
 		"anchorMenuApplicationRequirements":{
 			"type": "boolean",
 			"default": false

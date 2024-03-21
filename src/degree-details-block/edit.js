@@ -35,7 +35,6 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
-			anchorMenuAtAGlance,
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,

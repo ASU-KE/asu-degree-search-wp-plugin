@@ -14,7 +14,6 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
-			anchorMenuAtAGlance,
 			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,
@@ -117,18 +116,6 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuEnabled: value} );
-								}
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Anchor menu - At a Glance' }
-							help={'Show or hide At a Glance link'}
-							checked={ anchorMenuAtAGlance }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {anchorMenuAtAGlance: value} );
 								}
 							}
 						/>

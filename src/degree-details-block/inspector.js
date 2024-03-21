@@ -34,6 +34,7 @@ const Inspector = ( props ) => {
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
 			nextStepsCardsLearnMoreIconPrefix,
+			nextStepsCardsLearnMoreIconName,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -367,9 +368,20 @@ const Inspector = ( props ) => {
 					<PanelRow>
 						<TextControl
 							label={ 'Next steps - Learn more card icon prefix' }
+							help={'Will not update without page reload'}
 							value={ nextStepsCardsLearnMoreIconPrefix }
 							onChange={ ( value ) =>
 								setAttributes( { nextStepsCardsLearnMoreIconPrefix: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card icon name' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsLearnMoreIconName }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreIconName: value } )
 							}
 						/>
 					</PanelRow>

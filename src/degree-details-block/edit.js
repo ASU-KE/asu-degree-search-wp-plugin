@@ -55,6 +55,7 @@ const Edit = ( props ) => {
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
 			nextStepsCardsLearnMoreIconPrefix,
+			nextStepsCardsLearnMoreIconName,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -231,7 +232,7 @@ const Edit = ( props ) => {
 			hide: nextStepsHide,
 			cards: {
 				learnMore: {
-					icon: [nextStepsCardsLearnMoreIconPrefix, "info-circle"],
+					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
 					title: "Learn more about our programs",
 					content:"Tell us what type of student you are and we'll get you the information you need.",
 					buttonLink: {

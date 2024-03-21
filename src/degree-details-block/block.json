@@ -102,6 +102,10 @@
 		"type": "string",
 		"default": "fas"
 	},
+	"nextStepsCardsLearnMoreIconName":{
+		"type": "string",
+		"default": "info-circle"
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false

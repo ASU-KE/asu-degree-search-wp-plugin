@@ -46,6 +46,7 @@ const Edit = ( props ) => {
 			anchorMenuGlobalOpportunity,
 			anchorMenuAttendOnline,
 			anchorMenuWhyChooseAsu,
+			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -169,7 +170,7 @@ const Edit = ( props ) => {
 			globalOpportunity: anchorMenuGlobalOpportunity,
 			attendOnline: anchorMenuAttendOnline,
 			whyChooseAsu: anchorMenuWhyChooseAsu,
-			programContactInfo: true,
+			programContactInfo: anchorMenuProgramContactInfo,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",

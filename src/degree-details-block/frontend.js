@@ -30,6 +30,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
 	const anchorMenuAttendOnline = detailBlock.dataset.anchormenuattendonline === "true"
 	const anchorMenuWhyChooseAsu = detailBlock.dataset.anchormenuwhychooseasu === "true"
+	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
 	const heroHide = detailBlock.dataset.herohide === "true"
 	const heroImageUrl = detailBlock.dataset.heroimageurl
@@ -171,7 +172,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			globalOpportunity: anchorMenuGlobalOpportunity,
 			attendOnline: anchorMenuAttendOnline,
 			whyChooseAsu: anchorMenuWhyChooseAsu,
-			programContactInfo: true,
+			programContactInfo: anchorMenuProgramContactInfo,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",

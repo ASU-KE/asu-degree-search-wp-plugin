@@ -25,6 +25,7 @@ const Inspector = ( props ) => {
 			anchorMenuGlobalOpportunity,
 			anchorMenuAttendOnline,
 			anchorMenuWhyChooseAsu,
+			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -274,6 +275,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuWhyChooseAsu: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - program contact info' }
+							help={'Show or hide program contact info link'}
+							checked={ anchorMenuProgramContactInfo }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuProgramContactInfo: value} );
 								}
 							}
 						/>

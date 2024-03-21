@@ -33,10 +33,10 @@ import ImgDefaultHero from "../../resources/asu-unity-stack/packages/app-degree-
 	//const wordpressMediaDate = listingBlock.dataset.wordpressmediadate
 
 	const dataSource = {
-        endpoint: "https://degrees.apps.asu.edu/t5/service",
-        method: "findAllDegrees",
+        //endpoint: "https://degrees.apps.asu.edu/t5/service",
+        //method: "findAllDegrees",
         program: dataSourceProgram, // graduate | undergrad
-		init: "false", // "true" | "false"
+		//init: "false", // "true" | "false"
 		collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
 		...dataSourceProgram === "graduate" && {
 			blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science

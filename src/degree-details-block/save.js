@@ -31,6 +31,8 @@ const save = ( props ) => {
 			nextStepsCardsLearnMoreIconPrefix,
 			nextStepsCardsLearnMoreIconName,
 			nextStepsCardsLearnMoreTitle,
+			nextStepsCardsLearnMoreContent,
+			nextStepsCardsLearnMoreButtonLinkLabel,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -122,6 +124,8 @@ const save = ( props ) => {
 			data-nextStepsCardsLearnMoreIconPrefix={ nextStepsCardsLearnMoreIconPrefix }
 			data-nextStepsCardsLearnMoreIconName={ nextStepsCardsLearnMoreIconName }
 			data-nextStepsCardsLearnMoreTitle={ nextStepsCardsLearnMoreTitle }
+			data-nextStepsCardsLearnMoreContent={ nextStepsCardsLearnMoreContent }
+			data-nextStepsCardsLearnMoreButtonLinkLabel={ nextStepsCardsLearnMoreButtonLinkLabel }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }

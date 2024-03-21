@@ -44,6 +44,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const nextStepsCardsLearnMoreIconPrefix = detailBlock.dataset.nextstepscardslearnmoreiconprefix
 	const nextStepsCardsLearnMoreIconName = detailBlock.dataset.nextstepscardslearnmoreiconname
 	const nextStepsCardsLearnMoreTitle = detailBlock.dataset.nextstepscardslearnmoretitle
+	const nextStepsCardsLearnMoreContent = detailBlock.dataset.nextstepscardslearnmorecontent
+	const nextStepsCardsLearnMoreButtonLinkLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinklabel
 
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
@@ -234,9 +236,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 				learnMore: {
 					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
 					title: nextStepsCardsLearnMoreTitle,
-					content:"Tell us what type of student you are and we'll get you the information you need.",
+					content: nextStepsCardsLearnMoreContent,
 					buttonLink: {
-						label: "Request information",
+						label: nextStepsCardsLearnMoreButtonLinkLabel,
 						ariaLabel: "Request information",
 						color: "maroon",
 						href: "https://admission.asu.edu/contact/request-info",

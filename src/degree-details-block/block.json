@@ -110,6 +110,14 @@
 		"type": "string",
 		"default": "Learn more about our programs"
 	},
+	"nextStepsCardsLearnMoreContent":{
+		"type": "string",
+		"default": "Tell us what type of student you are and we'll get you the information you need."
+	},
+	"nextStepsCardsLearnMoreButtonLinkLabel":{
+		"type": "string",
+		"default": "Request information"
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false

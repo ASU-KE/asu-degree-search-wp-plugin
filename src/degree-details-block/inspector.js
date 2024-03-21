@@ -36,6 +36,8 @@ const Inspector = ( props ) => {
 			nextStepsCardsLearnMoreIconPrefix,
 			nextStepsCardsLearnMoreIconName,
 			nextStepsCardsLearnMoreTitle,
+			nextStepsCardsLearnMoreContent,
+			nextStepsCardsLearnMoreButtonLinkLabel,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -392,6 +394,24 @@ const Inspector = ( props ) => {
 							value={ nextStepsCardsLearnMoreTitle }
 							onChange={ ( value ) =>
 								setAttributes( { nextStepsCardsLearnMoreTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card content' }
+							value={ nextStepsCardsLearnMoreContent }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreContent: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link label' }
+							value={ nextStepsCardsLearnMoreButtonLinkLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkLabel: value } )
 							}
 						/>
 					</PanelRow>

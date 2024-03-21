@@ -24,6 +24,7 @@ const Inspector = ( props ) => {
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuAttendOnline,
+			anchorMenuWhyChooseAsu,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -261,6 +262,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuAttendOnline: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - why choose asu' }
+							help={'Show or hide why choose asu link'}
+							checked={ anchorMenuWhyChooseAsu }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuWhyChooseAsu: value} );
 								}
 							}
 						/>

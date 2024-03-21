@@ -61,6 +61,10 @@
 			"type": "boolean",
 			"default": false
 		},
+		"anchorMenuWhyChooseAsu":{
+			"type": "boolean",
+			"default": false
+		},
     "dataSourceAcadPlan":{
 		"type": "string",
 		"default": "BABUSGLBA"

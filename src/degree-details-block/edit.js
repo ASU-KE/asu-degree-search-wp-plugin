@@ -45,6 +45,7 @@ const Edit = ( props ) => {
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuAttendOnline,
+			anchorMenuWhyChooseAsu,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -167,7 +168,7 @@ const Edit = ( props ) => {
 			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
 			attendOnline: anchorMenuAttendOnline,
-			whyChooseAsu: true,
+			whyChooseAsu: anchorMenuWhyChooseAsu,
 			programContactInfo: true,
 		//   externalAnchors: [
 		// 	{

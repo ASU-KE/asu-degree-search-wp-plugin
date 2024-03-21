@@ -30,6 +30,7 @@ const save = ( props ) => {
 			nextStepsHide,
 			nextStepsCardsLearnMoreIconPrefix,
 			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -120,6 +121,7 @@ const save = ( props ) => {
 			data-nextStepsHide={ nextStepsHide }
 			data-nextStepsCardsLearnMoreIconPrefix={ nextStepsCardsLearnMoreIconPrefix }
 			data-nextStepsCardsLearnMoreIconName={ nextStepsCardsLearnMoreIconName }
+			data-nextStepsCardsLearnMoreTitle={ nextStepsCardsLearnMoreTitle }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }

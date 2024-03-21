@@ -56,6 +56,7 @@ const Edit = ( props ) => {
 			nextStepsHide,
 			nextStepsCardsLearnMoreIconPrefix,
 			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -233,7 +234,7 @@ const Edit = ( props ) => {
 			cards: {
 				learnMore: {
 					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
-					title: "Learn more about our programs",
+					title: nextStepsCardsLearnMoreTitle,
 					content:"Tell us what type of student you are and we'll get you the information you need.",
 					buttonLink: {
 						label: "Request information",

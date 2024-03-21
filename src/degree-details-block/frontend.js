@@ -43,6 +43,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const nextStepsHide = detailBlock.dataset.nextstepshide === "true"
 	const nextStepsCardsLearnMoreIconPrefix = detailBlock.dataset.nextstepscardslearnmoreiconprefix
 	const nextStepsCardsLearnMoreIconName = detailBlock.dataset.nextstepscardslearnmoreiconname
+	const nextStepsCardsLearnMoreTitle = detailBlock.dataset.nextstepscardslearnmoretitle
 
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
@@ -232,7 +233,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			cards: {
 				learnMore: {
 					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
-					title: "Learn more about our programs",
+					title: nextStepsCardsLearnMoreTitle,
 					content:"Tell us what type of student you are and we'll get you the information you need.",
 					buttonLink: {
 						label: "Request information",

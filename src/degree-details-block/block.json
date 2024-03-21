@@ -106,6 +106,10 @@
 		"type": "string",
 		"default": "info-circle"
 	},
+	"nextStepsCardsLearnMoreTitle":{
+		"type": "string",
+		"default": "Learn more about our programs"
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false

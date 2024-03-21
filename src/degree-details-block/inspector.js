@@ -35,6 +35,7 @@ const Inspector = ( props ) => {
 			nextStepsHide,
 			nextStepsCardsLearnMoreIconPrefix,
 			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -382,6 +383,15 @@ const Inspector = ( props ) => {
 							value={ nextStepsCardsLearnMoreIconName }
 							onChange={ ( value ) =>
 								setAttributes( { nextStepsCardsLearnMoreIconName: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card title' }
+							value={ nextStepsCardsLearnMoreTitle }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreTitle: value } )
 							}
 						/>
 					</PanelRow>

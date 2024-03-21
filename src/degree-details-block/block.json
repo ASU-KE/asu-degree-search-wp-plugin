@@ -98,6 +98,10 @@
 		"type": "boolean",
 		"default": false
 	},
+	"nextStepsCardsLearnMoreIconPrefix":{
+		"type": "string",
+		"default": "fas"
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false

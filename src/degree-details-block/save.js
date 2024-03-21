@@ -28,6 +28,7 @@ const save = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
+			nextStepsCardsLearnMoreIconPrefix,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -116,6 +117,7 @@ const save = ( props ) => {
 			data-atAGlanceApplicationRequirementsHide={ atAGlanceApplicationRequirementsHide }
 			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
 			data-nextStepsHide={ nextStepsHide }
+			data-nextStepsCardsLearnMoreIconPrefix={ nextStepsCardsLearnMoreIconPrefix }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }

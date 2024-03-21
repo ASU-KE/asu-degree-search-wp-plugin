@@ -33,6 +33,7 @@ const Inspector = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
+			nextStepsCardsLearnMoreIconPrefix,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -359,6 +360,20 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					<PanelBody
+						title={ __( 'Next steps - Learn more card', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card icon prefix' }
+							value={ nextStepsCardsLearnMoreIconPrefix }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreIconPrefix: value } )
+							}
+						/>
+					</PanelRow>
+					</PanelBody>
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Affording college', 'unityblocks' ) }

@@ -118,6 +118,19 @@
 		"type": "string",
 		"default": "Request information"
 	},
+	"nextStepsCardsLearnMoreButtonLinkAriaLabel":{
+		"type": "string",
+		"default": "Request information"
+	},
+	"nextStepsCardsLearnMoreButtonLinkColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"nextStepsCardsLearnMoreButtonLinkHref":{
+		"type": "string",
+		"default": "https://admission.asu.edu/contact/request-info"
+	},
 	"affordingCollegeHide":{
 		"type": "boolean",
 		"default": false

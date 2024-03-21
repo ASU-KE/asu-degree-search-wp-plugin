@@ -38,6 +38,9 @@ const Inspector = ( props ) => {
 			nextStepsCardsLearnMoreTitle,
 			nextStepsCardsLearnMoreContent,
 			nextStepsCardsLearnMoreButtonLinkLabel,
+			nextStepsCardsLearnMoreButtonLinkAriaLabel,
+			nextStepsCardsLearnMoreButtonLinkColor,
+			nextStepsCardsLearnMoreButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -412,6 +415,40 @@ const Inspector = ( props ) => {
 							value={ nextStepsCardsLearnMoreButtonLinkLabel }
 							onChange={ ( value ) =>
 								setAttributes( { nextStepsCardsLearnMoreButtonLinkLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link aria label' }
+							help={'required for a11y'}
+							value={ nextStepsCardsLearnMoreButtonLinkAriaLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkAriaLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Next steps - Learn more card button link color'}
+							help={ 'Set button color' }
+							value={ nextStepsCardsLearnMoreButtonLinkColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { nextStepsCardsLearnMoreButtonLinkColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link href' }
+							value={ nextStepsCardsLearnMoreButtonLinkHref }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkHref: value } )
 							}
 						/>
 					</PanelRow>

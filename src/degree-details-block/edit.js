@@ -59,6 +59,9 @@ const Edit = ( props ) => {
 			nextStepsCardsLearnMoreTitle,
 			nextStepsCardsLearnMoreContent,
 			nextStepsCardsLearnMoreButtonLinkLabel,
+			nextStepsCardsLearnMoreButtonLinkAriaLabel,
+			nextStepsCardsLearnMoreButtonLinkColor,
+			nextStepsCardsLearnMoreButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -240,9 +243,9 @@ const Edit = ( props ) => {
 					content: nextStepsCardsLearnMoreContent,
 					buttonLink: {
 						label: nextStepsCardsLearnMoreButtonLinkLabel,
-						ariaLabel: "Request information",
-						color: "maroon",
-						href: "https://admission.asu.edu/contact/request-info",
+						ariaLabel: nextStepsCardsLearnMoreButtonLinkAriaLabel,
+						color: nextStepsCardsLearnMoreButtonLinkColor,
+						href: nextStepsCardsLearnMoreButtonLinkHref,
 					},
 				},
 				apply: {

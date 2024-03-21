@@ -46,6 +46,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const nextStepsCardsLearnMoreTitle = detailBlock.dataset.nextstepscardslearnmoretitle
 	const nextStepsCardsLearnMoreContent = detailBlock.dataset.nextstepscardslearnmorecontent
 	const nextStepsCardsLearnMoreButtonLinkLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinklabel
+	const nextStepsCardsLearnMoreButtonLinkAriaLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinkarialabel
+	const nextStepsCardsLearnMoreButtonLinkColor = detailBlock.dataset.nextstepscardslearnmorebuttonlinkcolor
+	const nextStepsCardsLearnMoreButtonLinkHref = detailBlock.dataset.nextstepscardslearnmorebuttonlinkhref
 
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
@@ -239,9 +242,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 					content: nextStepsCardsLearnMoreContent,
 					buttonLink: {
 						label: nextStepsCardsLearnMoreButtonLinkLabel,
-						ariaLabel: "Request information",
-						color: "maroon",
-						href: "https://admission.asu.edu/contact/request-info",
+						ariaLabel: nextStepsCardsLearnMoreButtonLinkAriaLabel,
+						color: nextStepsCardsLearnMoreButtonLinkColor,
+						href: nextStepsCardsLearnMoreButtonLinkHref,
 					},
 				},
 				apply: {

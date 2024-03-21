@@ -21,7 +21,15 @@
 			"type": "boolean",
 			"default": false
 		},
+		"anchorMenuAtAGlance":{
+			"type": "boolean",
+			"default": false
+		},
 		"anchorMenuApplicationRequirements":{
+			"type": "boolean",
+			"default": false
+		},
+		"anchorMenuChangeMajorRequirements":{
 			"type": "boolean",
 			"default": false
 		},
@@ -30,6 +38,10 @@
 			"default": false
 		},
 		"anchorMenuAffordingCollege":{
+			"type": "boolean",
+			"default": false
+		},
+		"anchorMenuFlexibleDegreeOptions":{
 			"type": "boolean",
 			"default": false
 		},

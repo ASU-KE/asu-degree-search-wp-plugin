@@ -9,9 +9,12 @@ const save = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
+			anchorMenuChangeMajorRequirements,
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
+			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuGlobalOpportunity,
 			dataSourceAcadPlan,
@@ -121,9 +124,12 @@ const save = ( props ) => {
 		id="asu-degree-details-container"
 		{...useBlockProps.save()}
 			data-anchorMenuEnabled={ anchorMenuEnabled }
+			data-anchorMenuAtAGlance={ anchorMenuAtAGlance }
+			data-anchorMenuChangeMajorRequirements={ anchorMenuChangeMajorRequirements }
 			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
 			data-anchorMenuNextSteps={ anchorMenuNextSteps }
 			data-anchorMenuAffordingCollege={ anchorMenuAffordingCollege }
+			data-anchorMenuFlexibleDegreeOptions={ anchorMenuFlexibleDegreeOptions }
 			data-anchorMenuCareerOutlook={ anchorMenuCareerOutlook }
 			data-anchorMenuGlobalOpportunity={ anchorMenuGlobalOpportunity }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }

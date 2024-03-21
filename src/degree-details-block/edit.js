@@ -35,9 +35,12 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
+			anchorMenuChangeMajorRequirements,
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
+			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuGlobalOpportunity,
 			dataSourceAcadPlan,
@@ -151,11 +154,19 @@ const Edit = ( props ) => {
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
 		anchorMenu: {
+			atAGlance: anchorMenuAtAGlance,
 			applicationRequirements: anchorMenuApplicationRequirements,
+			changeMajorRequirements: anchorMenuChangeMajorRequirements,
 			nextSteps: anchorMenuNextSteps,
 			affordingCollege: anchorMenuAffordingCollege,
+			flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 			careerOutlook: anchorMenuCareerOutlook,
+			exampleCareers: true,
+			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
+			attendOnline: true,
+			whyChooseAsu: true,
+			programContactInfo: true,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",
@@ -250,7 +261,7 @@ const Edit = ( props ) => {
 		changeMajorRequirements: {
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
-		nextSteps: { // add ability to customize next steps cards
+		nextSteps: {
 			hide: nextStepsHide,
 			cards: {
 				learnMore: {

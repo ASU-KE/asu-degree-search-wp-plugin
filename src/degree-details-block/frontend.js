@@ -19,9 +19,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const dataSourceAcadPlan = detailBlock.dataset.datasourceacadplan
 
 	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
+	const anchorMenuAtAGlance = detailBlock.dataset.anchormenuataglance === "true"
 	const anchorMenuApplicationRequirements = detailBlock.dataset.anchormenuapplicationrequirements === "true"
+	const anchorMenuChangeMajorRequirements = detailBlock.dataset.anchormenuchangemajorrequirements === "true"
 	const anchorMenuNextSteps = detailBlock.dataset.anchormenunextsteps === "true"
 	const anchorMenuAffordingCollege = detailBlock.dataset.anchormenuaffordingcollege === "true"
+	const anchorMenuFlexibleDegreeOptions = detailBlock.dataset.anchormenuflexibledegreeoptions === "true"
 	const anchorMenuCareerOutlook = detailBlock.dataset.anchormenucareeroutlook === "true"
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
 
@@ -153,11 +156,19 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
 		anchorMenu: {
+			atAGlance: anchorMenuAtAGlance,
 			applicationRequirements: anchorMenuApplicationRequirements,
+			changeMajorRequirements: anchorMenuChangeMajorRequirements,
 			nextSteps: anchorMenuNextSteps,
 			affordingCollege: anchorMenuAffordingCollege,
+			flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 			careerOutlook: anchorMenuCareerOutlook,
+			exampleCareers: true,
+			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
+			attendOnline: true,
+			whyChooseAsu: true,
+			programContactInfo: true,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",
@@ -252,7 +263,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		changeMajorRequirements: {
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
-		nextSteps: { // add ability to customize next steps cards
+		nextSteps: {
 			hide: nextStepsHide,
 			cards: {
 				learnMore: {

@@ -14,9 +14,12 @@ const Inspector = ( props ) => {
 	const {
 		attributes: {
 			anchorMenuEnabled,
+			anchorMenuAtAGlance,
+			anchorMenuChangeMajorRequirements,
 			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
+			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuGlobalOpportunity,
 			dataSourceAcadPlan,
@@ -142,12 +145,36 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
+							label={ 'Anchor menu - At a glance' }
+							help={'Show or hide at a glance link'}
+							checked={ anchorMenuAtAGlance }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuAtAGlance: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
 							label={ 'Anchor menu - Application Requirements' }
 							help={'Show or hide application requirements link'}
 							checked={ anchorMenuApplicationRequirements }
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuApplicationRequirements: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Change major requirements' }
+							help={'Show or hide change major requirements link'}
+							checked={ anchorMenuChangeMajorRequirements }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuChangeMajorRequirements: value} );
 								}
 							}
 						/>
@@ -172,6 +199,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuAffordingCollege: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - Flexible degree options' }
+							help={'Show or hide flexible degree options link'}
+							checked={ anchorMenuFlexibleDegreeOptions }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuFlexibleDegreeOptions: value} );
 								}
 							}
 						/>

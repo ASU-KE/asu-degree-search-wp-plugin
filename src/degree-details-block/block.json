@@ -57,6 +57,10 @@
 			"type": "boolean",
 			"default": false
 		},
+		"anchorMenuAttendOnline":{
+			"type": "boolean",
+			"default": false
+		},
     "dataSourceAcadPlan":{
 		"type": "string",
 		"default": "BABUSGLBA"

@@ -28,6 +28,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuCareerOutlook = detailBlock.dataset.anchormenucareeroutlook === "true"
 	const anchorMenuExampleCareers = detailBlock.dataset.anchormenuexamplecareers === "true"
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
+	const anchorMenuAttendOnline = detailBlock.dataset.anchormenuattendonline === "true"
 
 	const heroHide = detailBlock.dataset.herohide === "true"
 	const heroImageUrl = detailBlock.dataset.heroimageurl
@@ -167,7 +168,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			exampleCareers: anchorMenuExampleCareers,
 			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
-			attendOnline: true,
+			attendOnline: anchorMenuAttendOnline,
 			whyChooseAsu: true,
 			programContactInfo: true,
 		//   externalAnchors: [

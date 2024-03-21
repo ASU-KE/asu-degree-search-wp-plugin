@@ -23,6 +23,7 @@ const Inspector = ( props ) => {
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
+			anchorMenuAttendOnline,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -248,6 +249,18 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuGlobalOpportunity: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - attend online' }
+							help={'Show or hide attend online link'}
+							checked={ anchorMenuAttendOnline }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuAttendOnline: value} );
 								}
 							}
 						/>

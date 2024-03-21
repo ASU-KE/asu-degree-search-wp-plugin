@@ -36,7 +36,6 @@ const Edit = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuApplicationRequirements,
-			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
@@ -136,8 +135,6 @@ const Edit = ( props ) => {
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //atAGlance: anchorMenuAtAGlance, REMOVE THIS
-		  //changeMajorRequirements: anchorMenuChangeMajorRequirements, REMOVE THIS
 		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
 		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
 		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS

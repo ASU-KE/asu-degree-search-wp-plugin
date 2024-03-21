@@ -10,7 +10,6 @@ const save = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuApplicationRequirements,
-			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
@@ -102,7 +101,6 @@ const save = ( props ) => {
 		{...useBlockProps.save()}
 			data-anchorMenuEnabled={ anchorMenuEnabled }
 			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
-			data-anchorMenuChangeMajorRequirements={ anchorMenuChangeMajorRequirements }
 			data-anchorMenuNextSteps={ anchorMenuNextSteps }
 			data-anchorMenuAffordingCollege={ anchorMenuAffordingCollege }
 			data-anchorMenuFlexibleDegreeOptions={ anchorMenuFlexibleDegreeOptions }

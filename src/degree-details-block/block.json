@@ -25,10 +25,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"anchorMenuChangeMajorRequirements":{
-			"type": "boolean",
-			"default": false
-		},
 		"anchorMenuNextSteps":{
 			"type": "boolean",
 			"default": false

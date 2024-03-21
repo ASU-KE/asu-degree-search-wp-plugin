@@ -15,7 +15,6 @@ const Inspector = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuApplicationRequirements,
-			anchorMenuChangeMajorRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
@@ -128,18 +127,6 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuApplicationRequirements: value} );
-								}
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Anchor menu - Change Major Requirements' }
-							help={'Show or hide change major requirements link'}
-							checked={ anchorMenuChangeMajorRequirements }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {anchorMenuChangeMajorRequirements: value} );
 								}
 							}
 						/>

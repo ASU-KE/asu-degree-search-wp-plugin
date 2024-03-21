@@ -20,7 +20,6 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 
 	const anchorMenuEnabled = detailBlock.dataset.anchormenuenabled === "true"
 	const anchorMenuApplicationRequirements = detailBlock.dataset.anchormenuapplicationrequirements === "true"
-	const anchorMenuChangeMajorRequirements = detailBlock.dataset.anchormenuchangemajorrequirements === "true"
 	const anchorMenuNextSteps = detailBlock.dataset.anchormenunextsteps === "true"
 	const anchorMenuAffordingCollege = detailBlock.dataset.anchormenuaffordingcollege === "true"
 	const anchorMenuFlexibleDegreeOptions = detailBlock.dataset.anchormenuflexibledegreeoptions === "true"
@@ -135,7 +134,6 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //changeMajorRequirements: anchorMenuChangeMajorRequirements, REMOVE THIS
 		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
 		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
 		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS

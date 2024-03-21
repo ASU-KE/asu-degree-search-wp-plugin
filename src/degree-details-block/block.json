@@ -37,10 +37,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"anchorMenuExampleCareers":{
-			"type": "boolean",
-			"default": false
-		},
 		"anchorMenuGlobalOpportunity":{
 			"type": "boolean",
 			"default": false

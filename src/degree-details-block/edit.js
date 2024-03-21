@@ -39,7 +39,6 @@ const Edit = ( props ) => {
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuCareerOutlook,
-			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
@@ -134,7 +133,6 @@ const Edit = ( props ) => {
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
 		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
 		  //
 		//   externalAnchors: [

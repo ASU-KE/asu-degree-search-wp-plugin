@@ -18,7 +18,6 @@ const Inspector = ( props ) => {
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuCareerOutlook,
-			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
@@ -162,18 +161,6 @@ const Inspector = ( props ) => {
 							onChange={ (value) => {
 								value ? false : true
 								setAttributes( {anchorMenuCareerOutlook: value} );
-								}
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Anchor menu - example careers' }
-							help={'Show or hide example careers link'}
-							checked={ anchorMenuExampleCareers }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {anchorMenuExampleCareers: value} );
 								}
 							}
 						/>

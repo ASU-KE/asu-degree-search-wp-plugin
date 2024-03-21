@@ -98,6 +98,39 @@
 		"type": "boolean",
 		"default": false
 	},
+	"nextStepsCardsApplyIconPrefix":{
+		"type": "string",
+		"default": "fas"
+	},
+	"nextStepsCardsApplyIconName":{
+		"type": "string",
+		"default": "file-alt"
+	},
+	"nextStepsCardsApplyTitle":{
+		"type": "string",
+		"default": "Apply to program"
+	},
+	"nextStepsCardsApplyContent":{
+		"type": "string",
+		"default": "Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application."
+	},
+	"nextStepsCardsApplyButtonLinkLabel":{
+		"type": "string",
+		"default": "Apply now"
+	},
+	"nextStepsCardsApplyButtonLinkAriaLabel":{
+		"type": "string",
+		"default": "Apply now"
+	},
+	"nextStepsCardsApplyButtonLinkColor":{
+		"type": "string",
+		"enum": ["maroon", "gold", "gray", "dark"],
+		"default": "maroon"
+	},
+	"nextStepsCardsApplyButtonLinkHref":{
+		"type": "string",
+		"default": "https://admission.asu.edu/apply"
+	},
 	"nextStepsCardsLearnMoreIconPrefix":{
 		"type": "string",
 		"default": "fas"

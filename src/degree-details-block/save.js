@@ -36,6 +36,14 @@ const save = ( props ) => {
 			nextStepsCardsLearnMoreButtonLinkAriaLabel,
 			nextStepsCardsLearnMoreButtonLinkColor,
 			nextStepsCardsLearnMoreButtonLinkHref,
+			nextStepsCardsApplyIconPrefix,
+			nextStepsCardsApplyIconName,
+			nextStepsCardsApplyTitle,
+			nextStepsCardsApplyContent,
+			nextStepsCardsApplyButtonLinkLabel,
+			nextStepsCardsApplyButtonLinkAriaLabel,
+			nextStepsCardsApplyButtonLinkColor,
+			nextStepsCardsApplyButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -132,6 +140,14 @@ const save = ( props ) => {
 			data-nextStepsCardsLearnMoreButtonLinkAriaLabel={ nextStepsCardsLearnMoreButtonLinkAriaLabel }
 			data-nextStepsCardsLearnMoreButtonLinkColor={ nextStepsCardsLearnMoreButtonLinkColor }
 			data-nextStepsCardsLearnMoreButtonLinkHref={ nextStepsCardsLearnMoreButtonLinkHref }
+			data-nextStepsCardsApplyIconPrefix={ nextStepsCardsApplyIconPrefix }
+			data-nextStepsCardsApplyIconName={ nextStepsCardsApplyIconName }
+			data-nextStepsCardsApplyTitle={ nextStepsCardsApplyTitle }
+			data-nextStepsCardsApplyContent={ nextStepsCardsApplyContent }
+			data-nextStepsCardsApplyButtonLinkLabel={ nextStepsCardsApplyButtonLinkLabel }
+			data-nextStepsCardsApplyButtonLinkAriaLabel={ nextStepsCardsApplyButtonLinkAriaLabel }
+			data-nextStepsCardsApplyButtonLinkColor={ nextStepsCardsApplyButtonLinkColor }
+			data-nextStepsCardsApplyButtonLinkHref={ nextStepsCardsApplyButtonLinkHref }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }

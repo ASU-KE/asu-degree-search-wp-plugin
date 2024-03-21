@@ -62,6 +62,14 @@ const Edit = ( props ) => {
 			nextStepsCardsLearnMoreButtonLinkAriaLabel,
 			nextStepsCardsLearnMoreButtonLinkColor,
 			nextStepsCardsLearnMoreButtonLinkHref,
+			nextStepsCardsApplyIconPrefix,
+			nextStepsCardsApplyIconName,
+			nextStepsCardsApplyTitle,
+			nextStepsCardsApplyContent,
+			nextStepsCardsApplyButtonLinkLabel,
+			nextStepsCardsApplyButtonLinkAriaLabel,
+			nextStepsCardsApplyButtonLinkColor,
+			nextStepsCardsApplyButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -249,30 +257,29 @@ const Edit = ( props ) => {
 					},
 				},
 				apply: {
-			  icon: ["fas", "file-alt"],
-			  title: "Apply to program",
-			  content:
-				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
-			  buttonLink: {
-				label: "Apply now",
-				ariaLabel: "Apply now",
-				color: "maroon",
-				href: "https://admission.asu.edu/apply",
-			  },
+					icon: [nextStepsCardsApplyIconPrefix, nextStepsCardsApplyIconName],
+					title: nextStepsCardsApplyTitle,
+					content: nextStepsCardsApplyContent,
+					buttonLink: {
+						label: nextStepsCardsApplyButtonLinkLabel,
+						ariaLabel: nextStepsCardsApplyButtonLinkAriaLabel,
+						color: nextStepsCardsApplyButtonLinkColor,
+						href: nextStepsCardsApplyButtonLinkHref,
+					},
+				},
+				visit: {
+				icon: ["fas", "map-marker-alt"],
+				title: "Visit our campus",
+				content:
+					"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
+				buttonLink: {
+					label: "Schedule a visit",
+					ariaLabel: "Schedule a visit",
+					color: "maroon",
+					href: "https://visit.asu.edu/",
+				},
+				},
 			},
-			visit: {
-			  icon: ["fas", "map-marker-alt"],
-			  title: "Visit our campus",
-			  content:
-				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-			  buttonLink: {
-				label: "Schedule a visit",
-				ariaLabel: "Schedule a visit",
-				color: "maroon",
-				href: "https://visit.asu.edu/",
-			  },
-			},
-		  },
 		},
 		affordingCollege: {
 		  hide: affordingCollegeHide,

@@ -41,6 +41,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
 
 	const nextStepsHide = detailBlock.dataset.nextstepshide === "true"
+
 	const nextStepsCardsLearnMoreIconPrefix = detailBlock.dataset.nextstepscardslearnmoreiconprefix
 	const nextStepsCardsLearnMoreIconName = detailBlock.dataset.nextstepscardslearnmoreiconname
 	const nextStepsCardsLearnMoreTitle = detailBlock.dataset.nextstepscardslearnmoretitle
@@ -49,6 +50,15 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const nextStepsCardsLearnMoreButtonLinkAriaLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinkarialabel
 	const nextStepsCardsLearnMoreButtonLinkColor = detailBlock.dataset.nextstepscardslearnmorebuttonlinkcolor
 	const nextStepsCardsLearnMoreButtonLinkHref = detailBlock.dataset.nextstepscardslearnmorebuttonlinkhref
+
+	const nextStepsCardsApplyIconPrefix = detailBlock.dataset.nextstepscardsapplyiconprefix
+	const nextStepsCardsApplyIconName = detailBlock.dataset.nextstepscardsapplyiconname
+	const nextStepsCardsApplyTitle = detailBlock.dataset.nextstepscardsapplytitle
+	const nextStepsCardsApplyContent = detailBlock.dataset.nextstepscardsapplycontent
+	const nextStepsCardsApplyButtonLinkLabel = detailBlock.dataset.nextstepscardsapplybuttonlinklabel
+	const nextStepsCardsApplyButtonLinkAriaLabel = detailBlock.dataset.nextstepscardsapplybuttonlinkarialabel
+	const nextStepsCardsApplyButtonLinkColor = detailBlock.dataset.nextstepscardsapplybuttonlinkcolor
+	const nextStepsCardsApplyButtonLinkHref = detailBlock.dataset.nextstepscardsapplybuttonlinkhref
 
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
@@ -248,15 +258,14 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 					},
 				},
 				apply: {
-			  icon: ["fas", "file-alt"],
-			  title: "Apply to program",
-			  content:
-				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
+			  icon: [nextStepsCardsApplyIconPrefix, nextStepsCardsApplyIconName],
+			  title: nextStepsCardsApplyTitle,
+			  content: nextStepsCardsApplyContent,
 			  buttonLink: {
-				label: "Apply now",
-				ariaLabel: "Apply now",
-				color: "maroon",
-				href: "https://admission.asu.edu/apply",
+				label: nextStepsCardsApplyButtonLinkLabel,
+				ariaLabel: nextStepsCardsApplyButtonLinkAriaLabel,
+				color: nextStepsCardsApplyButtonLinkColor,
+				href: nextStepsCardsApplyButtonLinkHref,
 			  },
 			},
 			visit: {

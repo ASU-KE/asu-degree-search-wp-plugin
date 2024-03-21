@@ -49,10 +49,10 @@ const Edit = ( props ) => {
 	console.log(`attribute props: ${JSON.stringify(props)}`);
 
 	const dataSource = {
-        endpoint: "https://degrees.apps.asu.edu/t5/service",
-        method: "findAllDegrees",
+        //endpoint: "https://degrees.apps.asu.edu/t5/service",
+        //method: "findAllDegrees",
         program: dataSourceProgram, // graduate | undergrad
-		init: "false", // "true" | "false"
+		//init: "false", // "true" | "false"
 		collegeAcadOrg: dataSourceCollegeAcadOrg, // OPTIONAL example values: CLW, CTB, CTE, CGF - empty string or null to see all
 		...dataSourceProgram === "graduate" && {
 			blacklistAcadPlans: dataSourceBlacklistAcadPlans ? dataSourceBlacklistAcadPlans.split(',') : "", // OPTIONAL ["BAACCBS", "LAACTBS"], example filters out Accountancy and Actuarial Science
@@ -85,7 +85,11 @@ const Edit = ( props ) => {
 	const actionUrls = {
         applyNowUrl: actionApplyNowUrl, // OPTIONAL
         majorInfoUrl: `/degrees/${degreeUrlLevel}/${degreeUrl}`,
-        // majorInfoUrl:
+        // majorInfoUrl: custom set in resources/asu-unity-stack submodule
+		//default:
+		// majorInfoUrl:
+  		//   `${DOMAIN_URL}/programs/t5/majorinfo/` +
+  		//   `{INSTITUTION_CODE}/{ACAD_PLAN_CODE}/undergrad/false`,
         //   `programs/College/{ACAD_PLAN_CODE}/undergrad/false`
         // more example here: https://asudev.jira.com/browse/WS2-691?focusedCommentId=1302038
     };
@@ -169,6 +173,45 @@ const Edit = ( props ) => {
 		},
 		degreesPerPage: degreesPerPage,
 	  }
+
+	let customProps1 = {
+		appPathFolder: ".", // OPTIONAL
+		actionUrls,
+		hero: null,
+		introContent: {
+		  type: "text",
+		  title: {
+			text: "This is introductory marketing copy. Lorem ipsum dolor sit amet",
+		  },
+		  contents: [
+			{
+			  text: `<p>Lorem, <strong>ipsum</strong> dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		   </p>`,
+			},
+			{
+			  text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
+		   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?`,
+			},
+		  ],
+		},
+		// hasFilters: false, // OPTIONAL
+		// hasSearchBar: false, // OPTIONAL
+		programList: {
+		  dataSource,
+		  // OPTIONAL
+		  // settings: {
+		  // hideCollegeSchool: true,
+		  // defaultView: "grid-view", // or "list-view"
+		  // cardDefaultImage: {
+		  //   url: `examples/assets/img/ds_header_undergrad.jpg`,
+		  // },
+		  // },
+		},
+	  };
+
 	return (
 		<>
 			<Inspector { ...props } />

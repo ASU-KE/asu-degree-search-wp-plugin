@@ -40,7 +40,6 @@ const Edit = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuCareerOutlook,
 			anchorMenuGlobalOpportunity,
-			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -133,8 +132,6 @@ const Edit = ( props ) => {
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
-		  //
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",

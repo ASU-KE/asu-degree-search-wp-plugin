@@ -19,7 +19,6 @@ const Inspector = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuCareerOutlook,
 			anchorMenuGlobalOpportunity,
-			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
 			heroImageUrl,
@@ -177,19 +176,6 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Anchor menu - program contact info' }
-							help={'Show or hide program contact info link'}
-							checked={ anchorMenuProgramContactInfo }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {anchorMenuProgramContactInfo: value} );
-								}
-							}
-						/>
-					</PanelRow>
-
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Data source', 'unityblocks' ) }

@@ -24,7 +24,6 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuAffordingCollege = detailBlock.dataset.anchormenuaffordingcollege === "true"
 	const anchorMenuCareerOutlook = detailBlock.dataset.anchormenucareeroutlook === "true"
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
-	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
 	const heroHide = detailBlock.dataset.herohide === "true"
 	const heroImageUrl = detailBlock.dataset.heroimageurl
@@ -132,8 +131,6 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			affordingCollege: anchorMenuAffordingCollege,
 			careerOutlook: anchorMenuCareerOutlook,
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
-		  //
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",

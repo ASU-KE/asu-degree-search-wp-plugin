@@ -85,11 +85,19 @@ const Inspector = ( props ) => {
 			whyChooseAsuCardsMentorsAltText,
 			whyChooseAsuCardsHonorsTitle,
 			whyChooseAsuCardsHonorsText,
+			whyChooseAsuCardsHonorsButtonLabel,
+			whyChooseAsuCardsHonorsButtonColor,
+			whyChooseAsuCardsHonorsButtonHref,
 			whyChooseAsuCardsHonorsImageUrl,
 			whyChooseAsuCardsHonorsAltText,
 			attendOnlineHide,
 			attendOnlineImageUrl,
-			attendOnlineAltText
+			attendOnlineAltText,
+			programContactInfoHide,
+			programContactInfoDepartmentText,
+			programContactInfoDepartmentUrl,
+			programContactInfoEmailText,
+			programContactInfoEmailUrl
 		},
 		setAttributes,
 	} = props;
@@ -950,6 +958,39 @@ const Inspector = ( props ) => {
 							/>
 						</PanelRow>
 						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Honors button text' }
+								value={ whyChooseAsuCardsHonorsButtonLabel }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsHonorsButtonLabel: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
+							<SelectControl
+								label={'Why ASU cards - Honors button color'}
+								help={ 'Set button color' }
+								value={ whyChooseAsuCardsHonorsButtonColor }
+								options={[
+									{ label: 'Gold', value: 'gold' },
+									{ label: 'Maroon', value: 'maroon' },
+									{ label: 'Gray', value: 'gray' },
+									{ label: 'Dark', value: 'dark'}
+								]}
+								onChange={ ( value ) => setAttributes( { whyChooseAsuCardsHonorsButtonColor: value } ) }
+								__nextHasNoMarginBottom
+							/>
+						</PanelRow>
+						<PanelRow>
+							<TextControl
+								label={ 'Why ASU cards - Honors button link' }
+								value={ whyChooseAsuCardsHonorsButtonHref }
+								onChange={ ( value ) =>
+									setAttributes( { whyChooseAsuCardsHonorsButtonHref: value } )
+								}
+							/>
+						</PanelRow>
+						<PanelRow>
 						<TextControl
 							label={ 'Why ASU cards - Honors image' }
               				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
@@ -1004,6 +1045,62 @@ const Inspector = ( props ) => {
 							value={ attendOnlineAltText }
 							onChange={ ( value ) =>
 								setAttributes( { attendOnlineAltText: value } )
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Program contact info', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide program contact info section' }
+							checked={ programContactInfoHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {programContactInfoHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Program name' }
+							help={ 'Leave blank to load default program name from API. Field may be locked' }
+							value={ programContactInfoDepartmentText }
+							onChange={ ( value ) =>
+								setAttributes( { programContactInfoDepartmentText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Program name link' }
+							help={ 'Leave blank to load default link from API. Examples: https://asu.edu, #jump-link-on-page' }
+							value={ programContactInfoDepartmentUrl }
+							onChange={ ( value ) =>
+								setAttributes( { programContactInfoDepartmentUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Program contact email display text. Field locked?' }
+							help={ 'Leave blank to load default display from API' }
+							value={ programContactInfoEmailText }
+							onChange={ ( value ) =>
+								setAttributes( { programContactInfoEmailText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Program contact email address' }
+							help={ 'Leave blank to load default email address from API' }
+							value={ programContactInfoEmailUrl }
+							onChange={ ( value ) =>
+								setAttributes( { programContactInfoEmailUrl: value } )
 							}
 						/>
 					</PanelRow>

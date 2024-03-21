@@ -343,6 +343,26 @@
 	"attendOnlineAltText":{
 		"type": "string",
 		"default": ""
+	},
+	"programContactInfoHide":{
+		"type": "boolean",
+		"default": false
+	},
+	"programContactInfoDepartmentText":{
+		"type": "string",
+		"default": ""
+	},
+	"programContactInfoDepartmentUrl":{
+		"type": "string",
+		"default": ""
+	},
+	"programContactInfoEmailText":{
+		"type": "string",
+		"default": ""
+	},
+	"programContactInfoEmailUrl":{
+		"type": "string",
+		"default": ""
 	}
   }
 }

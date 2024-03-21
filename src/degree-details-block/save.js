@@ -87,7 +87,12 @@ const save = ( props ) => {
 			whyChooseAsuCardsHonorsAltText,
 			attendOnlineHide,
 			attendOnlineImageUrl,
-			attendOnlineAltText
+			attendOnlineAltText,
+			programContactInfoHide,
+			programContactInfoDepartmentText,
+			programContactInfoDepartmentUrl,
+			programContactInfoEmailText,
+			programContactInfoEmailUrl
 		},
 		className,
 	} = props;
@@ -176,6 +181,11 @@ const save = ( props ) => {
 			data-attendOnlineHide={ attendOnlineHide }
 			data-attendOnlineImageUrl={ attendOnlineImageUrl }
 			data-attendOnlineAltText={ attendOnlineAltText }
+			data-programContactInfoHide={ programContactInfoHide }
+			data-programContactInfoDepartmentText={ programContactInfoDepartmentText }
+			data-programContactInfoDepartmentUrl={ programContactInfoDepartmentUrl }
+			data-programContactInfoEmailText={ programContactInfoEmailText }
+			data-programContactInfoEmailUrl={ programContactInfoEmailUrl }
 		></div>
 	);
 };

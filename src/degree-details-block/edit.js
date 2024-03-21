@@ -113,7 +113,12 @@ const Edit = ( props ) => {
 			whyChooseAsuCardsHonorsAltText,
 			attendOnlineHide,
 			attendOnlineImageUrl,
-			attendOnlineAltText
+			attendOnlineAltText,
+			programContactInfoHide,
+			programContactInfoDepartmentText,
+			programContactInfoDepartmentUrl,
+			programContactInfoEmailText,
+			programContactInfoEmailUrl
 		},
 		className,
 	} = props;
@@ -391,8 +396,8 @@ const Edit = ( props ) => {
 		programContactInfo: {
 		  hide: programContactInfoHide,
 		  //leave blank to load default contact info
-		  department: { text: "", url: "#" },
-		  email: { text: "", url: "#" },
+		  department: { text: programContactInfoDepartmentText, url: programContactInfoDepartmentUrl },
+		  email: { text: programContactInfoEmailText, url: programContactInfoEmailUrl },
 		},
 	  };
 

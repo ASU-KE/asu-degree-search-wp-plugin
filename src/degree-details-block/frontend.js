@@ -113,6 +113,12 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const attendOnlineImageUrl = detailBlock.dataset.attendonlineimageurl
 	const attendOnlineAltText = detailBlock.dataset.attendonlinealttext
 
+	const programContactInfoHide = detailBlock.dataset.programcontactinfohide === "true"
+	const programContactInfoDepartmentText = detailBlock.dataset.programcontactinfodepartmenttext
+	const programContactInfoDepartmentUrl = detailBlock.dataset.programcontactinfodepartmenturl
+	const programContactInfoEmailText = detailBlock.dataset.programcontactinfoemailtext
+	const programContactInfoEmailUrl = detailBlock.dataset.programcontactinfoemailurl
+
 	const customProps = {
 		appPathFolder: ".", // OPTIONAL
 		dataSource: {
@@ -384,9 +390,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  },
 		},
 		programContactInfo: {
-		  // hide: true, // OPTIONAL
-		  department: { text: "", url: "" },
-		  email: { text: "", url: "" },
+		  hide: programContactInfoHide,
+		  department: { text: programContactInfoDepartmentText, url: programContactInfoDepartmentUrl },
+		  email: { text: programContactInfoEmailText, url: programContactInfoEmailUrl },
 		},
 	  };
 

@@ -42,6 +42,7 @@ const Edit = ( props ) => {
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
+			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
 			dataSourceAcadPlan,
 			heroHide,
@@ -161,7 +162,7 @@ const Edit = ( props ) => {
 			affordingCollege: anchorMenuAffordingCollege,
 			flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 			careerOutlook: anchorMenuCareerOutlook,
-			exampleCareers: true,
+			exampleCareers: anchorMenuExampleCareers,
 			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
 			attendOnline: true,

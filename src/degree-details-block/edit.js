@@ -126,9 +126,6 @@ const Edit = ( props ) => {
 	const customProps = {
 		appPathFolder: ".", // OPTIONAL
 		dataSource: {
-		  // endpoint: "https://degrees.apps.asu.edu/t5/service", // OPTIONAL
-		  // method: "findDegreeByAcadPlan", // OPTIONAL
-		  // init: "false", // OPTIONAL
 		  acadPlan: dataSourceAcadPlan, // any valid acadPlan code example BABUSGLBA //"TBTGMBGM" - this has major map subPlans
 		  // acadPlan: "FAARTHBA", // this has one on-campus and one online major map
 		  // acadPlan: "LSBISBIS", // this has marketText
@@ -395,7 +392,6 @@ const Edit = ( props ) => {
 		},
 		programContactInfo: {
 		  hide: programContactInfoHide,
-		  //leave blank to load default contact info
 		  department: { text: programContactInfoDepartmentText, url: programContactInfoDepartmentUrl },
 		  email: { text: programContactInfoEmailText, url: programContactInfoEmailUrl },
 		},

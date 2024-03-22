@@ -2,7 +2,6 @@
  * External dependencies
  */
 import { AsuRfi } from "../../resources/asu-unity-stack/packages/app-rfi/src/components/AsuRfi";
-// import { AsuRfi } from "@asu/app-rfi/dist/appRfi.es";
 
 /**
  * Internal dependencies
@@ -17,7 +16,12 @@ import { useBlockProps } from "@wordpress/block-editor";
  *
  * @param {Object} props
  */
-
+/* TO ADD:
+- college: Use one acadOrgCode from reference
+*     https://api.myasuplat-dpl.asu.edu/api/codeset/colleges
+* - department: Use one department code. See DepartmentCode values in
+*     Degree Search API query.
+*/
 const Edit = ( props ) => {
 	console.log(`starting props: ${JSON.stringify(props)}`);
 	const {

@@ -15,14 +15,16 @@ const Inspector = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
-			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
+			anchorMenuAttendOnline,
+			anchorMenuWhyChooseAsu,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
@@ -38,6 +40,30 @@ const Inspector = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
+			nextStepsCardsLearnMoreIconPrefix,
+			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
+			nextStepsCardsLearnMoreContent,
+			nextStepsCardsLearnMoreButtonLinkLabel,
+			nextStepsCardsLearnMoreButtonLinkAriaLabel,
+			nextStepsCardsLearnMoreButtonLinkColor,
+			nextStepsCardsLearnMoreButtonLinkHref,
+			nextStepsCardsApplyIconPrefix,
+			nextStepsCardsApplyIconName,
+			nextStepsCardsApplyTitle,
+			nextStepsCardsApplyContent,
+			nextStepsCardsApplyButtonLinkLabel,
+			nextStepsCardsApplyButtonLinkAriaLabel,
+			nextStepsCardsApplyButtonLinkColor,
+			nextStepsCardsApplyButtonLinkHref,
+			nextStepsCardsVisitIconPrefix,
+			nextStepsCardsVisitIconName,
+			nextStepsCardsVisitTitle,
+			nextStepsCardsVisitContent,
+			nextStepsCardsVisitButtonLinkLabel,
+			nextStepsCardsVisitButtonLinkAriaLabel,
+			nextStepsCardsVisitButtonLinkColor,
+			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -123,8 +149,8 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
-							label={ 'Anchor menu - At a Glance' }
-							help={'Show or hide At a Glance link'}
+							label={ 'Anchor menu - At a glance' }
+							help={'Show or hide at a glance link'}
 							checked={ anchorMenuAtAGlance }
 							onChange={ (value) => {
 								value ? false : true
@@ -147,7 +173,7 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
-							label={ 'Anchor menu - Change Major Requirements' }
+							label={ 'Anchor menu - Change major requirements' }
 							help={'Show or hide change major requirements link'}
 							checked={ anchorMenuChangeMajorRequirements }
 							onChange={ (value) => {
@@ -184,7 +210,7 @@ const Inspector = ( props ) => {
 					<PanelRow>
 						<ToggleControl
 							label={ 'Anchor menu - Flexible degree options' }
-							help={'Show or hide Flexible degree options link'}
+							help={'Show or hide flexible degree options link'}
 							checked={ anchorMenuFlexibleDegreeOptions }
 							onChange={ (value) => {
 								value ? false : true
@@ -231,6 +257,30 @@ const Inspector = ( props ) => {
 					</PanelRow>
 					<PanelRow>
 						<ToggleControl
+							label={ 'Anchor menu - attend online' }
+							help={'Show or hide attend online link'}
+							checked={ anchorMenuAttendOnline }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuAttendOnline: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Anchor menu - why choose asu' }
+							help={'Show or hide why choose asu link'}
+							checked={ anchorMenuWhyChooseAsu }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {anchorMenuWhyChooseAsu: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
 							label={ 'Anchor menu - program contact info' }
 							help={'Show or hide program contact info link'}
 							checked={ anchorMenuProgramContactInfo }
@@ -241,7 +291,6 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
-
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Data source', 'unityblocks' ) }
@@ -425,6 +474,264 @@ const Inspector = ( props ) => {
 							}
 						/>
 					</PanelRow>
+					<PanelBody
+						title={ __( 'Next steps - Learn more card', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card icon prefix' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsLearnMoreIconPrefix }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreIconPrefix: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card icon name' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsLearnMoreIconName }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreIconName: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card title' }
+							value={ nextStepsCardsLearnMoreTitle }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card content' }
+							value={ nextStepsCardsLearnMoreContent }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreContent: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link label' }
+							value={ nextStepsCardsLearnMoreButtonLinkLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link aria label' }
+							help={'required for a11y'}
+							value={ nextStepsCardsLearnMoreButtonLinkAriaLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkAriaLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Next steps - Learn more card button link color'}
+							help={ 'Set button color' }
+							value={ nextStepsCardsLearnMoreButtonLinkColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { nextStepsCardsLearnMoreButtonLinkColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Learn more card button link href' }
+							value={ nextStepsCardsLearnMoreButtonLinkHref }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsLearnMoreButtonLinkHref: value } )
+							}
+						/>
+					</PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Next steps - Apply card', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card icon prefix' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsApplyIconPrefix }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyIconPrefix: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card icon name' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsApplyIconName }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyIconName: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card title' }
+							value={ nextStepsCardsApplyTitle }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card content' }
+							value={ nextStepsCardsApplyContent }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyContent: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card button link label' }
+							value={ nextStepsCardsApplyButtonLinkLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyButtonLinkLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card button link aria label' }
+							help={'required for a11y'}
+							value={ nextStepsCardsApplyButtonLinkAriaLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyButtonLinkAriaLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Next steps - Apply card button link color'}
+							help={ 'Set button color' }
+							value={ nextStepsCardsApplyButtonLinkColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { nextStepsCardsApplyButtonLinkColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card button link href' }
+							value={ nextStepsCardsApplyButtonLinkHref }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsApplyButtonLinkHref: value } )
+							}
+						/>
+					</PanelRow>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Next steps - Visit card', 'unityblocks' ) }
+						initialOpen={ false }
+						>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card icon prefix' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsVisitIconPrefix }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitIconPrefix: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card icon name' }
+							help={'Will not update without page reload'}
+							value={ nextStepsCardsVisitIconName }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitIconName: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card title' }
+							value={ nextStepsCardsVisitTitle }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitTitle: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card content' }
+							value={ nextStepsCardsVisitContent }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitContent: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card button link label' }
+							value={ nextStepsCardsVisitButtonLinkLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitButtonLinkLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Visit card button link aria label' }
+							help={'required for a11y'}
+							value={ nextStepsCardsVisitButtonLinkAriaLabel }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitButtonLinkAriaLabel: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Next steps - Visit card button link color'}
+							help={ 'Set button color' }
+							value={ nextStepsCardsVisitButtonLinkColor }
+							options={[
+								{ label: 'Gold', value: 'gold' },
+								{ label: 'Maroon', value: 'maroon' },
+								{ label: 'Gray', value: 'gray' },
+								{ label: 'Dark', value: 'dark'}
+							]}
+							onChange={ ( value ) => setAttributes( { nextStepsCardsVisitButtonLinkColor: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Next steps - Apply card button link href' }
+							value={ nextStepsCardsVisitButtonLinkHref }
+							onChange={ ( value ) =>
+								setAttributes( { nextStepsCardsVisitButtonLinkHref: value } )
+							}
+						/>
+					</PanelRow>
+					</PanelBody>
 				</PanelBody>
 				<PanelBody
 					title={ __( 'Affording college', 'unityblocks' ) }

@@ -10,14 +10,16 @@ const save = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
-			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
+			anchorMenuAttendOnline,
+			anchorMenuWhyChooseAsu,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
@@ -33,6 +35,30 @@ const save = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
+			nextStepsCardsLearnMoreIconPrefix,
+			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
+			nextStepsCardsLearnMoreContent,
+			nextStepsCardsLearnMoreButtonLinkLabel,
+			nextStepsCardsLearnMoreButtonLinkAriaLabel,
+			nextStepsCardsLearnMoreButtonLinkColor,
+			nextStepsCardsLearnMoreButtonLinkHref,
+			nextStepsCardsApplyIconPrefix,
+			nextStepsCardsApplyIconName,
+			nextStepsCardsApplyTitle,
+			nextStepsCardsApplyContent,
+			nextStepsCardsApplyButtonLinkLabel,
+			nextStepsCardsApplyButtonLinkAriaLabel,
+			nextStepsCardsApplyButtonLinkColor,
+			nextStepsCardsApplyButtonLinkHref,
+			nextStepsCardsVisitIconPrefix,
+			nextStepsCardsVisitIconName,
+			nextStepsCardsVisitTitle,
+			nextStepsCardsVisitContent,
+			nextStepsCardsVisitButtonLinkLabel,
+			nextStepsCardsVisitButtonLinkAriaLabel,
+			nextStepsCardsVisitButtonLinkColor,
+			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -103,14 +129,16 @@ const save = ( props ) => {
 		{...useBlockProps.save()}
 			data-anchorMenuEnabled={ anchorMenuEnabled }
 			data-anchorMenuAtAGlance={ anchorMenuAtAGlance }
-			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
 			data-anchorMenuChangeMajorRequirements={ anchorMenuChangeMajorRequirements }
+			data-anchorMenuApplicationRequirements={ anchorMenuApplicationRequirements }
 			data-anchorMenuNextSteps={ anchorMenuNextSteps }
 			data-anchorMenuAffordingCollege={ anchorMenuAffordingCollege }
 			data-anchorMenuFlexibleDegreeOptions={ anchorMenuFlexibleDegreeOptions }
 			data-anchorMenuCareerOutlook={ anchorMenuCareerOutlook }
 			data-anchorMenuExampleCareers={ anchorMenuExampleCareers }
 			data-anchorMenuGlobalOpportunity={ anchorMenuGlobalOpportunity }
+			data-anchorMenuAttendOnline={ anchorMenuAttendOnline }
+			data-anchorMenuWhyChooseAsu={ anchorMenuWhyChooseAsu }
 			data-anchorMenuProgramContactInfo={ anchorMenuProgramContactInfo }
 			data-dataSourceAcadPlan={ dataSourceAcadPlan }
 			data-heroHide={ heroHide }
@@ -126,6 +154,30 @@ const save = ( props ) => {
 			data-atAGlanceApplicationRequirementsHide={ atAGlanceApplicationRequirementsHide }
 			data-atAGlanceChangeMajorRequirementsHide={ atAGlanceChangeMajorRequirementsHide }
 			data-nextStepsHide={ nextStepsHide }
+			data-nextStepsCardsLearnMoreIconPrefix={ nextStepsCardsLearnMoreIconPrefix }
+			data-nextStepsCardsLearnMoreIconName={ nextStepsCardsLearnMoreIconName }
+			data-nextStepsCardsLearnMoreTitle={ nextStepsCardsLearnMoreTitle }
+			data-nextStepsCardsLearnMoreContent={ nextStepsCardsLearnMoreContent }
+			data-nextStepsCardsLearnMoreButtonLinkLabel={ nextStepsCardsLearnMoreButtonLinkLabel }
+			data-nextStepsCardsLearnMoreButtonLinkAriaLabel={ nextStepsCardsLearnMoreButtonLinkAriaLabel }
+			data-nextStepsCardsLearnMoreButtonLinkColor={ nextStepsCardsLearnMoreButtonLinkColor }
+			data-nextStepsCardsLearnMoreButtonLinkHref={ nextStepsCardsLearnMoreButtonLinkHref }
+			data-nextStepsCardsApplyIconPrefix={ nextStepsCardsApplyIconPrefix }
+			data-nextStepsCardsApplyIconName={ nextStepsCardsApplyIconName }
+			data-nextStepsCardsApplyTitle={ nextStepsCardsApplyTitle }
+			data-nextStepsCardsApplyContent={ nextStepsCardsApplyContent }
+			data-nextStepsCardsApplyButtonLinkLabel={ nextStepsCardsApplyButtonLinkLabel }
+			data-nextStepsCardsApplyButtonLinkAriaLabel={ nextStepsCardsApplyButtonLinkAriaLabel }
+			data-nextStepsCardsApplyButtonLinkColor={ nextStepsCardsApplyButtonLinkColor }
+			data-nextStepsCardsApplyButtonLinkHref={ nextStepsCardsApplyButtonLinkHref }
+			data-nextStepsCardsVisitIconPrefix={ nextStepsCardsVisitIconPrefix }
+			data-nextStepsCardsVisitIconName={ nextStepsCardsVisitIconName }
+			data-nextStepsCardsVisitTitle={ nextStepsCardsVisitTitle }
+			data-nextStepsCardsVisitContent={ nextStepsCardsVisitContent }
+			data-nextStepsCardsVisitButtonLinkLabel={ nextStepsCardsVisitButtonLinkLabel }
+			data-nextStepsCardsVisitButtonLinkAriaLabel={ nextStepsCardsVisitButtonLinkAriaLabel }
+			data-nextStepsCardsVisitButtonLinkColor={ nextStepsCardsVisitButtonLinkColor }
+			data-nextStepsCardsVisitButtonLinkHref={ nextStepsCardsVisitButtonLinkHref }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }

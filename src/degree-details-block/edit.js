@@ -36,14 +36,16 @@ const Edit = ( props ) => {
 		attributes: {
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
-			anchorMenuApplicationRequirements,
 			anchorMenuChangeMajorRequirements,
+			anchorMenuApplicationRequirements,
 			anchorMenuNextSteps,
 			anchorMenuAffordingCollege,
 			anchorMenuFlexibleDegreeOptions,
 			anchorMenuCareerOutlook,
 			anchorMenuExampleCareers,
 			anchorMenuGlobalOpportunity,
+			anchorMenuAttendOnline,
+			anchorMenuWhyChooseAsu,
 			anchorMenuProgramContactInfo,
 			dataSourceAcadPlan,
 			heroHide,
@@ -59,6 +61,30 @@ const Edit = ( props ) => {
 			atAGlanceApplicationRequirementsHide,
 			atAGlanceChangeMajorRequirementsHide,
 			nextStepsHide,
+			nextStepsCardsLearnMoreIconPrefix,
+			nextStepsCardsLearnMoreIconName,
+			nextStepsCardsLearnMoreTitle,
+			nextStepsCardsLearnMoreContent,
+			nextStepsCardsLearnMoreButtonLinkLabel,
+			nextStepsCardsLearnMoreButtonLinkAriaLabel,
+			nextStepsCardsLearnMoreButtonLinkColor,
+			nextStepsCardsLearnMoreButtonLinkHref,
+			nextStepsCardsApplyIconPrefix,
+			nextStepsCardsApplyIconName,
+			nextStepsCardsApplyTitle,
+			nextStepsCardsApplyContent,
+			nextStepsCardsApplyButtonLinkLabel,
+			nextStepsCardsApplyButtonLinkAriaLabel,
+			nextStepsCardsApplyButtonLinkColor,
+			nextStepsCardsApplyButtonLinkHref,
+			nextStepsCardsVisitIconPrefix,
+			nextStepsCardsVisitIconName,
+			nextStepsCardsVisitTitle,
+			nextStepsCardsVisitContent,
+			nextStepsCardsVisitButtonLinkLabel,
+			nextStepsCardsVisitButtonLinkAriaLabel,
+			nextStepsCardsVisitButtonLinkColor,
+			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
 			careerOutlookImageUrl,
@@ -132,17 +158,19 @@ const Edit = ( props ) => {
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
 		anchorMenu: {
+			atAGlance: anchorMenuAtAGlance,
 			applicationRequirements: anchorMenuApplicationRequirements,
+			changeMajorRequirements: anchorMenuChangeMajorRequirements,
 			nextSteps: anchorMenuNextSteps,
 			affordingCollege: anchorMenuAffordingCollege,
+			flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 			careerOutlook: anchorMenuCareerOutlook,
+			exampleCareers: anchorMenuExampleCareers,
+			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //atAGlance: anchorMenuAtAGlance, REMOVE THIS
-		  //changeMajorRequirements: anchorMenuChangeMajorRequirements, REMOVE THIS
-		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
-		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
-		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
-		  //
+			attendOnline: anchorMenuAttendOnline,
+			whyChooseAsu: anchorMenuWhyChooseAsu,
+			programContactInfo: anchorMenuProgramContactInfo,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",
@@ -237,45 +265,43 @@ const Edit = ( props ) => {
 		changeMajorRequirements: {
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
-		nextSteps: { // add ability to customize next steps cards
+		nextSteps: {
 			hide: nextStepsHide,
 			cards: {
 				learnMore: {
-					icon: ["fas", "info-circle"],
-					title: "Learn more about our programs",
-					content:"Tell us what type of student you are and we'll get you the information you need.",
+					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
+					title: nextStepsCardsLearnMoreTitle,
+					content: nextStepsCardsLearnMoreContent,
 					buttonLink: {
-						label: "Request information",
-						ariaLabel: "Request information",
-						color: "maroon",
-						href: "https://admission.asu.edu/contact/request-info",
+						label: nextStepsCardsLearnMoreButtonLinkLabel,
+						ariaLabel: nextStepsCardsLearnMoreButtonLinkAriaLabel,
+						color: nextStepsCardsLearnMoreButtonLinkColor,
+						href: nextStepsCardsLearnMoreButtonLinkHref,
 					},
 				},
 				apply: {
-			  icon: ["fas", "file-alt"],
-			  title: "Apply to program",
-			  content:
-				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
-			  buttonLink: {
-				label: "Apply now",
-				ariaLabel: "Apply now",
-				color: "maroon",
-				href: "https://admission.asu.edu/apply",
-			  },
+					icon: [nextStepsCardsApplyIconPrefix, nextStepsCardsApplyIconName],
+					title: nextStepsCardsApplyTitle,
+					content: nextStepsCardsApplyContent,
+					buttonLink: {
+						label: nextStepsCardsApplyButtonLinkLabel,
+						ariaLabel: nextStepsCardsApplyButtonLinkAriaLabel,
+						color: nextStepsCardsApplyButtonLinkColor,
+						href: nextStepsCardsApplyButtonLinkHref,
+					},
+				},
+				visit: {
+					icon: [nextStepsCardsVisitIconPrefix, nextStepsCardsVisitIconName],
+					title: nextStepsCardsVisitTitle,
+					content:nextStepsCardsVisitContent,
+					buttonLink: {
+						label: nextStepsCardsVisitButtonLinkLabel,
+						ariaLabel: nextStepsCardsVisitButtonLinkAriaLabel,
+						color: nextStepsCardsVisitButtonLinkColor,
+						href: nextStepsCardsVisitButtonLinkHref,
+					},
+				},
 			},
-			visit: {
-			  icon: ["fas", "map-marker-alt"],
-			  title: "Visit our campus",
-			  content:
-				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-			  buttonLink: {
-				label: "Schedule a visit",
-				ariaLabel: "Schedule a visit",
-				color: "maroon",
-				href: "https://visit.asu.edu/",
-			  },
-			},
-		  },
 		},
 		affordingCollege: {
 		  hide: affordingCollegeHide,

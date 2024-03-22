@@ -28,6 +28,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const anchorMenuCareerOutlook = detailBlock.dataset.anchormenucareeroutlook === "true"
 	const anchorMenuExampleCareers = detailBlock.dataset.anchormenuexamplecareers === "true"
 	const anchorMenuGlobalOpportunity = detailBlock.dataset.anchormenuglobalopportunity === "true"
+	const anchorMenuAttendOnline = detailBlock.dataset.anchormenuattendonline === "true"
+	const anchorMenuWhyChooseAsu = detailBlock.dataset.anchormenuwhychooseasu === "true"
 	const anchorMenuProgramContactInfo = detailBlock.dataset.anchormenuprogramcontactinfo === "true"
 
 	const heroHide = detailBlock.dataset.herohide === "true"
@@ -46,6 +48,33 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
 
 	const nextStepsHide = detailBlock.dataset.nextstepshide === "true"
+
+	const nextStepsCardsLearnMoreIconPrefix = detailBlock.dataset.nextstepscardslearnmoreiconprefix
+	const nextStepsCardsLearnMoreIconName = detailBlock.dataset.nextstepscardslearnmoreiconname
+	const nextStepsCardsLearnMoreTitle = detailBlock.dataset.nextstepscardslearnmoretitle
+	const nextStepsCardsLearnMoreContent = detailBlock.dataset.nextstepscardslearnmorecontent
+	const nextStepsCardsLearnMoreButtonLinkLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinklabel
+	const nextStepsCardsLearnMoreButtonLinkAriaLabel = detailBlock.dataset.nextstepscardslearnmorebuttonlinkarialabel
+	const nextStepsCardsLearnMoreButtonLinkColor = detailBlock.dataset.nextstepscardslearnmorebuttonlinkcolor
+	const nextStepsCardsLearnMoreButtonLinkHref = detailBlock.dataset.nextstepscardslearnmorebuttonlinkhref
+
+	const nextStepsCardsApplyIconPrefix = detailBlock.dataset.nextstepscardsapplyiconprefix
+	const nextStepsCardsApplyIconName = detailBlock.dataset.nextstepscardsapplyiconname
+	const nextStepsCardsApplyTitle = detailBlock.dataset.nextstepscardsapplytitle
+	const nextStepsCardsApplyContent = detailBlock.dataset.nextstepscardsapplycontent
+	const nextStepsCardsApplyButtonLinkLabel = detailBlock.dataset.nextstepscardsapplybuttonlinklabel
+	const nextStepsCardsApplyButtonLinkAriaLabel = detailBlock.dataset.nextstepscardsapplybuttonlinkarialabel
+	const nextStepsCardsApplyButtonLinkColor = detailBlock.dataset.nextstepscardsapplybuttonlinkcolor
+	const nextStepsCardsApplyButtonLinkHref = detailBlock.dataset.nextstepscardsapplybuttonlinkhref
+
+	const nextStepsCardsVisitIconPrefix = detailBlock.dataset.nextstepscardsvisiticonprefix
+	const nextStepsCardsVisitIconName = detailBlock.dataset.nextstepscardsvisiticonname
+	const nextStepsCardsVisitTitle = detailBlock.dataset.nextstepscardsvisittitle
+	const nextStepsCardsVisitContent = detailBlock.dataset.nextstepscardsvisitcontent
+	const nextStepsCardsVisitButtonLinkLabel = detailBlock.dataset.nextstepscardsvisitbuttonlinklabel
+	const nextStepsCardsVisitButtonLinkAriaLabel = detailBlock.dataset.nextstepscardsvisitbuttonlinkarialabel
+	const nextStepsCardsVisitButtonLinkColor = detailBlock.dataset.nextstepscardsvisitbuttonlinkcolor
+	const nextStepsCardsVisitButtonLinkHref = detailBlock.dataset.nextstepscardsvisitbuttonlinkhref
 
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
@@ -131,17 +160,19 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  // acadPlan: "ESBMEMDBSE", // this does not have required courses
 		},
 		anchorMenu: {
+			atAGlance: anchorMenuAtAGlance,
 			applicationRequirements: anchorMenuApplicationRequirements,
+			changeMajorRequirements: anchorMenuChangeMajorRequirements,
 			nextSteps: anchorMenuNextSteps,
 			affordingCollege: anchorMenuAffordingCollege,
+			flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions,
 			careerOutlook: anchorMenuCareerOutlook,
+			exampleCareers: anchorMenuExampleCareers,
+			//customizeYourCollegeExperience: true, // listed as prop, but currently commented out in component by ET. Future update?
 			globalOpportunity: anchorMenuGlobalOpportunity,
-		  //atAGlance: anchorMenuAtAGlance, REMOVE THIS
-		  //changeMajorRequirements: anchorMenuChangeMajorRequirements, REMOVE THIS
-		  //flexibleDegreeOptions: anchorMenuFlexibleDegreeOptions, REMOVE THIS
-		  //exampleCareers: anchorMenuExampleCareers, REMOVE THIS
-		  //programContactInfo: anchorMenuProgramContactInfo, REMOVE THIS
-		  //
+			attendOnline: anchorMenuAttendOnline,
+			whyChooseAsu: anchorMenuWhyChooseAsu,
+			programContactInfo: anchorMenuProgramContactInfo,
 		//   externalAnchors: [
 		// 	{
 		// 	  targetIdName: "my-request-form-info-id",
@@ -236,43 +267,41 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		changeMajorRequirements: {
 			hide: atAGlanceChangeMajorRequirementsHide,
 		},
-		nextSteps: { // add ability to customize next steps cards
+		nextSteps: {
 			hide: nextStepsHide,
 			cards: {
 				learnMore: {
-					icon: ["fas", "info-circle"],
-					title: "Learn more about our programs",
-					content:"Tell us what type of student you are and we'll get you the information you need.",
+					icon: [nextStepsCardsLearnMoreIconPrefix, nextStepsCardsLearnMoreIconName],
+					title: nextStepsCardsLearnMoreTitle,
+					content: nextStepsCardsLearnMoreContent,
 					buttonLink: {
-						label: "Request information",
-						ariaLabel: "Request information",
-						color: "maroon",
-						href: "https://admission.asu.edu/contact/request-info",
+						label: nextStepsCardsLearnMoreButtonLinkLabel,
+						ariaLabel: nextStepsCardsLearnMoreButtonLinkAriaLabel,
+						color: nextStepsCardsLearnMoreButtonLinkColor,
+						href: nextStepsCardsLearnMoreButtonLinkHref,
 					},
 				},
 				apply: {
-			  icon: ["fas", "file-alt"],
-			  title: "Apply to program",
-			  content:
-				"Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application.",
+			  icon: [nextStepsCardsApplyIconPrefix, nextStepsCardsApplyIconName],
+			  title: nextStepsCardsApplyTitle,
+			  content: nextStepsCardsApplyContent,
 			  buttonLink: {
-				label: "Apply now",
-				ariaLabel: "Apply now",
-				color: "maroon",
-				href: "https://admission.asu.edu/apply",
+				label: nextStepsCardsApplyButtonLinkLabel,
+				ariaLabel: nextStepsCardsApplyButtonLinkAriaLabel,
+				color: nextStepsCardsApplyButtonLinkColor,
+				href: nextStepsCardsApplyButtonLinkHref,
 			  },
 			},
 			visit: {
-			  icon: ["fas", "map-marker-alt"],
-			  title: "Visit our campus",
-			  content:
-				"An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus.",
-			  buttonLink: {
-				label: "Schedule a visit",
-				ariaLabel: "Schedule a visit",
-				color: "maroon",
-				href: "https://visit.asu.edu/",
-			  },
+				icon: [nextStepsCardsVisitIconPrefix, nextStepsCardsVisitIconName],
+				title: nextStepsCardsVisitTitle,
+				content:nextStepsCardsVisitContent,
+				buttonLink: {
+					label: nextStepsCardsVisitButtonLinkLabel,
+					ariaLabel: nextStepsCardsVisitButtonLinkAriaLabel,
+					color: nextStepsCardsVisitButtonLinkColor,
+					href: nextStepsCardsVisitButtonLinkHref,
+				},
 			},
 		  },
 		},

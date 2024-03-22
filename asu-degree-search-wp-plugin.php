@@ -10,7 +10,7 @@
  *
  * Plugin Name:  Asu Degree Search Wp Plugin
  * Description:  The developer tools panel for WordPress.
- * Version:      1.0.0
+ * Version:      1.1.0
  * Plugin URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
  * Author:       ASU KE
  * Author URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
@@ -44,7 +44,7 @@ function create_block_asu_degree_search_wp_plugin_block_init() {
  * Make a POST request to an API service using the RFI form
  * Parameters: WP_REST_Request - Request object sent from client
  * Returns: WP_REST_Response - Response object sent to client
- * 
+ *
  */
 function general_form_post(WP_REST_Request $request) {
 
@@ -67,7 +67,7 @@ function general_form_post(WP_REST_Request $request) {
 	}
 }
 
-/** 
+/**
  * Validate request contains required form fields
  * Parameters: Array - Request Body from client
  * Returns: Boolean - Determines if request is valid

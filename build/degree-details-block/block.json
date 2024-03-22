@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "asu-degree-search/degree-details-block",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "ASU Degree Details",
   "category": "uds",
   "keywords": [
@@ -65,6 +65,14 @@
       "default": false
     },
     "anchorMenuGlobalOpportunity": {
+      "type": "boolean",
+      "default": false
+    },
+    "anchorMenuAttendOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "anchorMenuWhyChooseAsu": {
       "type": "boolean",
       "default": false
     },
@@ -132,6 +140,120 @@
     "nextStepsHide": {
       "type": "boolean",
       "default": false
+    },
+    "nextStepsCardsApplyIconPrefix": {
+      "type": "string",
+      "default": "fas"
+    },
+    "nextStepsCardsApplyIconName": {
+      "type": "string",
+      "default": "file-alt"
+    },
+    "nextStepsCardsApplyTitle": {
+      "type": "string",
+      "default": "Apply to program"
+    },
+    "nextStepsCardsApplyContent": {
+      "type": "string",
+      "default": "Arizona State University invites freshman, transfer, international, graduate and online students to apply for admission using our online application."
+    },
+    "nextStepsCardsApplyButtonLinkLabel": {
+      "type": "string",
+      "default": "Apply now"
+    },
+    "nextStepsCardsApplyButtonLinkAriaLabel": {
+      "type": "string",
+      "default": "Apply now"
+    },
+    "nextStepsCardsApplyButtonLinkColor": {
+      "type": "string",
+      "enum": [
+        "maroon",
+        "gold",
+        "gray",
+        "dark"
+      ],
+      "default": "maroon"
+    },
+    "nextStepsCardsApplyButtonLinkHref": {
+      "type": "string",
+      "default": "https://admission.asu.edu/apply"
+    },
+    "nextStepsCardsVisitIconPrefix": {
+      "type": "string",
+      "default": "fas"
+    },
+    "nextStepsCardsVisitIconName": {
+      "type": "string",
+      "default": "map-marker-alt"
+    },
+    "nextStepsCardsVisitTitle": {
+      "type": "string",
+      "default": "Visit our campus"
+    },
+    "nextStepsCardsVisitContent": {
+      "type": "string",
+      "default": "An Experience ASU visit includes a presentation on admissions, scholarships and financial aid, student housing, getting involved on campus and much more.You will also go on a student-led walking tour of campus."
+    },
+    "nextStepsCardsVisitButtonLinkLabel": {
+      "type": "string",
+      "default": "Schedule a visit"
+    },
+    "nextStepsCardsVisitButtonLinkAriaLabel": {
+      "type": "string",
+      "default": "Schedule a visit"
+    },
+    "nextStepsCardsVisitButtonLinkColor": {
+      "type": "string",
+      "enum": [
+        "maroon",
+        "gold",
+        "gray",
+        "dark"
+      ],
+      "default": "maroon"
+    },
+    "nextStepsCardsVisitButtonLinkHref": {
+      "type": "string",
+      "default": "https://admission.asu.edu/contact/request-info"
+    },
+    "nextStepsCardsLearnMoreIconPrefix": {
+      "type": "string",
+      "default": "fas"
+    },
+    "nextStepsCardsLearnMoreIconName": {
+      "type": "string",
+      "default": "info-circle"
+    },
+    "nextStepsCardsLearnMoreTitle": {
+      "type": "string",
+      "default": "Learn more about our programs"
+    },
+    "nextStepsCardsLearnMoreContent": {
+      "type": "string",
+      "default": "Tell us what type of student you are and we'll get you the information you need."
+    },
+    "nextStepsCardsLearnMoreButtonLinkLabel": {
+      "type": "string",
+      "default": "Request information"
+    },
+    "nextStepsCardsLearnMoreButtonLinkAriaLabel": {
+      "type": "string",
+      "default": "Request information"
+    },
+    "nextStepsCardsLearnMoreButtonLinkColor": {
+      "type": "string",
+      "enum": [
+        "maroon",
+        "gold",
+        "gray",
+        "dark"
+      ],
+      "default": "maroon"
+    },
+    "nextStepsCardsLearnMoreButtonLinkHref": {
+      "type": "string",
+      "default": "https://admission.asu.edu/contact/request-info"
     },
     "affordingCollegeHide": {
       "type": "boolean",

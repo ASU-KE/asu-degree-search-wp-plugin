@@ -10,7 +10,7 @@
  *
  * Plugin Name:  Asu Degree Search Wp Plugin
  * Description:  The developer tools panel for WordPress.
- * Version:      1.1.1
+ * Version:      1.1.2
  * Plugin URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
  * Author:       ASU KE
  * Author URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
@@ -106,12 +106,12 @@ function validate_request_array(Array $requestBody) {
  * Returns: WP_REST_Response - Response object sent to client
  */
 function post_to_api(Array $requestBody) {
-	$url = 'https://crm-enterprise-rfi-forms-submit-handler-sandbox.sdc.uto.asu.edu/';
+	$sandbox_url = 'https://3ceccsb54wpba5wrdg6kgxmlv40obcjl.lambda-url.us-west-2.on.aws/';
 	$postData = json_encode($requestBody);
 	// Initialize cURL session
 	$ch = curl_init();
 	// Set options for HTTP request
-	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_URL, $sandbox_url);
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
@@ -144,3 +144,5 @@ add_action( 'rest_api_init', function () {
 	  'callback' => 'general_form_post',
 	) );
   } );
+
+

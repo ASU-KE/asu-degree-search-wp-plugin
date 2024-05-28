@@ -144,7 +144,8 @@ const Edit = ( props ) => {
 			programContactInfoDepartmentText,
 			programContactInfoDepartmentUrl,
 			programContactInfoEmailText,
-			programContactInfoEmailUrl
+			programContactInfoEmailUrl,
+			professionalLicensureHide
 		},
 		className,
 	} = props;
@@ -317,6 +318,9 @@ const Edit = ( props ) => {
 		},
 		exampleCareers: {
 		  hide: exampleCareersHide,
+		},
+		professionalLicensure: {
+		  hide: professionalLicensureHide,
 		},
 		globalOpportunity: {
 		  hide: globalOpportunityHide,

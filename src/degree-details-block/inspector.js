@@ -123,7 +123,8 @@ const Inspector = ( props ) => {
 			programContactInfoDepartmentText,
 			programContactInfoDepartmentUrl,
 			programContactInfoEmailText,
-			programContactInfoEmailUrl
+			programContactInfoEmailUrl,
+			professionalLicensureHide
 		},
 		setAttributes,
 	} = props;
@@ -834,6 +835,18 @@ const Inspector = ( props ) => {
 							onChange={ ( value ) =>
 								setAttributes( { globalOpportunityAltText: value } )
 							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody title={ __( 'Professional licensure', 'unityblocks' ) } initialOpen={ false }>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide professional licensure section' }
+							checked={ professionalLicensureHide }
+							onChange={ ( value ) => {
+								value ? false : true;
+								setAttributes( { professionalLicensureHide: value } );
+							} }
 						/>
 					</PanelRow>
 				</PanelBody>

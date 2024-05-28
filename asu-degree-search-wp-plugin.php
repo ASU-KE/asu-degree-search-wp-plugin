@@ -10,7 +10,7 @@
  *
  * Plugin Name:  Asu Degree Search Wp Plugin
  * Description:  The developer tools panel for WordPress.
- * Version:      1.1.2
+ * Version:      1.2.0
  * Plugin URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
  * Author:       ASU KE
  * Author URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
@@ -35,7 +35,7 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_asu_degree_search_wp_plugin_block_init() {
-	register_block_type( __DIR__ . '/build/degree-rfi-form' );
+	//register_block_type( __DIR__ . '/build/degree-rfi-form' );
 	register_block_type( __DIR__ . '/build/degree-overview-block' );
 	register_block_type( __DIR__ . '/build/degree-details-block' );
 }

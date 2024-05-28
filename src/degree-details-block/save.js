@@ -118,7 +118,8 @@ const save = ( props ) => {
 			programContactInfoDepartmentText,
 			programContactInfoDepartmentUrl,
 			programContactInfoEmailText,
-			programContactInfoEmailUrl
+			programContactInfoEmailUrl,
+			professionalLicensureHide
 		},
 		className,
 	} = props;
@@ -238,6 +239,7 @@ const save = ( props ) => {
 			data-programContactInfoDepartmentUrl={ programContactInfoDepartmentUrl }
 			data-programContactInfoEmailText={ programContactInfoEmailText }
 			data-programContactInfoEmailUrl={ programContactInfoEmailUrl }
+			data-professionalLicensureHide={ professionalLicensureHide }
 		></div>
 	);
 };

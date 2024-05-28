@@ -123,7 +123,8 @@ const Inspector = ( props ) => {
 			programContactInfoDepartmentText,
 			programContactInfoDepartmentUrl,
 			programContactInfoEmailText,
-			programContactInfoEmailUrl
+			programContactInfoEmailUrl,
+			professionalLicensureHide
 		},
 		setAttributes,
 	} = props;
@@ -131,8 +132,73 @@ const Inspector = ( props ) => {
 	return (
 		<>
 			<InspectorControls>
+			<PanelBody
+					title={ __( 'Data source', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<TextControl
+							label={ 'dataSourceAcadPlan' }
+              				help={'any valid acadPlan code example BABUSGLBA'}
+							value={ dataSourceAcadPlan }
+							onChange={ ( value ) =>
+								setAttributes( { dataSourceAcadPlan: value } )
+							}
+						/>
+					</PanelRow>
+				</PanelBody>
 				<PanelBody
-					title={ __( 'Show/hide sections - Anchor menu', 'unityblocks' ) }
+					title={ __( 'Hero settings', 'unityblocks' ) }
+					initialOpen={ false }
+				>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide hero section' }
+							checked={ heroHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {heroHide: value} );
+								}
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image URL' }
+              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
+							value={ heroImageUrl }
+							onChange={ ( value ) =>
+								setAttributes( { heroImageUrl: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={ 'Hero image alt text' }
+              				help={'required for a11y '}
+							value={ heroAltText }
+							onChange={ ( value ) =>
+								setAttributes( { heroAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl
+							label={'Hero image size'}
+							help={ 'Set hero height' }
+							value={ heroImageSize }
+							options={[
+								{ label: 'Small', value: 'small' },
+								{ label: 'Medium', value: 'medium' },
+								{ label: 'Large', value: 'large' }
+							]}
+							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
+							__nextHasNoMarginBottom
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Anchor menu settings', 'unityblocks' ) }
 					initialOpen={ false }
 				>
 					<PanelRow>
@@ -289,71 +355,6 @@ const Inspector = ( props ) => {
 								setAttributes( {anchorMenuProgramContactInfo: value} );
 								}
 							}
-						/>
-					</PanelRow>
-				</PanelBody>
-				<PanelBody
-					title={ __( 'Data source', 'unityblocks' ) }
-					initialOpen={ false }
-				>
-					<PanelRow>
-						<TextControl
-							label={ 'dataSourceAcadPlan' }
-              				help={'any valid acadPlan code example BABUSGLBA'}
-							value={ dataSourceAcadPlan }
-							onChange={ ( value ) =>
-								setAttributes( { dataSourceAcadPlan: value } )
-							}
-						/>
-					</PanelRow>
-				</PanelBody>
-				<PanelBody
-					title={ __( 'Hero settings', 'unityblocks' ) }
-					initialOpen={ false }
-				>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Hide hero section' }
-							checked={ heroHide }
-							onChange={ (value) => {
-								value ? false : true
-								setAttributes( {heroHide: value} );
-								}
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<TextControl
-							label={ 'Hero image URL' }
-              				help={'Use relative url for locally hosted image, example: /wp-content/uploads/2023/07/hero-image.jpeg'}
-							value={ heroImageUrl }
-							onChange={ ( value ) =>
-								setAttributes( { heroImageUrl: value } )
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<TextControl
-							label={ 'Hero image alt text' }
-              				help={'required for a11y '}
-							value={ heroAltText }
-							onChange={ ( value ) =>
-								setAttributes( { heroAltText: value } )
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl
-							label={'Hero image size'}
-							help={ 'Set hero height' }
-							value={ heroImageSize }
-							options={[
-								{ label: 'Small', value: 'small' },
-								{ label: 'Medium', value: 'medium' },
-								{ label: 'Large', value: 'large' }
-							]}
-							onChange={ ( value ) => setAttributes( { heroImageSize: value } ) }
-							__nextHasNoMarginBottom
 						/>
 					</PanelRow>
 				</PanelBody>
@@ -798,6 +799,19 @@ const Inspector = ( props ) => {
 								setAttributes( {exampleCareersHide: value} );
 								}
 							}
+						/>
+					</PanelRow>
+				</PanelBody>
+				<PanelBody title={ __( 'Professional licensure', 'unityblocks' ) } initialOpen={ false }>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide professional licensure section' }
+							help={'If applicable, Professional licensure section will display. Hiding this section is disabled.'}
+							checked={ professionalLicensureHide }
+							onChange={ ( value ) => {
+								value ? false : true;
+								setAttributes( { professionalLicensureHide: value } );
+							} }
 						/>
 					</PanelRow>
 				</PanelBody>

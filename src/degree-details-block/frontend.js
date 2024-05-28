@@ -148,6 +148,8 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const programContactInfoEmailText = detailBlock.dataset.programcontactinfoemailtext
 	const programContactInfoEmailUrl = detailBlock.dataset.programcontactinfoemailurl
 
+	const professionalLicensureHide = detailBlock.dataset.professionallicensurehide === "true"
+
 	const customProps = {
 		appPathFolder: ".", // OPTIONAL
 		dataSource: {
@@ -320,6 +322,9 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		exampleCareers: {
 		  hide: exampleCareersHide,
 		},
+		professionalLicensure: {
+			hide: professionalLicensureHide
+		},
 		globalOpportunity: {
 		  hide: globalOpportunityHide,
 		  image: {
@@ -463,6 +468,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			whyChooseAsu={ customProps.whyChooseAsu }
 			attendOnline={ customProps.attendOnline }
 			programContactInfo={ customProps.programContactInfo }
+			professionalLicensure={ customProps.professionalLicensure }
 		/>,
 		detailBlock
 	);

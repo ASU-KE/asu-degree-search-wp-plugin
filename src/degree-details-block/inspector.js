@@ -802,6 +802,19 @@ const Inspector = ( props ) => {
 						/>
 					</PanelRow>
 				</PanelBody>
+				<PanelBody title={ __( 'Professional licensure', 'unityblocks' ) } initialOpen={ false }>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide professional licensure section' }
+							help={'If applicable, Professional licensure section will display. Hiding this section is disabled.'}
+							checked={ professionalLicensureHide }
+							onChange={ ( value ) => {
+								value ? false : true;
+								setAttributes( { professionalLicensureHide: value } );
+							} }
+						/>
+					</PanelRow>
+				</PanelBody>
 				<PanelBody
 					title={ __( 'Global opportunity', 'unityblocks' ) }
 					initialOpen={ false }
@@ -835,18 +848,6 @@ const Inspector = ( props ) => {
 							onChange={ ( value ) =>
 								setAttributes( { globalOpportunityAltText: value } )
 							}
-						/>
-					</PanelRow>
-				</PanelBody>
-				<PanelBody title={ __( 'Professional licensure', 'unityblocks' ) } initialOpen={ false }>
-					<PanelRow>
-						<ToggleControl
-							label={ 'Hide professional licensure section' }
-							checked={ professionalLicensureHide }
-							onChange={ ( value ) => {
-								value ? false : true;
-								setAttributes( { professionalLicensureHide: value } );
-							} }
 						/>
 					</PanelRow>
 				</PanelBody>

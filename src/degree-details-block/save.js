@@ -61,6 +61,7 @@ const save = ( props ) => {
 			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
+			careerOutlookHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
@@ -181,6 +182,7 @@ const save = ( props ) => {
 			data-nextStepsCardsVisitButtonLinkHref={ nextStepsCardsVisitButtonLinkHref }
 			data-affordingCollegeHide={ affordingCollegeHide }
 			data-flexibleDegreeOptionsHide={ flexibleDegreeOptionsHide }
+			data-careerOutlookHide={ careerOutlookHide }
 			data-careerOutlookImageUrl={ careerOutlookImageUrl }
 			data-careerOutlookImageAltText={ careerOutlookImageAltText }
 			data-exampleCareersHide={ exampleCareersHide }

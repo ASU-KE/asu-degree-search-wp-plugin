@@ -66,6 +66,7 @@ const Inspector = ( props ) => {
 			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
+			careerOutlookHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
@@ -787,6 +788,17 @@ const Inspector = ( props ) => {
 							value={ careerOutlookImageAltText }
 							onChange={ ( value ) =>
 								setAttributes( { careerOutlookImageAltText: value } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ 'Hide career outlook section' }
+							checked={ careerOutlookHide }
+							onChange={ (value) => {
+								value ? false : true
+								setAttributes( {careerOutlookHide: value} );
+								}
 							}
 						/>
 					</PanelRow>

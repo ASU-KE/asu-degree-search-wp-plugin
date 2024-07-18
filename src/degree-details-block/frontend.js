@@ -79,6 +79,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 	const affordingCollegeHide = detailBlock.dataset.affordingcollegehide === "true"
 	const flexibleDegreeOptionsHide = detailBlock.dataset.flexibledegreeoptionshide === "true"
 
+	const careerOutlookHide = detailBlock.dataset.careeroutlookhide === "true"
 	const careerOutlookImageUrl = detailBlock.dataset.careeroutlookimageurl
 	const careerOutlookImageAltText = detailBlock.dataset.careeroutlookimagealttext
 	const exampleCareersHide = detailBlock.dataset.examplecareershide === "true"
@@ -314,6 +315,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  hide: flexibleDegreeOptionsHide,
 		},
 		careerOutlook: {
+		  hide: careerOutlookHide,
 		  image: {
 			url: careerOutlookImageUrl ? careerOutlookImageUrl : ImgCareerOutlook,
 			altText: careerOutlookImageAltText,

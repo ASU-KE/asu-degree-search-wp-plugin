@@ -87,6 +87,7 @@ const Edit = ( props ) => {
 			nextStepsCardsVisitButtonLinkHref,
 			affordingCollegeHide,
 			flexibleDegreeOptionsHide,
+			careerOutlookHide,
 			careerOutlookImageUrl,
 			careerOutlookImageAltText,
 			exampleCareersHide,
@@ -311,6 +312,7 @@ const Edit = ( props ) => {
 		  hide: flexibleDegreeOptionsHide,
 		},
 		careerOutlook: {
+		  hide: careerOutlookHide,
 		  image: {
 			url: careerOutlookImageUrl ? careerOutlookImageUrl : ImgCareerOutlook,
 			altText: careerOutlookImageAltText,

@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "asu-degree-search/degree-details-block",
-	"version": "2.5.3.1",
+	"version": "2.5.6",
 	"title": "ASU Degree Details",
 	"category": "uds",
 	"keywords": ["ASU", "details", "block", "degree"],
@@ -230,6 +230,10 @@
 			"default": false
 		},
 		"flexibleDegreeOptionsHide": {
+			"type": "boolean",
+			"default": false
+		},
+		"careerOutlookHide": {
 			"type": "boolean",
 			"default": false
 		},

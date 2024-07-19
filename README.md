@@ -12,7 +12,7 @@
 
 * Contributors:      ASU-KE
 * Tested up to:      6.5
-* Current vesion:    1.3.0
+* Current vesion:    1.4.0
 
 
 <br />

@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "asu-degree-search/degree-details-block",
-	"version": "2.5.6",
+	"version": "2.5.6.1",
 	"title": "ASU Degree Details",
 	"category": "uds",
 	"keywords": ["ASU", "details", "block", "degree"],
@@ -17,6 +17,10 @@
 	"editorScript": "file:./index.js",
 	"style": "file:./style-index.css",
 	"attributes": {
+		"id": {
+			"type": "string",
+			"default": ""
+		},
 		"anchorMenuEnabled": {
 			"type": "boolean",
 			"default": false

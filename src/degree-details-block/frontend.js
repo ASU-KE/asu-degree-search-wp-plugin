@@ -14,7 +14,9 @@ import ImgCustomizePrograms from "../../resources/asu-unity-stack/packages/app-d
 import ImgCustomizeResearch from "../../resources/asu-unity-stack/packages/app-degree-pages/src/assets/img/detail-page/customize-research-600.jpg"
 import ImgGlobalOpportunity from "../../resources/asu-unity-stack/packages/app-degree-pages/src/assets/img/detail-page/global-opportunity.jpg"
 
-const detailBlock = document.getElementById( 'asu-degree-details-container' )
+const detailBlockContainer = document.querySelectorAll('.wp-block-asu-degree-search-degree-details-block')
+
+detailBlockContainer.forEach((detailBlock) => {
 
 	const dataSourceAcadPlan = detailBlock.dataset.datasourceacadplan
 
@@ -430,7 +432,7 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 		  department: { text: programContactInfoDepartmentText, url: programContactInfoDepartmentUrl },
 		  email: { text: programContactInfoEmailText, url: programContactInfoEmailUrl },
 		},
-	  };
+	  }
 
 	window.addEventListener('load', () => {
 		const hash = window.location.hash.substring(1)
@@ -473,4 +475,5 @@ const detailBlock = document.getElementById( 'asu-degree-details-container' )
 			professionalLicensure={ customProps.professionalLicensure }
 		/>,
 		detailBlock
-	);
+	)
+})

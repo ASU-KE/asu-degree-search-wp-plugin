@@ -34,6 +34,7 @@ const Edit = ( props ) => {
 
 	const {
 		attributes: {
+			id,
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
 			anchorMenuChangeMajorRequirements,
@@ -149,8 +150,13 @@ const Edit = ( props ) => {
 			professionalLicensureHide
 		},
 		className,
+		clientId,
 	} = props;
-
+	React.useEffect(() => {
+		if (!id) {
+			props.setAttributes({ id: clientId });
+		}
+	}, []);
 	const customProps = {
 		appPathFolder: ".", // OPTIONAL
 		dataSource: {

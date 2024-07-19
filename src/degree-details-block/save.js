@@ -8,6 +8,7 @@ import { useBlockProps } from "@wordpress/block-editor";
 const save = ( props ) => {
 	const {
 		attributes: {
+			id,
 			anchorMenuEnabled,
 			anchorMenuAtAGlance,
 			anchorMenuChangeMajorRequirements,
@@ -127,7 +128,7 @@ const save = ( props ) => {
 
 	return (
 		<div
-		id="asu-degree-details-container"
+		id={`asu-degree-details-container-${ id }`}
 		{...useBlockProps.save()}
 			data-anchorMenuEnabled={ anchorMenuEnabled }
 			data-anchorMenuAtAGlance={ anchorMenuAtAGlance }

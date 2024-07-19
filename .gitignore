@@ -31,3 +31,6 @@ node_modules/
 
 # Ignore Mac DS_Store files
 .DS_Store
+
+# Ignore RTL files
+build/*/*-rtl.css

@@ -1,21 +1,14 @@
 <p align="center">
-  <img src="https://cdn.infonet.research.asu.edu/assets/asu_asu_knowledge_enterprise_horiz_150ppi.png" alt="ASU Knowledge Enterprise" width="400" />
+  <img src="https://research.asu.edu/wp-content/themes/UDS-WordPress-Theme/img/endorsed-logo/asu_knowledge_enterprise_white.png" width="300" alt="ASU KE Logo">
 </p>
 
-<h1 align="center">ASU Degree Search Wordpress Plugin</h1>
+# ASU Degree Search Wordpress Plugin
 
-<p align="center">
-  <b>A collection of blocks to handle ASU degree data within Wordpress.</b>
-</p>
-
-<br />
+### A collection of blocks to handle ASU degree data within Wordpress.
 
 * Contributors:      ASU-KE
 * Tested up to:      6.5
-* Current vesion:    1.4.0
-
-
-<br />
+* Current vesion:    1.4.1
 
 ## Installation
 

@@ -8,9 +8,9 @@
  * @copyright 2024 ASU KE
  * @license   GPL v2 or later
  *
- * Plugin Name:  Asu Degree Search WP Plugin
+ * Plugin Name:  ASU Degree API WP Plugin
  * Description:  The developer tools panel for WordPress.
- * Version:      1.4.2
+ * Version:      1.5.0
  * Plugin URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
  * Author:       ASU KE RTO Web Services
  * Author URI:   https://rto.asu.edu/web-services/

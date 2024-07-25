@@ -8,7 +8,7 @@
 
 * Contributors:      ASU-KE
 * Tested up to:      6.5
-* Current vesion:    1.4.2
+* Current vesion:    1.5.0
 
 ## Installation
 

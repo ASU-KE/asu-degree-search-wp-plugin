@@ -7,8 +7,8 @@
 ### A collection of blocks to handle ASU degree data within Wordpress.
 
 * Contributors:      ASU-KE
-* Tested up to:      6.5
-* Current vesion:    1.5.0
+* Tested up to:      6.7.1
+* Current vesion:    1.6.0
 
 ## Installation
 
@@ -18,6 +18,10 @@ Upload the plugin files to the `/wp-content/plugins/` directory, or install the 
 This block uses `wp-scripts` for the build process:
 * `npm run build` - rebuilds the app with the latest saved files, exported to `/build`
 * `npm run start` - live editing mode, rebuilds app when updated file is saved
+###### 1st time setup
+* Install submodules
+* Duplicate .npmrc file into `resources/asu-unity-stack` to fully install `@asu` dependencies.
+* `npm i` in `resources/asu-unity-stack`
 
 ## Available blocks
 

@@ -15,7 +15,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^29.0.0",
+		"@wordpress/scripts": "^30.7.0",
 		"swr": "^1.2.2"
 	},
 	"volta": {

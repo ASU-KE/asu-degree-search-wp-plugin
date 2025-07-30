@@ -10,7 +10,7 @@
  *
  * Plugin Name:  ASU Degree API WP Plugin
  * Description:  Gutenberg blocks for ASU degrees built off UDS app-degree-pages.
- * Version:      1.8.0
+ * Version:      1.9.0
  * Plugin URI:   https://github.com/ASU-KE/asu-degree-search-wp-plugin
  * Author:       ASU KE RTO Web Services
  * Author URI:   https://rto.asu.edu/web-services/

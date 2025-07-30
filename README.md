@@ -7,8 +7,8 @@
 ### A collection of blocks to handle ASU degree data within Wordpress.
 
 * Contributors:      ASU-KE
-* Tested up to:      6.7.2
-* Current vesion:    1.8.0
+* Tested up to:      6.8.2
+* Current vesion:    1.9.0
 
 ## Installation
 

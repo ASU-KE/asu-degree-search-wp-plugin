@@ -47,7 +47,7 @@ detailBlockContainer.forEach((detailBlock) => {
 
 	const atAGlanceHide = detailBlock.dataset.ataglancehide === "true"
 	const atAGlanceApplicationRequirementsHide = detailBlock.dataset.ataglanceapplicationrequirementshide === "true"
-	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirements === "true"
+	const atAGlanceChangeMajorRequirementsHide = detailBlock.dataset.ataglancechangemajorrequirementshide === "true"
 
 	const nextStepsHide = detailBlock.dataset.nextstepshide === "true"
 
